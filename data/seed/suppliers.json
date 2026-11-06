@@ -1,0 +1,802 @@
+[
+  {
+    "category": "electronics",
+    "created_at": "2025-07-06T10:00:00Z",
+    "id": "SUP0001",
+    "location": "IN-TG",
+    "name": "Apex Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-07T10:00:00Z",
+    "id": "SUP0002",
+    "location": "IN-AP",
+    "name": "Nova Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-08T10:00:00Z",
+    "id": "SUP0003",
+    "location": "IN-KA",
+    "name": "Orbit Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-09T10:00:00Z",
+    "id": "SUP0004",
+    "location": "IN-MH",
+    "name": "Vertex Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-10T10:00:00Z",
+    "id": "SUP0005",
+    "location": "IN-TG",
+    "name": "Crescent Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-11T10:00:00Z",
+    "id": "SUP0006",
+    "location": "IN-AP",
+    "name": "Summit Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-12T10:00:00Z",
+    "id": "SUP0007",
+    "location": "IN-KA",
+    "name": "Pioneer Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-13T10:00:00Z",
+    "id": "SUP0008",
+    "location": "IN-MH",
+    "name": "Meridian Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-14T10:00:00Z",
+    "id": "SUP0009",
+    "location": "IN-TG",
+    "name": "Atlas Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-15T10:00:00Z",
+    "id": "SUP0010",
+    "location": "IN-AP",
+    "name": "Harbor Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-16T10:00:00Z",
+    "id": "SUP0011",
+    "location": "IN-KA",
+    "name": "Cobalt Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-17T10:00:00Z",
+    "id": "SUP0012",
+    "location": "IN-MH",
+    "name": "Nova Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-18T10:00:00Z",
+    "id": "SUP0013",
+    "location": "IN-TG",
+    "name": "Nova Components Pvt. Ltd.",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-19T10:00:00Z",
+    "id": "SUP0014",
+    "location": "IN-AP",
+    "name": "Zenith Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-20T10:00:00Z",
+    "id": "SUP0015",
+    "location": "IN-KA",
+    "name": "Falcon Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-21T10:00:00Z",
+    "id": "SUP0016",
+    "location": "IN-MH",
+    "name": "Ironwood Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-22T10:00:00Z",
+    "id": "SUP0017",
+    "location": "IN-TG",
+    "name": "Bluepeak Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-23T10:00:00Z",
+    "id": "SUP0018",
+    "location": "IN-AP",
+    "name": "Silverline Components Pvt Ltd",
+    "status": "inactive"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-24T10:00:00Z",
+    "id": "SUP0019",
+    "location": "IN-KA",
+    "name": "Northstar Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-25T10:00:00Z",
+    "id": "SUP0020",
+    "location": "IN-MH",
+    "name": "Delta Components Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-26T10:00:00Z",
+    "id": "SUP0021",
+    "location": "IN-TG",
+    "name": "Apex Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-27T10:00:00Z",
+    "id": "SUP0022",
+    "location": "IN-AP",
+    "name": "Nova Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-28T10:00:00Z",
+    "id": "SUP0023",
+    "location": "IN-KA",
+    "name": "Orbit Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-29T10:00:00Z",
+    "id": "SUP0024",
+    "location": "IN-MH",
+    "name": "Vertex Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "electronics",
+    "created_at": "2025-07-30T10:00:00Z",
+    "id": "SUP0025",
+    "location": "IN-TG",
+    "name": "Crescent Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-07-31T10:00:00Z",
+    "id": "SUP0026",
+    "location": "IN-AP",
+    "name": "Summit Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-01T10:00:00Z",
+    "id": "SUP0027",
+    "location": "IN-KA",
+    "name": "Pioneer Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-02T10:00:00Z",
+    "id": "SUP0028",
+    "location": "IN-MH",
+    "name": "Meridian Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-03T10:00:00Z",
+    "id": "SUP0029",
+    "location": "IN-TG",
+    "name": "Atlas Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-04T10:00:00Z",
+    "id": "SUP0030",
+    "location": "IN-AP",
+    "name": "Harbor Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-05T10:00:00Z",
+    "id": "SUP0031",
+    "location": "IN-KA",
+    "name": "Cobalt Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-06T10:00:00Z",
+    "id": "SUP0032",
+    "location": "IN-MH",
+    "name": "Evergreen Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-07T10:00:00Z",
+    "id": "SUP0033",
+    "location": "IN-TG",
+    "name": "Sterling Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-08T10:00:00Z",
+    "id": "SUP0034",
+    "location": "IN-AP",
+    "name": "Zenith Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-09T10:00:00Z",
+    "id": "SUP0035",
+    "location": "IN-KA",
+    "name": "Falcon Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-10T10:00:00Z",
+    "id": "SUP0036",
+    "location": "IN-MH",
+    "name": "Ironwood Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-11T10:00:00Z",
+    "id": "SUP0037",
+    "location": "IN-TG",
+    "name": "Bluepeak Systems Pvt Ltd",
+    "status": "inactive"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-12T10:00:00Z",
+    "id": "SUP0038",
+    "location": "IN-AP",
+    "name": "Silverline Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-13T10:00:00Z",
+    "id": "SUP0039",
+    "location": "IN-KA",
+    "name": "Northstar Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-14T10:00:00Z",
+    "id": "SUP0040",
+    "location": "IN-MH",
+    "name": "Delta Systems Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-15T10:00:00Z",
+    "id": "SUP0041",
+    "location": "IN-TG",
+    "name": "Apex Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-16T10:00:00Z",
+    "id": "SUP0042",
+    "location": "IN-AP",
+    "name": "Nova Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-17T10:00:00Z",
+    "id": "SUP0043",
+    "location": "IN-KA",
+    "name": "Orbit Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-18T10:00:00Z",
+    "id": "SUP0044",
+    "location": "IN-MH",
+    "name": "Vertex Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-19T10:00:00Z",
+    "id": "SUP0045",
+    "location": "IN-TG",
+    "name": "Crescent Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-20T10:00:00Z",
+    "id": "SUP0046",
+    "location": "IN-AP",
+    "name": "Summit Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-21T10:00:00Z",
+    "id": "SUP0047",
+    "location": "IN-KA",
+    "name": "Pioneer Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-22T10:00:00Z",
+    "id": "SUP0048",
+    "location": "IN-MH",
+    "name": "Meridian Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-23T10:00:00Z",
+    "id": "SUP0049",
+    "location": "IN-TG",
+    "name": "Atlas Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "furniture",
+    "created_at": "2025-08-24T10:00:00Z",
+    "id": "SUP0050",
+    "location": "IN-AP",
+    "name": "Harbor Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-08-25T10:00:00Z",
+    "id": "SUP0051",
+    "location": "IN-KA",
+    "name": "Cobalt Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-08-26T10:00:00Z",
+    "id": "SUP0052",
+    "location": "IN-MH",
+    "name": "Evergreen Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-08-27T10:00:00Z",
+    "id": "SUP0053",
+    "location": "IN-TG",
+    "name": "Sterling Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-08-28T10:00:00Z",
+    "id": "SUP0054",
+    "location": "IN-AP",
+    "name": "Zenith Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-08-29T10:00:00Z",
+    "id": "SUP0055",
+    "location": "IN-KA",
+    "name": "Falcon Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-08-30T10:00:00Z",
+    "id": "SUP0056",
+    "location": "IN-MH",
+    "name": "Ironwood Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-08-31T10:00:00Z",
+    "id": "SUP0057",
+    "location": "IN-TG",
+    "name": "Bluepeak Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-01T10:00:00Z",
+    "id": "SUP0058",
+    "location": "IN-AP",
+    "name": "Silverline Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-02T10:00:00Z",
+    "id": "SUP0059",
+    "location": "IN-KA",
+    "name": "Northstar Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-03T10:00:00Z",
+    "id": "SUP0060",
+    "location": "IN-MH",
+    "name": "Delta Supplies Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-04T10:00:00Z",
+    "id": "SUP0061",
+    "location": "IN-TG",
+    "name": "Apex Traders Pvt Ltd",
+    "status": "suspended"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-05T10:00:00Z",
+    "id": "SUP0062",
+    "location": "IN-AP",
+    "name": "Nova Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-06T10:00:00Z",
+    "id": "SUP0063",
+    "location": "IN-KA",
+    "name": "Orbit Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-07T10:00:00Z",
+    "id": "SUP0064",
+    "location": "IN-MH",
+    "name": "Vertex Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-08T10:00:00Z",
+    "id": "SUP0065",
+    "location": "IN-TG",
+    "name": "Crescent Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-09T10:00:00Z",
+    "id": "SUP0066",
+    "location": "IN-AP",
+    "name": "Summit Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-10T10:00:00Z",
+    "id": "SUP0067",
+    "location": "IN-KA",
+    "name": "Pioneer Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-11T10:00:00Z",
+    "id": "SUP0068",
+    "location": "IN-MH",
+    "name": "Meridian Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-12T10:00:00Z",
+    "id": "SUP0069",
+    "location": "IN-TG",
+    "name": "Atlas Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-13T10:00:00Z",
+    "id": "SUP0070",
+    "location": "IN-AP",
+    "name": "Harbor Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-14T10:00:00Z",
+    "id": "SUP0071",
+    "location": "IN-KA",
+    "name": "Cobalt Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-15T10:00:00Z",
+    "id": "SUP0072",
+    "location": "IN-MH",
+    "name": "Evergreen Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-16T10:00:00Z",
+    "id": "SUP0073",
+    "location": "IN-TG",
+    "name": "Sterling Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-17T10:00:00Z",
+    "id": "SUP0074",
+    "location": "IN-AP",
+    "name": "Zenith Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "it_hardware",
+    "created_at": "2025-09-18T10:00:00Z",
+    "id": "SUP0075",
+    "location": "IN-KA",
+    "name": "Falcon Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-09-19T10:00:00Z",
+    "id": "SUP0076",
+    "location": "IN-MH",
+    "name": "Ironwood Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-09-20T10:00:00Z",
+    "id": "SUP0077",
+    "location": "IN-TG",
+    "name": "Bluepeak Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-09-21T10:00:00Z",
+    "id": "SUP0078",
+    "location": "IN-AP",
+    "name": "Silverline Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-09-22T10:00:00Z",
+    "id": "SUP0079",
+    "location": "IN-KA",
+    "name": "Northstar Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-09-23T10:00:00Z",
+    "id": "SUP0080",
+    "location": "IN-MH",
+    "name": "Delta Traders Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-09-24T10:00:00Z",
+    "id": "SUP0081",
+    "location": "IN-TG",
+    "name": "Apex Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-09-25T10:00:00Z",
+    "id": "SUP0082",
+    "location": "IN-AP",
+    "name": "Nova Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-09-26T10:00:00Z",
+    "id": "SUP0083",
+    "location": "IN-KA",
+    "name": "Orbit Works Pvt Ltd",
+    "status": "inactive"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-09-27T10:00:00Z",
+    "id": "SUP0084",
+    "location": "IN-MH",
+    "name": "Vertex Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-09-28T10:00:00Z",
+    "id": "SUP0085",
+    "location": "IN-TG",
+    "name": "Crescent Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-09-29T10:00:00Z",
+    "id": "SUP0086",
+    "location": "IN-AP",
+    "name": "Summit Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-09-30T10:00:00Z",
+    "id": "SUP0087",
+    "location": "IN-KA",
+    "name": "Pioneer Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-01T10:00:00Z",
+    "id": "SUP0088",
+    "location": "IN-MH",
+    "name": "Meridian Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-02T10:00:00Z",
+    "id": "SUP0089",
+    "location": "IN-TG",
+    "name": "Atlas Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-03T10:00:00Z",
+    "id": "SUP0090",
+    "location": "IN-AP",
+    "name": "Harbor Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-04T10:00:00Z",
+    "id": "SUP0091",
+    "location": "IN-KA",
+    "name": "Cobalt Works Pvt Ltd",
+    "status": "suspended"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-05T10:00:00Z",
+    "id": "SUP0092",
+    "location": "IN-MH",
+    "name": "Evergreen Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-06T10:00:00Z",
+    "id": "SUP0093",
+    "location": "IN-TG",
+    "name": "Sterling Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-07T10:00:00Z",
+    "id": "SUP0094",
+    "location": "IN-AP",
+    "name": "Zenith Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-08T10:00:00Z",
+    "id": "SUP0095",
+    "location": "IN-KA",
+    "name": "Falcon Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-09T10:00:00Z",
+    "id": "SUP0096",
+    "location": "IN-MH",
+    "name": "Ironwood Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-10T10:00:00Z",
+    "id": "SUP0097",
+    "location": "IN-TG",
+    "name": "Bluepeak Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-11T10:00:00Z",
+    "id": "SUP0098",
+    "location": "IN-AP",
+    "name": "Silverline Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-12T10:00:00Z",
+    "id": "SUP0099",
+    "location": "IN-KA",
+    "name": "Northstar Works Pvt Ltd",
+    "status": "active"
+  },
+  {
+    "category": "office_supplies",
+    "created_at": "2025-10-13T10:00:00Z",
+    "id": "SUP0100",
+    "location": "IN-MH",
+    "name": "Delta Works Pvt Ltd",
+    "status": "active"
+  }
+]

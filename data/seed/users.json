@@ -1,0 +1,107 @@
+[
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0001@example.test",
+    "id": "USR0001",
+    "password_hash": "placeholder-password-hash",
+    "role": "admin"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0002@example.test",
+    "id": "USR0002",
+    "password_hash": "placeholder-password-hash",
+    "role": "requester"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0003@example.test",
+    "id": "USR0003",
+    "password_hash": "placeholder-password-hash",
+    "role": "requester"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0004@example.test",
+    "id": "USR0004",
+    "password_hash": "placeholder-password-hash",
+    "role": "requester"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0005@example.test",
+    "id": "USR0005",
+    "password_hash": "placeholder-password-hash",
+    "role": "approver"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0006@example.test",
+    "id": "USR0006",
+    "password_hash": "placeholder-password-hash",
+    "role": "approver"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0007@example.test",
+    "id": "USR0007",
+    "password_hash": "placeholder-password-hash",
+    "role": "approver"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0008@example.test",
+    "id": "USR0008",
+    "password_hash": "placeholder-password-hash",
+    "role": "approver"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0009@example.test",
+    "id": "USR0009",
+    "password_hash": "placeholder-password-hash",
+    "role": "approver"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0010@example.test",
+    "id": "USR0010",
+    "password_hash": "placeholder-password-hash",
+    "role": "approver"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0011@example.test",
+    "id": "USR0011",
+    "password_hash": "placeholder-password-hash",
+    "role": "approver"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0012@example.test",
+    "id": "USR0012",
+    "password_hash": "placeholder-password-hash",
+    "role": "approver"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0013@example.test",
+    "id": "USR0013",
+    "password_hash": "placeholder-password-hash",
+    "role": "approver"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0014@example.test",
+    "id": "USR0014",
+    "password_hash": "placeholder-password-hash",
+    "role": "approver"
+  },
+  {
+    "created_at": "2025-12-01T00:00:00Z",
+    "email": "user0015@example.test",
+    "id": "USR0015",
+    "password_hash": "placeholder-password-hash",
+    "role": "auditor"
+  }
+]

@@ -1,0 +1,5002 @@
+[
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00001",
+    "product_id": "PRD0001",
+    "supplier_id": "SUP0001",
+    "unit_price": "61334.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00002",
+    "product_id": "PRD0002",
+    "supplier_id": "SUP0001",
+    "unit_price": "12730.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 6,
+    "id": "QTN00003",
+    "product_id": "PRD0003",
+    "supplier_id": "SUP0001",
+    "unit_price": "4770.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00004",
+    "product_id": "PRD0004",
+    "supplier_id": "SUP0001",
+    "unit_price": "86469.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 9,
+    "id": "QTN00005",
+    "product_id": "PRD0005",
+    "supplier_id": "SUP0001",
+    "unit_price": "33712.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 31,
+    "id": "QTN00006",
+    "product_id": "PRD0002",
+    "supplier_id": "SUP0002",
+    "unit_price": "12328.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 17,
+    "id": "QTN00007",
+    "product_id": "PRD0003",
+    "supplier_id": "SUP0002",
+    "unit_price": "4725.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 39,
+    "id": "QTN00008",
+    "product_id": "PRD0004",
+    "supplier_id": "SUP0002",
+    "unit_price": "81016.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00009",
+    "product_id": "PRD0005",
+    "supplier_id": "SUP0002",
+    "unit_price": "30401.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00010",
+    "product_id": "PRD0006",
+    "supplier_id": "SUP0002",
+    "unit_price": "30240.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00011",
+    "product_id": "PRD0003",
+    "supplier_id": "SUP0003",
+    "unit_price": "4230.00",
+    "valid_until": "2025-12-15"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 42,
+    "id": "QTN00012",
+    "product_id": "PRD0004",
+    "supplier_id": "SUP0003",
+    "unit_price": "77900.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 34,
+    "id": "QTN00013",
+    "product_id": "PRD0005",
+    "supplier_id": "SUP0003",
+    "unit_price": "29799.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00014",
+    "product_id": "PRD0006",
+    "supplier_id": "SUP0003",
+    "unit_price": "27540.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 22,
+    "id": "QTN00015",
+    "product_id": "PRD0007",
+    "supplier_id": "SUP0003",
+    "unit_price": "23560.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00016",
+    "product_id": "PRD0004",
+    "supplier_id": "SUP0004",
+    "unit_price": "68552.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 15,
+    "id": "QTN00017",
+    "product_id": "PRD0005",
+    "supplier_id": "SUP0004",
+    "unit_price": "28595.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 41,
+    "id": "QTN00018",
+    "product_id": "PRD0006",
+    "supplier_id": "SUP0004",
+    "unit_price": "23760.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00019",
+    "product_id": "PRD0007",
+    "supplier_id": "SUP0004",
+    "unit_price": "22072.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 22,
+    "id": "QTN00020",
+    "product_id": "PRD0008",
+    "supplier_id": "SUP0004",
+    "unit_price": "14418.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00021",
+    "product_id": "PRD0005",
+    "supplier_id": "SUP0005",
+    "unit_price": "27090.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 32,
+    "id": "QTN00022",
+    "product_id": "PRD0006",
+    "supplier_id": "SUP0005",
+    "unit_price": "25920.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 9,
+    "id": "QTN00023",
+    "product_id": "PRD0007",
+    "supplier_id": "SUP0005",
+    "unit_price": "23312.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00024",
+    "product_id": "PRD0008",
+    "supplier_id": "SUP0005",
+    "unit_price": "17982.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 31,
+    "id": "QTN00025",
+    "product_id": "PRD0009",
+    "supplier_id": "SUP0005",
+    "unit_price": "79722.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 13,
+    "id": "QTN00026",
+    "product_id": "PRD0006",
+    "supplier_id": "SUP0006",
+    "unit_price": "30510.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00027",
+    "product_id": "PRD0007",
+    "supplier_id": "SUP0006",
+    "unit_price": "22568.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 28,
+    "id": "QTN00028",
+    "product_id": "PRD0008",
+    "supplier_id": "SUP0006",
+    "unit_price": "16362.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00029",
+    "product_id": "PRD0009",
+    "supplier_id": "SUP0006",
+    "unit_price": "78174.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 42,
+    "id": "QTN00030",
+    "product_id": "PRD0010",
+    "supplier_id": "SUP0006",
+    "unit_price": "13516.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00031",
+    "product_id": "PRD0007",
+    "supplier_id": "SUP0007",
+    "unit_price": "22568.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 7,
+    "id": "QTN00032",
+    "product_id": "PRD0008",
+    "supplier_id": "SUP0007",
+    "unit_price": "17982.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 13,
+    "id": "QTN00033",
+    "product_id": "PRD0009",
+    "supplier_id": "SUP0007",
+    "unit_price": "73530.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 9,
+    "id": "QTN00034",
+    "product_id": "PRD0010",
+    "supplier_id": "SUP0007",
+    "unit_price": "13020.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 18,
+    "id": "QTN00035",
+    "product_id": "PRD0011",
+    "supplier_id": "SUP0007",
+    "unit_price": "71912.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 40,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00036",
+    "product_id": "PRD0008",
+    "supplier_id": "SUP0008",
+    "unit_price": "16524.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00037",
+    "product_id": "PRD0009",
+    "supplier_id": "SUP0008",
+    "unit_price": "78948.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 42,
+    "id": "QTN00038",
+    "product_id": "PRD0010",
+    "supplier_id": "SUP0008",
+    "unit_price": "11284.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 1,
+    "id": "QTN00039",
+    "product_id": "PRD0011",
+    "supplier_id": "SUP0008",
+    "unit_price": "74760.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00040",
+    "product_id": "PRD0012",
+    "supplier_id": "SUP0008",
+    "unit_price": "70020.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 32,
+    "id": "QTN00041",
+    "product_id": "PRD0009",
+    "supplier_id": "SUP0009",
+    "unit_price": "71982.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00042",
+    "product_id": "PRD0010",
+    "supplier_id": "SUP0009",
+    "unit_price": "12772.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 25,
+    "id": "QTN00043",
+    "product_id": "PRD0011",
+    "supplier_id": "SUP0009",
+    "unit_price": "63368.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 17,
+    "id": "QTN00044",
+    "product_id": "PRD0012",
+    "supplier_id": "SUP0009",
+    "unit_price": "68464.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00045",
+    "product_id": "PRD0013",
+    "supplier_id": "SUP0009",
+    "unit_price": "65314.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00046",
+    "product_id": "PRD0010",
+    "supplier_id": "SUP0010",
+    "unit_price": "12028.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00047",
+    "product_id": "PRD0011",
+    "supplier_id": "SUP0010",
+    "unit_price": "79032.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 32,
+    "id": "QTN00048",
+    "product_id": "PRD0012",
+    "supplier_id": "SUP0010",
+    "unit_price": "84802.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 19,
+    "id": "QTN00049",
+    "product_id": "PRD0013",
+    "supplier_id": "SUP0010",
+    "unit_price": "53176.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 38,
+    "id": "QTN00050",
+    "product_id": "PRD0014",
+    "supplier_id": "SUP0010",
+    "unit_price": "10246.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00051",
+    "product_id": "PRD0011",
+    "supplier_id": "SUP0011",
+    "unit_price": "79032.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00052",
+    "product_id": "PRD0012",
+    "supplier_id": "SUP0011",
+    "unit_price": "86358.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 31,
+    "id": "QTN00053",
+    "product_id": "PRD0013",
+    "supplier_id": "SUP0011",
+    "unit_price": "51442.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 34,
+    "id": "QTN00054",
+    "product_id": "PRD0014",
+    "supplier_id": "SUP0011",
+    "unit_price": "11336.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 33,
+    "id": "QTN00055",
+    "product_id": "PRD0015",
+    "supplier_id": "SUP0011",
+    "unit_price": "58032.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 12,
+    "id": "QTN00056",
+    "product_id": "PRD0012",
+    "supplier_id": "SUP0012",
+    "unit_price": "70020.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00057",
+    "product_id": "PRD0013",
+    "supplier_id": "SUP0012",
+    "unit_price": "52020.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00058",
+    "product_id": "PRD0014",
+    "supplier_id": "SUP0012",
+    "unit_price": "11881.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00059",
+    "product_id": "PRD0015",
+    "supplier_id": "SUP0012",
+    "unit_price": "62400.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 39,
+    "id": "QTN00060",
+    "product_id": "PRD0016",
+    "supplier_id": "SUP0012",
+    "unit_price": "42940.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 6,
+    "id": "QTN00061",
+    "product_id": "PRD0013",
+    "supplier_id": "SUP0013",
+    "unit_price": "51442.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 38,
+    "id": "QTN00062",
+    "product_id": "PRD0014",
+    "supplier_id": "SUP0013",
+    "unit_price": "11009.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 21,
+    "id": "QTN00063",
+    "product_id": "PRD0015",
+    "supplier_id": "SUP0013",
+    "unit_price": "66144.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00064",
+    "product_id": "PRD0016",
+    "supplier_id": "SUP0013",
+    "unit_price": "43392.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00065",
+    "product_id": "PRD0017",
+    "supplier_id": "SUP0013",
+    "unit_price": "5720.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 46,
+    "id": "QTN00066",
+    "product_id": "PRD0014",
+    "supplier_id": "SUP0014",
+    "unit_price": "10464.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00067",
+    "product_id": "PRD0015",
+    "supplier_id": "SUP0014",
+    "unit_price": "68016.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00068",
+    "product_id": "PRD0016",
+    "supplier_id": "SUP0014",
+    "unit_price": "46104.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 40,
+    "id": "QTN00069",
+    "product_id": "PRD0017",
+    "supplier_id": "SUP0014",
+    "unit_price": "4576.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00070",
+    "product_id": "PRD0018",
+    "supplier_id": "SUP0014",
+    "unit_price": "5300.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 33,
+    "id": "QTN00071",
+    "product_id": "PRD0015",
+    "supplier_id": "SUP0015",
+    "unit_price": "65520.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 23,
+    "id": "QTN00072",
+    "product_id": "PRD0016",
+    "supplier_id": "SUP0015",
+    "unit_price": "43392.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 24,
+    "id": "QTN00073",
+    "product_id": "PRD0017",
+    "supplier_id": "SUP0015",
+    "unit_price": "4680.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 29,
+    "id": "QTN00074",
+    "product_id": "PRD0018",
+    "supplier_id": "SUP0015",
+    "unit_price": "4850.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00075",
+    "product_id": "PRD0019",
+    "supplier_id": "SUP0015",
+    "unit_price": "13110.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 42,
+    "id": "QTN00076",
+    "product_id": "PRD0016",
+    "supplier_id": "SUP0016",
+    "unit_price": "48364.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00077",
+    "product_id": "PRD0017",
+    "supplier_id": "SUP0016",
+    "unit_price": "5408.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00078",
+    "product_id": "PRD0018",
+    "supplier_id": "SUP0016",
+    "unit_price": "5700.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 9,
+    "id": "QTN00079",
+    "product_id": "PRD0019",
+    "supplier_id": "SUP0016",
+    "unit_price": "12535.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 7,
+    "id": "QTN00080",
+    "product_id": "PRD0020",
+    "supplier_id": "SUP0016",
+    "unit_price": "23328.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 10,
+    "id": "QTN00081",
+    "product_id": "PRD0017",
+    "supplier_id": "SUP0017",
+    "unit_price": "5772.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 39,
+    "id": "QTN00082",
+    "product_id": "PRD0018",
+    "supplier_id": "SUP0017",
+    "unit_price": "4800.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 22,
+    "id": "QTN00083",
+    "product_id": "PRD0019",
+    "supplier_id": "SUP0017",
+    "unit_price": "10810.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 41,
+    "id": "QTN00084",
+    "product_id": "PRD0020",
+    "supplier_id": "SUP0017",
+    "unit_price": "22842.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 33,
+    "id": "QTN00085",
+    "product_id": "PRD0021",
+    "supplier_id": "SUP0017",
+    "unit_price": "29670.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00086",
+    "product_id": "PRD0018",
+    "supplier_id": "SUP0018",
+    "unit_price": "5150.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 28,
+    "id": "QTN00087",
+    "product_id": "PRD0019",
+    "supplier_id": "SUP0018",
+    "unit_price": "9200.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 3,
+    "id": "QTN00088",
+    "product_id": "PRD0020",
+    "supplier_id": "SUP0018",
+    "unit_price": "27702.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 9,
+    "id": "QTN00089",
+    "product_id": "PRD0021",
+    "supplier_id": "SUP0018",
+    "unit_price": "22704.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 11,
+    "id": "QTN00090",
+    "product_id": "PRD0022",
+    "supplier_id": "SUP0018",
+    "unit_price": "57996.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00091",
+    "product_id": "PRD0019",
+    "supplier_id": "SUP0019",
+    "unit_price": "12765.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00092",
+    "product_id": "PRD0020",
+    "supplier_id": "SUP0019",
+    "unit_price": "26730.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00093",
+    "product_id": "PRD0021",
+    "supplier_id": "SUP0019",
+    "unit_price": "22704.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00094",
+    "product_id": "PRD0022",
+    "supplier_id": "SUP0019",
+    "unit_price": "59070.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 24,
+    "id": "QTN00095",
+    "product_id": "PRD0023",
+    "supplier_id": "SUP0019",
+    "unit_price": "56604.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 10,
+    "id": "QTN00096",
+    "product_id": "PRD0020",
+    "supplier_id": "SUP0020",
+    "unit_price": "25758.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 3,
+    "id": "QTN00097",
+    "product_id": "PRD0021",
+    "supplier_id": "SUP0020",
+    "unit_price": "26058.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 3,
+    "id": "QTN00098",
+    "product_id": "PRD0022",
+    "supplier_id": "SUP0020",
+    "unit_price": "52089.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 44,
+    "id": "QTN00099",
+    "product_id": "PRD0023",
+    "supplier_id": "SUP0020",
+    "unit_price": "62964.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 7,
+    "id": "QTN00100",
+    "product_id": "PRD0024",
+    "supplier_id": "SUP0020",
+    "unit_price": "4465.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00101",
+    "product_id": "PRD0021",
+    "supplier_id": "SUP0021",
+    "unit_price": "25542.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 40,
+    "id": "QTN00102",
+    "product_id": "PRD0022",
+    "supplier_id": "SUP0021",
+    "unit_price": "61755.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00103",
+    "product_id": "PRD0023",
+    "supplier_id": "SUP0021",
+    "unit_price": "70596.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 12,
+    "id": "QTN00104",
+    "product_id": "PRD0024",
+    "supplier_id": "SUP0021",
+    "unit_price": "5405.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 12,
+    "id": "QTN00105",
+    "product_id": "PRD0025",
+    "supplier_id": "SUP0021",
+    "unit_price": "59994.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00106",
+    "product_id": "PRD0022",
+    "supplier_id": "SUP0022",
+    "unit_price": "59607.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00107",
+    "product_id": "PRD0023",
+    "supplier_id": "SUP0022",
+    "unit_price": "71868.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00108",
+    "product_id": "PRD0024",
+    "supplier_id": "SUP0022",
+    "unit_price": "4512.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 3,
+    "id": "QTN00109",
+    "product_id": "PRD0025",
+    "supplier_id": "SUP0022",
+    "unit_price": "54054.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 15,
+    "id": "QTN00110",
+    "product_id": "PRD0026",
+    "supplier_id": "SUP0022",
+    "unit_price": "25645.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00111",
+    "product_id": "PRD0023",
+    "supplier_id": "SUP0023",
+    "unit_price": "59784.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 15,
+    "id": "QTN00112",
+    "product_id": "PRD0024",
+    "supplier_id": "SUP0023",
+    "unit_price": "4653.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00113",
+    "product_id": "PRD0025",
+    "supplier_id": "SUP0023",
+    "unit_price": "56430.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 22,
+    "id": "QTN00114",
+    "product_id": "PRD0026",
+    "supplier_id": "SUP0023",
+    "unit_price": "20962.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00115",
+    "product_id": "PRD0027",
+    "supplier_id": "SUP0023",
+    "unit_price": "72288.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 23,
+    "id": "QTN00116",
+    "product_id": "PRD0024",
+    "supplier_id": "SUP0024",
+    "unit_price": "5264.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00117",
+    "product_id": "PRD0025",
+    "supplier_id": "SUP0024",
+    "unit_price": "64152.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00118",
+    "product_id": "PRD0026",
+    "supplier_id": "SUP0024",
+    "unit_price": "24307.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 8,
+    "id": "QTN00119",
+    "product_id": "PRD0027",
+    "supplier_id": "SUP0024",
+    "unit_price": "73794.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 38,
+    "id": "QTN00120",
+    "product_id": "PRD0028",
+    "supplier_id": "SUP0024",
+    "unit_price": "65760.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 7,
+    "id": "QTN00121",
+    "product_id": "PRD0025",
+    "supplier_id": "SUP0025",
+    "unit_price": "57024.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 23,
+    "id": "QTN00122",
+    "product_id": "PRD0026",
+    "supplier_id": "SUP0025",
+    "unit_price": "23861.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 21,
+    "id": "QTN00123",
+    "product_id": "PRD0027",
+    "supplier_id": "SUP0025",
+    "unit_price": "83583.00",
+    "valid_until": "2025-11-30"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 33,
+    "id": "QTN00124",
+    "product_id": "PRD0028",
+    "supplier_id": "SUP0025",
+    "unit_price": "69185.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00125",
+    "product_id": "PRD0029",
+    "supplier_id": "SUP0025",
+    "unit_price": "67158.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 3,
+    "id": "QTN00126",
+    "product_id": "PRD0051",
+    "supplier_id": "SUP0026",
+    "unit_price": "42112.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 1,
+    "id": "QTN00127",
+    "product_id": "PRD0052",
+    "supplier_id": "SUP0026",
+    "unit_price": "21010.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00128",
+    "product_id": "PRD0053",
+    "supplier_id": "SUP0026",
+    "unit_price": "33696.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00129",
+    "product_id": "PRD0054",
+    "supplier_id": "SUP0026",
+    "unit_price": "16350.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 28,
+    "id": "QTN00130",
+    "product_id": "PRD0055",
+    "supplier_id": "SUP0026",
+    "unit_price": "40232.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 22,
+    "id": "QTN00131",
+    "product_id": "PRD0052",
+    "supplier_id": "SUP0027",
+    "unit_price": "17190.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00132",
+    "product_id": "PRD0053",
+    "supplier_id": "SUP0027",
+    "unit_price": "34668.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00133",
+    "product_id": "PRD0054",
+    "supplier_id": "SUP0027",
+    "unit_price": "17250.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00134",
+    "product_id": "PRD0055",
+    "supplier_id": "SUP0027",
+    "unit_price": "44512.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00135",
+    "product_id": "PRD0056",
+    "supplier_id": "SUP0027",
+    "unit_price": "3737.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00136",
+    "product_id": "PRD0053",
+    "supplier_id": "SUP0028",
+    "unit_price": "35640.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00137",
+    "product_id": "PRD0054",
+    "supplier_id": "SUP0028",
+    "unit_price": "13800.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 44,
+    "id": "QTN00138",
+    "product_id": "PRD0055",
+    "supplier_id": "SUP0028",
+    "unit_price": "46652.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 40,
+    "id": "QTN00139",
+    "product_id": "PRD0056",
+    "supplier_id": "SUP0028",
+    "unit_price": "4107.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00140",
+    "product_id": "PRD0057",
+    "supplier_id": "SUP0028",
+    "unit_price": "41128.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 1,
+    "id": "QTN00141",
+    "product_id": "PRD0054",
+    "supplier_id": "SUP0029",
+    "unit_price": "15750.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 14,
+    "id": "QTN00142",
+    "product_id": "PRD0055",
+    "supplier_id": "SUP0029",
+    "unit_price": "41516.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 38,
+    "id": "QTN00143",
+    "product_id": "PRD0056",
+    "supplier_id": "SUP0029",
+    "unit_price": "3737.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 21,
+    "id": "QTN00144",
+    "product_id": "PRD0057",
+    "supplier_id": "SUP0029",
+    "unit_price": "41516.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 29,
+    "id": "QTN00145",
+    "product_id": "PRD0058",
+    "supplier_id": "SUP0029",
+    "unit_price": "25500.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 33,
+    "id": "QTN00146",
+    "product_id": "PRD0055",
+    "supplier_id": "SUP0030",
+    "unit_price": "46652.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 11,
+    "id": "QTN00147",
+    "product_id": "PRD0056",
+    "supplier_id": "SUP0030",
+    "unit_price": "3811.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 19,
+    "id": "QTN00148",
+    "product_id": "PRD0057",
+    "supplier_id": "SUP0030",
+    "unit_price": "42292.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 41,
+    "id": "QTN00149",
+    "product_id": "PRD0058",
+    "supplier_id": "SUP0030",
+    "unit_price": "26000.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 6,
+    "id": "QTN00150",
+    "product_id": "PRD0059",
+    "supplier_id": "SUP0030",
+    "unit_price": "30923.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00151",
+    "product_id": "PRD0056",
+    "supplier_id": "SUP0031",
+    "unit_price": "4218.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 15,
+    "id": "QTN00152",
+    "product_id": "PRD0057",
+    "supplier_id": "SUP0031",
+    "unit_price": "42292.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 10,
+    "id": "QTN00153",
+    "product_id": "PRD0058",
+    "supplier_id": "SUP0031",
+    "unit_price": "28250.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00154",
+    "product_id": "PRD0059",
+    "supplier_id": "SUP0031",
+    "unit_price": "25432.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00155",
+    "product_id": "PRD0060",
+    "supplier_id": "SUP0031",
+    "unit_price": "8034.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 25,
+    "currency": "INR",
+    "delivery_days": 41,
+    "id": "QTN00156",
+    "product_id": "PRD0057",
+    "supplier_id": "SUP0032",
+    "unit_price": "39576.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00157",
+    "product_id": "PRD0058",
+    "supplier_id": "SUP0032",
+    "unit_price": "26500.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00158",
+    "product_id": "PRD0059",
+    "supplier_id": "SUP0032",
+    "unit_price": "28900.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 42,
+    "id": "QTN00159",
+    "product_id": "PRD0060",
+    "supplier_id": "SUP0032",
+    "unit_price": "7410.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 7,
+    "id": "QTN00160",
+    "product_id": "PRD0061",
+    "supplier_id": "SUP0032",
+    "unit_price": "22880.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 15,
+    "id": "QTN00161",
+    "product_id": "PRD0058",
+    "supplier_id": "SUP0033",
+    "unit_price": "28000.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00162",
+    "product_id": "PRD0059",
+    "supplier_id": "SUP0033",
+    "unit_price": "26877.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00163",
+    "product_id": "PRD0060",
+    "supplier_id": "SUP0033",
+    "unit_price": "8112.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 8,
+    "id": "QTN00164",
+    "product_id": "PRD0061",
+    "supplier_id": "SUP0033",
+    "unit_price": "21840.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00165",
+    "product_id": "PRD0062",
+    "supplier_id": "SUP0033",
+    "unit_price": "5610.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00166",
+    "product_id": "PRD0059",
+    "supplier_id": "SUP0034",
+    "unit_price": "31501.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 29,
+    "id": "QTN00167",
+    "product_id": "PRD0060",
+    "supplier_id": "SUP0034",
+    "unit_price": "8346.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 33,
+    "id": "QTN00168",
+    "product_id": "PRD0061",
+    "supplier_id": "SUP0034",
+    "unit_price": "22256.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00169",
+    "product_id": "PRD0062",
+    "supplier_id": "SUP0034",
+    "unit_price": "5555.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 31,
+    "id": "QTN00170",
+    "product_id": "PRD0063",
+    "supplier_id": "SUP0034",
+    "unit_price": "30294.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00171",
+    "product_id": "PRD0060",
+    "supplier_id": "SUP0035",
+    "unit_price": "7956.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 18,
+    "id": "QTN00172",
+    "product_id": "PRD0061",
+    "supplier_id": "SUP0035",
+    "unit_price": "23712.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 34,
+    "id": "QTN00173",
+    "product_id": "PRD0062",
+    "supplier_id": "SUP0035",
+    "unit_price": "6160.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00174",
+    "product_id": "PRD0063",
+    "supplier_id": "SUP0035",
+    "unit_price": "30591.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00175",
+    "product_id": "PRD0064",
+    "supplier_id": "SUP0035",
+    "unit_price": "15840.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00176",
+    "product_id": "PRD0061",
+    "supplier_id": "SUP0036",
+    "unit_price": "22880.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 21,
+    "id": "QTN00177",
+    "product_id": "PRD0062",
+    "supplier_id": "SUP0036",
+    "unit_price": "5280.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 50,
+    "id": "QTN00178",
+    "product_id": "PRD0063",
+    "supplier_id": "SUP0036",
+    "unit_price": "31185.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 25,
+    "id": "QTN00179",
+    "product_id": "PRD0064",
+    "supplier_id": "SUP0036",
+    "unit_price": "15180.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 14,
+    "id": "QTN00180",
+    "product_id": "PRD0065",
+    "supplier_id": "SUP0036",
+    "unit_price": "48290.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00181",
+    "product_id": "PRD0062",
+    "supplier_id": "SUP0037",
+    "unit_price": "4950.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00182",
+    "product_id": "PRD0063",
+    "supplier_id": "SUP0037",
+    "unit_price": "29106.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 14,
+    "id": "QTN00183",
+    "product_id": "PRD0064",
+    "supplier_id": "SUP0037",
+    "unit_price": "16665.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 25,
+    "id": "QTN00184",
+    "product_id": "PRD0065",
+    "supplier_id": "SUP0037",
+    "unit_price": "50046.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00185",
+    "product_id": "PRD0066",
+    "supplier_id": "SUP0037",
+    "unit_price": "37632.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00186",
+    "product_id": "PRD0063",
+    "supplier_id": "SUP0038",
+    "unit_price": "26136.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 1,
+    "id": "QTN00187",
+    "product_id": "PRD0064",
+    "supplier_id": "SUP0038",
+    "unit_price": "16500.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 25,
+    "id": "QTN00188",
+    "product_id": "PRD0065",
+    "supplier_id": "SUP0038",
+    "unit_price": "43461.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00189",
+    "product_id": "PRD0066",
+    "supplier_id": "SUP0038",
+    "unit_price": "38640.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00190",
+    "product_id": "PRD0067",
+    "supplier_id": "SUP0038",
+    "unit_price": "34755.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 15,
+    "id": "QTN00191",
+    "product_id": "PRD0064",
+    "supplier_id": "SUP0039",
+    "unit_price": "18645.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 18,
+    "id": "QTN00192",
+    "product_id": "PRD0065",
+    "supplier_id": "SUP0039",
+    "unit_price": "45217.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 2,
+    "id": "QTN00193",
+    "product_id": "PRD0066",
+    "supplier_id": "SUP0039",
+    "unit_price": "33936.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00194",
+    "product_id": "PRD0067",
+    "supplier_id": "SUP0039",
+    "unit_price": "33100.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00195",
+    "product_id": "PRD0068",
+    "supplier_id": "SUP0039",
+    "unit_price": "21800.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00196",
+    "product_id": "PRD0065",
+    "supplier_id": "SUP0040",
+    "unit_price": "48729.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00197",
+    "product_id": "PRD0066",
+    "supplier_id": "SUP0040",
+    "unit_price": "30912.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 38,
+    "id": "QTN00198",
+    "product_id": "PRD0067",
+    "supplier_id": "SUP0040",
+    "unit_price": "29128.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 2,
+    "id": "QTN00199",
+    "product_id": "PRD0068",
+    "supplier_id": "SUP0040",
+    "unit_price": "21200.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 28,
+    "id": "QTN00200",
+    "product_id": "PRD0069",
+    "supplier_id": "SUP0040",
+    "unit_price": "27900.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00201",
+    "product_id": "PRD0066",
+    "supplier_id": "SUP0041",
+    "unit_price": "30912.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 17,
+    "id": "QTN00202",
+    "product_id": "PRD0067",
+    "supplier_id": "SUP0041",
+    "unit_price": "30783.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 14,
+    "id": "QTN00203",
+    "product_id": "PRD0068",
+    "supplier_id": "SUP0041",
+    "unit_price": "20000.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 22,
+    "id": "QTN00204",
+    "product_id": "PRD0069",
+    "supplier_id": "SUP0041",
+    "unit_price": "31620.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 18,
+    "id": "QTN00205",
+    "product_id": "PRD0070",
+    "supplier_id": "SUP0041",
+    "unit_price": "12656.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00206",
+    "product_id": "PRD0067",
+    "supplier_id": "SUP0042",
+    "unit_price": "37072.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 6,
+    "id": "QTN00207",
+    "product_id": "PRD0068",
+    "supplier_id": "SUP0042",
+    "unit_price": "19200.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00208",
+    "product_id": "PRD0069",
+    "supplier_id": "SUP0042",
+    "unit_price": "31930.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 15,
+    "id": "QTN00209",
+    "product_id": "PRD0070",
+    "supplier_id": "SUP0042",
+    "unit_price": "10057.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 42,
+    "id": "QTN00210",
+    "product_id": "PRD0071",
+    "supplier_id": "SUP0042",
+    "unit_price": "40500.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 2,
+    "id": "QTN00211",
+    "product_id": "PRD0068",
+    "supplier_id": "SUP0043",
+    "unit_price": "17800.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 2,
+    "id": "QTN00212",
+    "product_id": "PRD0069",
+    "supplier_id": "SUP0043",
+    "unit_price": "29450.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00213",
+    "product_id": "PRD0070",
+    "supplier_id": "SUP0043",
+    "unit_price": "12091.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00214",
+    "product_id": "PRD0071",
+    "supplier_id": "SUP0043",
+    "unit_price": "34500.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 14,
+    "id": "QTN00215",
+    "product_id": "PRD0072",
+    "supplier_id": "SUP0043",
+    "unit_price": "4550.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 17,
+    "id": "QTN00216",
+    "product_id": "PRD0069",
+    "supplier_id": "SUP0044",
+    "unit_price": "31620.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 11,
+    "id": "QTN00217",
+    "product_id": "PRD0070",
+    "supplier_id": "SUP0044",
+    "unit_price": "12656.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 8,
+    "id": "QTN00218",
+    "product_id": "PRD0071",
+    "supplier_id": "SUP0044",
+    "unit_price": "40125.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 11,
+    "id": "QTN00219",
+    "product_id": "PRD0072",
+    "supplier_id": "SUP0044",
+    "unit_price": "5600.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 38,
+    "id": "QTN00220",
+    "product_id": "PRD0073",
+    "supplier_id": "SUP0044",
+    "unit_price": "3686.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00221",
+    "product_id": "PRD0070",
+    "supplier_id": "SUP0045",
+    "unit_price": "9944.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00222",
+    "product_id": "PRD0071",
+    "supplier_id": "SUP0045",
+    "unit_price": "40875.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00223",
+    "product_id": "PRD0072",
+    "supplier_id": "SUP0045",
+    "unit_price": "5500.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 41,
+    "id": "QTN00224",
+    "product_id": "PRD0073",
+    "supplier_id": "SUP0045",
+    "unit_price": "4028.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00225",
+    "product_id": "PRD0074",
+    "supplier_id": "SUP0045",
+    "unit_price": "33535.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 44,
+    "id": "QTN00226",
+    "product_id": "PRD0071",
+    "supplier_id": "SUP0046",
+    "unit_price": "42000.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 8,
+    "id": "QTN00227",
+    "product_id": "PRD0072",
+    "supplier_id": "SUP0046",
+    "unit_price": "5350.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 3,
+    "id": "QTN00228",
+    "product_id": "PRD0073",
+    "supplier_id": "SUP0046",
+    "unit_price": "4294.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 28,
+    "id": "QTN00229",
+    "product_id": "PRD0074",
+    "supplier_id": "SUP0046",
+    "unit_price": "34947.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00230",
+    "product_id": "PRD0075",
+    "supplier_id": "SUP0046",
+    "unit_price": "14279.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 22,
+    "id": "QTN00231",
+    "product_id": "PRD0072",
+    "supplier_id": "SUP0047",
+    "unit_price": "5200.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00232",
+    "product_id": "PRD0073",
+    "supplier_id": "SUP0047",
+    "unit_price": "3344.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 7,
+    "id": "QTN00233",
+    "product_id": "PRD0074",
+    "supplier_id": "SUP0047",
+    "unit_price": "40242.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 41,
+    "id": "QTN00234",
+    "product_id": "PRD0075",
+    "supplier_id": "SUP0047",
+    "unit_price": "13231.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 10,
+    "id": "QTN00235",
+    "product_id": "PRD0076",
+    "supplier_id": "SUP0047",
+    "unit_price": "46740.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 34,
+    "id": "QTN00236",
+    "product_id": "PRD0073",
+    "supplier_id": "SUP0048",
+    "unit_price": "3838.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 40,
+    "id": "QTN00237",
+    "product_id": "PRD0074",
+    "supplier_id": "SUP0048",
+    "unit_price": "38124.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 31,
+    "id": "QTN00238",
+    "product_id": "PRD0075",
+    "supplier_id": "SUP0048",
+    "unit_price": "14803.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 38,
+    "id": "QTN00239",
+    "product_id": "PRD0076",
+    "supplier_id": "SUP0048",
+    "unit_price": "41820.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00240",
+    "product_id": "PRD0077",
+    "supplier_id": "SUP0048",
+    "unit_price": "15648.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 18,
+    "id": "QTN00241",
+    "product_id": "PRD0074",
+    "supplier_id": "SUP0049",
+    "unit_price": "40242.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00242",
+    "product_id": "PRD0075",
+    "supplier_id": "SUP0049",
+    "unit_price": "13362.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00243",
+    "product_id": "PRD0076",
+    "supplier_id": "SUP0049",
+    "unit_price": "43460.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 2,
+    "id": "QTN00244",
+    "product_id": "PRD0077",
+    "supplier_id": "SUP0049",
+    "unit_price": "16300.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 21,
+    "id": "QTN00245",
+    "product_id": "PRD0078",
+    "supplier_id": "SUP0049",
+    "unit_price": "5665.00",
+    "valid_until": "2025-12-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 14,
+    "id": "QTN00246",
+    "product_id": "PRD0075",
+    "supplier_id": "SUP0050",
+    "unit_price": "12183.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 17,
+    "id": "QTN00247",
+    "product_id": "PRD0076",
+    "supplier_id": "SUP0050",
+    "unit_price": "40590.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 39,
+    "id": "QTN00248",
+    "product_id": "PRD0077",
+    "supplier_id": "SUP0050",
+    "unit_price": "15974.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00249",
+    "product_id": "PRD0078",
+    "supplier_id": "SUP0050",
+    "unit_price": "6050.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 13,
+    "id": "QTN00250",
+    "product_id": "PRD0079",
+    "supplier_id": "SUP0050",
+    "unit_price": "11792.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00251",
+    "product_id": "PRD0101",
+    "supplier_id": "SUP0051",
+    "unit_price": "29700.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00252",
+    "product_id": "PRD0102",
+    "supplier_id": "SUP0051",
+    "unit_price": "25441.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 42,
+    "id": "QTN00253",
+    "product_id": "PRD0103",
+    "supplier_id": "SUP0051",
+    "unit_price": "60830.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 29,
+    "id": "QTN00254",
+    "product_id": "PRD0104",
+    "supplier_id": "SUP0051",
+    "unit_price": "51480.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 6,
+    "id": "QTN00255",
+    "product_id": "PRD0105",
+    "supplier_id": "SUP0051",
+    "unit_price": "40228.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00256",
+    "product_id": "PRD0102",
+    "supplier_id": "SUP0052",
+    "unit_price": "23959.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00257",
+    "product_id": "PRD0103",
+    "supplier_id": "SUP0052",
+    "unit_price": "60830.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 24,
+    "id": "QTN00258",
+    "product_id": "PRD0104",
+    "supplier_id": "SUP0052",
+    "unit_price": "51012.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 34,
+    "id": "QTN00259",
+    "product_id": "PRD0105",
+    "supplier_id": "SUP0052",
+    "unit_price": "36668.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00260",
+    "product_id": "PRD0106",
+    "supplier_id": "SUP0052",
+    "unit_price": "72765.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00261",
+    "product_id": "PRD0103",
+    "supplier_id": "SUP0053",
+    "unit_price": "54194.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00262",
+    "product_id": "PRD0104",
+    "supplier_id": "SUP0053",
+    "unit_price": "47736.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 8,
+    "id": "QTN00263",
+    "product_id": "PRD0105",
+    "supplier_id": "SUP0053",
+    "unit_price": "34176.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 21,
+    "id": "QTN00264",
+    "product_id": "PRD0106",
+    "supplier_id": "SUP0053",
+    "unit_price": "81585.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00265",
+    "product_id": "PRD0107",
+    "supplier_id": "SUP0053",
+    "unit_price": "59150.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 12,
+    "id": "QTN00266",
+    "product_id": "PRD0104",
+    "supplier_id": "SUP0054",
+    "unit_price": "52416.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 31,
+    "id": "QTN00267",
+    "product_id": "PRD0105",
+    "supplier_id": "SUP0054",
+    "unit_price": "33464.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 38,
+    "id": "QTN00268",
+    "product_id": "PRD0106",
+    "supplier_id": "SUP0054",
+    "unit_price": "70560.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 39,
+    "id": "QTN00269",
+    "product_id": "PRD0107",
+    "supplier_id": "SUP0054",
+    "unit_price": "72800.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 13,
+    "id": "QTN00270",
+    "product_id": "PRD0108",
+    "supplier_id": "SUP0054",
+    "unit_price": "29488.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 24,
+    "id": "QTN00271",
+    "product_id": "PRD0105",
+    "supplier_id": "SUP0055",
+    "unit_price": "34532.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 1,
+    "id": "QTN00272",
+    "product_id": "PRD0106",
+    "supplier_id": "SUP0055",
+    "unit_price": "68355.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 9,
+    "id": "QTN00273",
+    "product_id": "PRD0107",
+    "supplier_id": "SUP0055",
+    "unit_price": "71500.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00274",
+    "product_id": "PRD0108",
+    "supplier_id": "SUP0055",
+    "unit_price": "29184.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00275",
+    "product_id": "PRD0109",
+    "supplier_id": "SUP0055",
+    "unit_price": "43260.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 32,
+    "id": "QTN00276",
+    "product_id": "PRD0106",
+    "supplier_id": "SUP0056",
+    "unit_price": "67620.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 1,
+    "id": "QTN00277",
+    "product_id": "PRD0107",
+    "supplier_id": "SUP0056",
+    "unit_price": "59150.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 10,
+    "currency": "INR",
+    "delivery_days": 31,
+    "id": "QTN00278",
+    "product_id": "PRD0108",
+    "supplier_id": "SUP0056",
+    "unit_price": "32224.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 22,
+    "id": "QTN00279",
+    "product_id": "PRD0109",
+    "supplier_id": "SUP0056",
+    "unit_price": "42436.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 17,
+    "id": "QTN00280",
+    "product_id": "PRD0110",
+    "supplier_id": "SUP0056",
+    "unit_price": "12741.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 8,
+    "id": "QTN00281",
+    "product_id": "PRD0107",
+    "supplier_id": "SUP0057",
+    "unit_price": "74750.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00282",
+    "product_id": "PRD0108",
+    "supplier_id": "SUP0057",
+    "unit_price": "34656.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00283",
+    "product_id": "PRD0109",
+    "supplier_id": "SUP0057",
+    "unit_price": "42436.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00284",
+    "product_id": "PRD0110",
+    "supplier_id": "SUP0057",
+    "unit_price": "14796.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00285",
+    "product_id": "PRD0111",
+    "supplier_id": "SUP0057",
+    "unit_price": "28888.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00286",
+    "product_id": "PRD0108",
+    "supplier_id": "SUP0058",
+    "unit_price": "29488.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00287",
+    "product_id": "PRD0109",
+    "supplier_id": "SUP0058",
+    "unit_price": "37492.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 40,
+    "id": "QTN00288",
+    "product_id": "PRD0110",
+    "supplier_id": "SUP0058",
+    "unit_price": "14659.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 34,
+    "id": "QTN00289",
+    "product_id": "PRD0111",
+    "supplier_id": "SUP0058",
+    "unit_price": "29830.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 29,
+    "id": "QTN00290",
+    "product_id": "PRD0112",
+    "supplier_id": "SUP0058",
+    "unit_price": "11200.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 38,
+    "id": "QTN00291",
+    "product_id": "PRD0109",
+    "supplier_id": "SUP0059",
+    "unit_price": "39964.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00292",
+    "product_id": "PRD0110",
+    "supplier_id": "SUP0059",
+    "unit_price": "13837.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 40,
+    "id": "QTN00293",
+    "product_id": "PRD0111",
+    "supplier_id": "SUP0059",
+    "unit_price": "33598.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 14,
+    "id": "QTN00294",
+    "product_id": "PRD0112",
+    "supplier_id": "SUP0059",
+    "unit_price": "12432.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 17,
+    "id": "QTN00295",
+    "product_id": "PRD0113",
+    "supplier_id": "SUP0059",
+    "unit_price": "43524.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 11,
+    "id": "QTN00296",
+    "product_id": "PRD0110",
+    "supplier_id": "SUP0060",
+    "unit_price": "14933.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00297",
+    "product_id": "PRD0111",
+    "supplier_id": "SUP0060",
+    "unit_price": "29830.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 1,
+    "id": "QTN00298",
+    "product_id": "PRD0112",
+    "supplier_id": "SUP0060",
+    "unit_price": "10080.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 60,
+    "id": "QTN00299",
+    "product_id": "PRD0113",
+    "supplier_id": "SUP0060",
+    "unit_price": "40703.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 19,
+    "id": "QTN00300",
+    "product_id": "PRD0114",
+    "supplier_id": "SUP0060",
+    "unit_price": "55640.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 19,
+    "id": "QTN00301",
+    "product_id": "PRD0111",
+    "supplier_id": "SUP0061",
+    "unit_price": "27946.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00302",
+    "product_id": "PRD0112",
+    "supplier_id": "SUP0061",
+    "unit_price": "12320.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00303",
+    "product_id": "PRD0113",
+    "supplier_id": "SUP0061",
+    "unit_price": "32240.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 17,
+    "id": "QTN00304",
+    "product_id": "PRD0114",
+    "supplier_id": "SUP0061",
+    "unit_price": "56680.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 41,
+    "id": "QTN00305",
+    "product_id": "PRD0115",
+    "supplier_id": "SUP0061",
+    "unit_price": "55370.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 13,
+    "id": "QTN00306",
+    "product_id": "PRD0112",
+    "supplier_id": "SUP0062",
+    "unit_price": "11872.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00307",
+    "product_id": "PRD0113",
+    "supplier_id": "SUP0062",
+    "unit_price": "40703.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 10,
+    "id": "QTN00308",
+    "product_id": "PRD0114",
+    "supplier_id": "SUP0062",
+    "unit_price": "49400.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 10,
+    "id": "QTN00309",
+    "product_id": "PRD0115",
+    "supplier_id": "SUP0062",
+    "unit_price": "47040.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 11,
+    "id": "QTN00310",
+    "product_id": "PRD0116",
+    "supplier_id": "SUP0062",
+    "unit_price": "31860.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 39,
+    "id": "QTN00311",
+    "product_id": "PRD0113",
+    "supplier_id": "SUP0063",
+    "unit_price": "45539.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00312",
+    "product_id": "PRD0114",
+    "supplier_id": "SUP0063",
+    "unit_price": "1200.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 8,
+    "id": "QTN00313",
+    "product_id": "PRD0115",
+    "supplier_id": "SUP0063",
+    "unit_price": "47530.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00314",
+    "product_id": "PRD0116",
+    "supplier_id": "SUP0063",
+    "unit_price": "36108.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 18,
+    "id": "QTN00315",
+    "product_id": "PRD0117",
+    "supplier_id": "SUP0063",
+    "unit_price": "16170.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 32,
+    "id": "QTN00316",
+    "product_id": "PRD0114",
+    "supplier_id": "SUP0064",
+    "unit_price": "54080.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 39,
+    "id": "QTN00317",
+    "product_id": "PRD0115",
+    "supplier_id": "SUP0064",
+    "unit_price": "49980.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 21,
+    "id": "QTN00318",
+    "product_id": "PRD0116",
+    "supplier_id": "SUP0064",
+    "unit_price": "31506.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 2,
+    "id": "QTN00319",
+    "product_id": "PRD0117",
+    "supplier_id": "SUP0064",
+    "unit_price": "15729.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 44,
+    "id": "QTN00320",
+    "product_id": "PRD0118",
+    "supplier_id": "SUP0064",
+    "unit_price": "26640.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00321",
+    "product_id": "PRD0115",
+    "supplier_id": "SUP0065",
+    "unit_price": "55860.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 44,
+    "id": "QTN00322",
+    "product_id": "PRD0116",
+    "supplier_id": "SUP0065",
+    "unit_price": "37524.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00323",
+    "product_id": "PRD0117",
+    "supplier_id": "SUP0065",
+    "unit_price": "16758.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 12,
+    "id": "QTN00324",
+    "product_id": "PRD0118",
+    "supplier_id": "SUP0065",
+    "unit_price": "26344.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 42,
+    "id": "QTN00325",
+    "product_id": "PRD0119",
+    "supplier_id": "SUP0065",
+    "unit_price": "67980.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 12,
+    "id": "QTN00326",
+    "product_id": "PRD0116",
+    "supplier_id": "SUP0066",
+    "unit_price": "36108.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 41,
+    "id": "QTN00327",
+    "product_id": "PRD0117",
+    "supplier_id": "SUP0066",
+    "unit_price": "15582.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 6,
+    "id": "QTN00328",
+    "product_id": "PRD0118",
+    "supplier_id": "SUP0066",
+    "unit_price": "33744.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00329",
+    "product_id": "PRD0119",
+    "supplier_id": "SUP0066",
+    "unit_price": "67980.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00330",
+    "product_id": "PRD0120",
+    "supplier_id": "SUP0066",
+    "unit_price": "39396.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 11,
+    "id": "QTN00331",
+    "product_id": "PRD0117",
+    "supplier_id": "SUP0067",
+    "unit_price": "13377.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00332",
+    "product_id": "PRD0118",
+    "supplier_id": "SUP0067",
+    "unit_price": "29008.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00333",
+    "product_id": "PRD0119",
+    "supplier_id": "SUP0067",
+    "unit_price": "67980.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00334",
+    "product_id": "PRD0120",
+    "supplier_id": "SUP0067",
+    "unit_price": "40200.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 6,
+    "id": "QTN00335",
+    "product_id": "PRD0121",
+    "supplier_id": "SUP0067",
+    "unit_price": "26433.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 21,
+    "id": "QTN00336",
+    "product_id": "PRD0118",
+    "supplier_id": "SUP0068",
+    "unit_price": "29008.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00337",
+    "product_id": "PRD0119",
+    "supplier_id": "SUP0068",
+    "unit_price": "60060.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 1,
+    "id": "QTN00338",
+    "product_id": "PRD0120",
+    "supplier_id": "SUP0068",
+    "unit_price": "46230.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00339",
+    "product_id": "PRD0121",
+    "supplier_id": "SUP0068",
+    "unit_price": "32373.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00340",
+    "product_id": "PRD0122",
+    "supplier_id": "SUP0068",
+    "unit_price": "60282.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 24,
+    "id": "QTN00341",
+    "product_id": "PRD0119",
+    "supplier_id": "SUP0069",
+    "unit_price": "62040.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 32,
+    "id": "QTN00342",
+    "product_id": "PRD0120",
+    "supplier_id": "SUP0069",
+    "unit_price": "43014.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00343",
+    "product_id": "PRD0121",
+    "supplier_id": "SUP0069",
+    "unit_price": "32076.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00344",
+    "product_id": "PRD0122",
+    "supplier_id": "SUP0069",
+    "unit_price": "55554.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 29,
+    "id": "QTN00345",
+    "product_id": "PRD0123",
+    "supplier_id": "SUP0069",
+    "unit_price": "44620.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 8,
+    "id": "QTN00346",
+    "product_id": "PRD0120",
+    "supplier_id": "SUP0070",
+    "unit_price": "44220.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 39,
+    "id": "QTN00347",
+    "product_id": "PRD0121",
+    "supplier_id": "SUP0070",
+    "unit_price": "26136.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 11,
+    "id": "QTN00348",
+    "product_id": "PRD0122",
+    "supplier_id": "SUP0070",
+    "unit_price": "66783.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 1,
+    "id": "QTN00349",
+    "product_id": "PRD0123",
+    "supplier_id": "SUP0070",
+    "unit_price": "47045.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 6,
+    "id": "QTN00350",
+    "product_id": "PRD0124",
+    "supplier_id": "SUP0070",
+    "unit_price": "77490.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 8,
+    "id": "QTN00351",
+    "product_id": "PRD0121",
+    "supplier_id": "SUP0071",
+    "unit_price": "28215.00",
+    "valid_until": "2025-10-31"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 42,
+    "id": "QTN00352",
+    "product_id": "PRD0122",
+    "supplier_id": "SUP0071",
+    "unit_price": "60282.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 32,
+    "id": "QTN00353",
+    "product_id": "PRD0123",
+    "supplier_id": "SUP0071",
+    "unit_price": "55290.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 33,
+    "id": "QTN00354",
+    "product_id": "PRD0124",
+    "supplier_id": "SUP0071",
+    "unit_price": "81180.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00355",
+    "product_id": "PRD0125",
+    "supplier_id": "SUP0071",
+    "unit_price": "60390.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 75,
+    "id": "QTN00356",
+    "product_id": "PRD0122",
+    "supplier_id": "SUP0072",
+    "unit_price": "67374.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00357",
+    "product_id": "PRD0123",
+    "supplier_id": "SUP0072",
+    "unit_price": "46075.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 13,
+    "id": "QTN00358",
+    "product_id": "PRD0124",
+    "supplier_id": "SUP0072",
+    "unit_price": "67896.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 9,
+    "id": "QTN00359",
+    "product_id": "PRD0125",
+    "supplier_id": "SUP0072",
+    "unit_price": "58743.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 18,
+    "id": "QTN00360",
+    "product_id": "PRD0126",
+    "supplier_id": "SUP0072",
+    "unit_price": "25990.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00361",
+    "product_id": "PRD0123",
+    "supplier_id": "SUP0073",
+    "unit_price": "54320.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 33,
+    "id": "QTN00362",
+    "product_id": "PRD0124",
+    "supplier_id": "SUP0073",
+    "unit_price": "72324.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 1,
+    "id": "QTN00363",
+    "product_id": "PRD0125",
+    "supplier_id": "SUP0073",
+    "unit_price": "52704.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00364",
+    "product_id": "PRD0126",
+    "supplier_id": "SUP0073",
+    "unit_price": "21922.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 38,
+    "id": "QTN00365",
+    "product_id": "PRD0127",
+    "supplier_id": "SUP0073",
+    "unit_price": "40014.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 10,
+    "id": "QTN00366",
+    "product_id": "PRD0124",
+    "supplier_id": "SUP0074",
+    "unit_price": "80442.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 31,
+    "id": "QTN00367",
+    "product_id": "PRD0125",
+    "supplier_id": "SUP0074",
+    "unit_price": "55998.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00368",
+    "product_id": "PRD0126",
+    "supplier_id": "SUP0074",
+    "unit_price": "22374.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 25,
+    "id": "QTN00369",
+    "product_id": "PRD0127",
+    "supplier_id": "SUP0074",
+    "unit_price": "39312.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 13,
+    "id": "QTN00370",
+    "product_id": "PRD0128",
+    "supplier_id": "SUP0074",
+    "unit_price": "22644.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00371",
+    "product_id": "PRD0125",
+    "supplier_id": "SUP0075",
+    "unit_price": "60390.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00372",
+    "product_id": "PRD0126",
+    "supplier_id": "SUP0075",
+    "unit_price": "22600.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 31,
+    "id": "QTN00373",
+    "product_id": "PRD0127",
+    "supplier_id": "SUP0075",
+    "unit_price": "31239.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 25,
+    "id": "QTN00374",
+    "product_id": "PRD0128",
+    "supplier_id": "SUP0075",
+    "unit_price": "24420.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 42,
+    "id": "QTN00375",
+    "product_id": "PRD0129",
+    "supplier_id": "SUP0075",
+    "unit_price": "33200.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 3,
+    "id": "QTN00376",
+    "product_id": "PRD0151",
+    "supplier_id": "SUP0076",
+    "unit_price": "2300.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 38,
+    "id": "QTN00377",
+    "product_id": "PRD0152",
+    "supplier_id": "SUP0076",
+    "unit_price": "2300.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 7,
+    "id": "QTN00378",
+    "product_id": "PRD0153",
+    "supplier_id": "SUP0076",
+    "unit_price": "3822.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 29,
+    "id": "QTN00379",
+    "product_id": "PRD0154",
+    "supplier_id": "SUP0076",
+    "unit_price": "3450.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00380",
+    "product_id": "PRD0155",
+    "supplier_id": "SUP0076",
+    "unit_price": "3094.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 10,
+    "id": "QTN00381",
+    "product_id": "PRD0152",
+    "supplier_id": "SUP0077",
+    "unit_price": "2200.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 42,
+    "id": "QTN00382",
+    "product_id": "PRD0153",
+    "supplier_id": "SUP0077",
+    "unit_price": "3939.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 31,
+    "id": "QTN00383",
+    "product_id": "PRD0154",
+    "supplier_id": "SUP0077",
+    "unit_price": "2760.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 22,
+    "id": "QTN00384",
+    "product_id": "PRD0155",
+    "supplier_id": "SUP0077",
+    "unit_price": "3842.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00385",
+    "product_id": "PRD0156",
+    "supplier_id": "SUP0077",
+    "unit_price": "1819.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 22,
+    "id": "QTN00386",
+    "product_id": "PRD0153",
+    "supplier_id": "SUP0078",
+    "unit_price": "4212.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00387",
+    "product_id": "PRD0154",
+    "supplier_id": "SUP0078",
+    "unit_price": "3450.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 41,
+    "id": "QTN00388",
+    "product_id": "PRD0155",
+    "supplier_id": "SUP0078",
+    "unit_price": "3400.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 32,
+    "id": "QTN00389",
+    "product_id": "PRD0156",
+    "supplier_id": "SUP0078",
+    "unit_price": "1870.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 3,
+    "id": "QTN00390",
+    "product_id": "PRD0157",
+    "supplier_id": "SUP0078",
+    "unit_price": "4140.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00391",
+    "product_id": "PRD0154",
+    "supplier_id": "SUP0079",
+    "unit_price": "3210.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 19,
+    "id": "QTN00392",
+    "product_id": "PRD0155",
+    "supplier_id": "SUP0079",
+    "unit_price": "3672.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 6,
+    "id": "QTN00393",
+    "product_id": "PRD0156",
+    "supplier_id": "SUP0079",
+    "unit_price": "1615.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 41,
+    "id": "QTN00394",
+    "product_id": "PRD0157",
+    "supplier_id": "SUP0079",
+    "unit_price": "3636.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 7,
+    "id": "QTN00395",
+    "product_id": "PRD0158",
+    "supplier_id": "SUP0079",
+    "unit_price": "110.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00396",
+    "product_id": "PRD0155",
+    "supplier_id": "SUP0080",
+    "unit_price": "3468.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 3,
+    "id": "QTN00397",
+    "product_id": "PRD0156",
+    "supplier_id": "SUP0080",
+    "unit_price": "1649.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00398",
+    "product_id": "PRD0157",
+    "supplier_id": "SUP0080",
+    "unit_price": "3528.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 5,
+    "currency": "INR",
+    "delivery_days": 24,
+    "id": "QTN00399",
+    "product_id": "PRD0158",
+    "supplier_id": "SUP0080",
+    "unit_price": "97.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00400",
+    "product_id": "PRD0159",
+    "supplier_id": "SUP0080",
+    "unit_price": "4444.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00401",
+    "product_id": "PRD0156",
+    "supplier_id": "SUP0081",
+    "unit_price": "1768.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 12,
+    "id": "QTN00402",
+    "product_id": "PRD0157",
+    "supplier_id": "SUP0081",
+    "unit_price": "3924.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 6,
+    "id": "QTN00403",
+    "product_id": "PRD0158",
+    "supplier_id": "SUP0081",
+    "unit_price": "93.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 25,
+    "id": "QTN00404",
+    "product_id": "PRD0159",
+    "supplier_id": "SUP0081",
+    "unit_price": "4708.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00405",
+    "product_id": "PRD0160",
+    "supplier_id": "SUP0081",
+    "unit_price": "5029.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 10,
+    "id": "QTN00406",
+    "product_id": "PRD0157",
+    "supplier_id": "SUP0082",
+    "unit_price": "3708.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 41,
+    "id": "QTN00407",
+    "product_id": "PRD0158",
+    "supplier_id": "SUP0082",
+    "unit_price": "95.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 17,
+    "id": "QTN00408",
+    "product_id": "PRD0159",
+    "supplier_id": "SUP0082",
+    "unit_price": "4224.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00409",
+    "product_id": "PRD0160",
+    "supplier_id": "SUP0082",
+    "unit_price": "5123.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00410",
+    "product_id": "PRD0161",
+    "supplier_id": "SUP0082",
+    "unit_price": "776.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 29,
+    "id": "QTN00411",
+    "product_id": "PRD0158",
+    "supplier_id": "SUP0083",
+    "unit_price": "93.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00412",
+    "product_id": "PRD0159",
+    "supplier_id": "SUP0083",
+    "unit_price": "4356.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00413",
+    "product_id": "PRD0160",
+    "supplier_id": "SUP0083",
+    "unit_price": "3760.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00414",
+    "product_id": "PRD0161",
+    "supplier_id": "SUP0083",
+    "unit_price": "768.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 31,
+    "id": "QTN00415",
+    "product_id": "PRD0162",
+    "supplier_id": "SUP0083",
+    "unit_price": "4136.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 25,
+    "id": "QTN00416",
+    "product_id": "PRD0159",
+    "supplier_id": "SUP0084",
+    "unit_price": "4004.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00417",
+    "product_id": "PRD0160",
+    "supplier_id": "SUP0084",
+    "unit_price": "4982.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 19,
+    "id": "QTN00418",
+    "product_id": "PRD0161",
+    "supplier_id": "SUP0084",
+    "unit_price": "776.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00419",
+    "product_id": "PRD0162",
+    "supplier_id": "SUP0084",
+    "unit_price": "3872.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 1,
+    "id": "QTN00420",
+    "product_id": "PRD0163",
+    "supplier_id": "SUP0084",
+    "unit_price": "3500.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 44,
+    "id": "QTN00421",
+    "product_id": "PRD0160",
+    "supplier_id": "SUP0085",
+    "unit_price": "4982.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00422",
+    "product_id": "PRD0161",
+    "supplier_id": "SUP0085",
+    "unit_price": "896.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 32,
+    "id": "QTN00423",
+    "product_id": "PRD0162",
+    "supplier_id": "SUP0085",
+    "unit_price": "4708.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 15,
+    "id": "QTN00424",
+    "product_id": "PRD0163",
+    "supplier_id": "SUP0085",
+    "unit_price": "3990.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 23,
+    "id": "QTN00425",
+    "product_id": "PRD0164",
+    "supplier_id": "SUP0085",
+    "unit_price": "5243.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 13,
+    "id": "QTN00426",
+    "product_id": "PRD0161",
+    "supplier_id": "SUP0086",
+    "unit_price": "760.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 44,
+    "id": "QTN00427",
+    "product_id": "PRD0162",
+    "supplier_id": "SUP0086",
+    "unit_price": "4708.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00428",
+    "product_id": "PRD0163",
+    "supplier_id": "SUP0086",
+    "unit_price": "3920.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 9,
+    "id": "QTN00429",
+    "product_id": "PRD0164",
+    "supplier_id": "SUP0086",
+    "unit_price": "5341.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 41,
+    "id": "QTN00430",
+    "product_id": "PRD0165",
+    "supplier_id": "SUP0086",
+    "unit_price": "1944.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00431",
+    "product_id": "PRD0162",
+    "supplier_id": "SUP0087",
+    "unit_price": "4752.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 3,
+    "id": "QTN00432",
+    "product_id": "PRD0163",
+    "supplier_id": "SUP0087",
+    "unit_price": "3955.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 9,
+    "id": "QTN00433",
+    "product_id": "PRD0164",
+    "supplier_id": "SUP0087",
+    "unit_price": "5194.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 21,
+    "id": "QTN00434",
+    "product_id": "PRD0165",
+    "supplier_id": "SUP0087",
+    "unit_price": "1620.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 12,
+    "id": "QTN00435",
+    "product_id": "PRD0166",
+    "supplier_id": "SUP0087",
+    "unit_price": "5550.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00436",
+    "product_id": "PRD0163",
+    "supplier_id": "SUP0088",
+    "unit_price": "3290.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 33,
+    "id": "QTN00437",
+    "product_id": "PRD0164",
+    "supplier_id": "SUP0088",
+    "unit_price": "4851.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 11,
+    "id": "QTN00438",
+    "product_id": "PRD0165",
+    "supplier_id": "SUP0088",
+    "unit_price": "1728.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 31,
+    "id": "QTN00439",
+    "product_id": "PRD0166",
+    "supplier_id": "SUP0088",
+    "unit_price": "4800.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 22,
+    "id": "QTN00440",
+    "product_id": "PRD0167",
+    "supplier_id": "SUP0088",
+    "unit_price": "4746.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00441",
+    "product_id": "PRD0164",
+    "supplier_id": "SUP0089",
+    "unit_price": "5537.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 15,
+    "id": "QTN00442",
+    "product_id": "PRD0165",
+    "supplier_id": "SUP0089",
+    "unit_price": "1620.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 44,
+    "id": "QTN00443",
+    "product_id": "PRD0166",
+    "supplier_id": "SUP0089",
+    "unit_price": "5750.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 1,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00444",
+    "product_id": "PRD0167",
+    "supplier_id": "SUP0089",
+    "unit_price": "4200.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00445",
+    "product_id": "PRD0168",
+    "supplier_id": "SUP0089",
+    "unit_price": "2178.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 35,
+    "id": "QTN00446",
+    "product_id": "PRD0165",
+    "supplier_id": "SUP0090",
+    "unit_price": "1584.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 24,
+    "id": "QTN00447",
+    "product_id": "PRD0166",
+    "supplier_id": "SUP0090",
+    "unit_price": "4550.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 44,
+    "id": "QTN00448",
+    "product_id": "PRD0167",
+    "supplier_id": "SUP0090",
+    "unit_price": "4578.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 25,
+    "id": "QTN00449",
+    "product_id": "PRD0168",
+    "supplier_id": "SUP0090",
+    "unit_price": "2112.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 24,
+    "id": "QTN00450",
+    "product_id": "PRD0169",
+    "supplier_id": "SUP0090",
+    "unit_price": "912.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 15,
+    "id": "QTN00451",
+    "product_id": "PRD0166",
+    "supplier_id": "SUP0091",
+    "unit_price": "4550.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 40,
+    "id": "QTN00452",
+    "product_id": "PRD0167",
+    "supplier_id": "SUP0091",
+    "unit_price": "4326.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 40,
+    "id": "QTN00453",
+    "product_id": "PRD0168",
+    "supplier_id": "SUP0091",
+    "unit_price": "2310.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00454",
+    "product_id": "PRD0169",
+    "supplier_id": "SUP0091",
+    "unit_price": "760.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00455",
+    "product_id": "PRD0170",
+    "supplier_id": "SUP0091",
+    "unit_price": "2052.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 42,
+    "id": "QTN00456",
+    "product_id": "PRD0167",
+    "supplier_id": "SUP0092",
+    "unit_price": "4620.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 9,
+    "id": "QTN00457",
+    "product_id": "PRD0168",
+    "supplier_id": "SUP0092",
+    "unit_price": "2222.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 20,
+    "id": "QTN00458",
+    "product_id": "PRD0169",
+    "supplier_id": "SUP0092",
+    "unit_price": "712.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 7,
+    "id": "QTN00459",
+    "product_id": "PRD0170",
+    "supplier_id": "SUP0092",
+    "unit_price": "1957.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 9,
+    "id": "QTN00460",
+    "product_id": "PRD0171",
+    "supplier_id": "SUP0092",
+    "unit_price": "2660.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 24,
+    "id": "QTN00461",
+    "product_id": "PRD0168",
+    "supplier_id": "SUP0093",
+    "unit_price": "2200.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 45,
+    "id": "QTN00462",
+    "product_id": "PRD0169",
+    "supplier_id": "SUP0093",
+    "unit_price": "872.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 38,
+    "id": "QTN00463",
+    "product_id": "PRD0170",
+    "supplier_id": "SUP0093",
+    "unit_price": "1995.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 10,
+    "id": "QTN00464",
+    "product_id": "PRD0171",
+    "supplier_id": "SUP0093",
+    "unit_price": "3108.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 7,
+    "id": "QTN00465",
+    "product_id": "PRD0172",
+    "supplier_id": "SUP0093",
+    "unit_price": "1111.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 40,
+    "id": "QTN00466",
+    "product_id": "PRD0169",
+    "supplier_id": "SUP0094",
+    "unit_price": "912.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 3,
+    "id": "QTN00467",
+    "product_id": "PRD0170",
+    "supplier_id": "SUP0094",
+    "unit_price": "1919.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 14,
+    "id": "QTN00468",
+    "product_id": "PRD0171",
+    "supplier_id": "SUP0094",
+    "unit_price": "3080.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00469",
+    "product_id": "PRD0172",
+    "supplier_id": "SUP0094",
+    "unit_price": "1122.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 7,
+    "id": "QTN00470",
+    "product_id": "PRD0173",
+    "supplier_id": "SUP0094",
+    "unit_price": "3450.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 90,
+    "id": "QTN00471",
+    "product_id": "PRD0170",
+    "supplier_id": "SUP0095",
+    "unit_price": "2071.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00472",
+    "product_id": "PRD0171",
+    "supplier_id": "SUP0095",
+    "unit_price": "3024.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 13,
+    "id": "QTN00473",
+    "product_id": "PRD0172",
+    "supplier_id": "SUP0095",
+    "unit_price": "1100.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00474",
+    "product_id": "PRD0173",
+    "supplier_id": "SUP0095",
+    "unit_price": "2730.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 14,
+    "id": "QTN00475",
+    "product_id": "PRD0174",
+    "supplier_id": "SUP0095",
+    "unit_price": "90.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 39,
+    "id": "QTN00476",
+    "product_id": "PRD0171",
+    "supplier_id": "SUP0096",
+    "unit_price": "3024.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 22,
+    "id": "QTN00477",
+    "product_id": "PRD0172",
+    "supplier_id": "SUP0096",
+    "unit_price": "968.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 37,
+    "id": "QTN00478",
+    "product_id": "PRD0173",
+    "supplier_id": "SUP0096",
+    "unit_price": "2850.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 36,
+    "id": "QTN00479",
+    "product_id": "PRD0174",
+    "supplier_id": "SUP0096",
+    "unit_price": "94.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 14,
+    "id": "QTN00480",
+    "product_id": "PRD0175",
+    "supplier_id": "SUP0096",
+    "unit_price": "4418.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 15,
+    "id": "QTN00481",
+    "product_id": "PRD0172",
+    "supplier_id": "SUP0097",
+    "unit_price": "1254.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 10,
+    "id": "QTN00482",
+    "product_id": "PRD0173",
+    "supplier_id": "SUP0097",
+    "unit_price": "2940.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 1,
+    "id": "QTN00483",
+    "product_id": "PRD0174",
+    "supplier_id": "SUP0097",
+    "unit_price": "113.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 10,
+    "id": "QTN00484",
+    "product_id": "PRD0175",
+    "supplier_id": "SUP0097",
+    "unit_price": "4512.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 17,
+    "id": "QTN00485",
+    "product_id": "PRD0176",
+    "supplier_id": "SUP0097",
+    "unit_price": "4324.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 150,
+    "currency": "INR",
+    "delivery_days": 8,
+    "id": "QTN00486",
+    "product_id": "PRD0173",
+    "supplier_id": "SUP0098",
+    "unit_price": "3390.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 2,
+    "id": "QTN00487",
+    "product_id": "PRD0174",
+    "supplier_id": "SUP0098",
+    "unit_price": "109.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 23,
+    "id": "QTN00488",
+    "product_id": "PRD0175",
+    "supplier_id": "SUP0098",
+    "unit_price": "4324.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 16,
+    "id": "QTN00489",
+    "product_id": "PRD0176",
+    "supplier_id": "SUP0098",
+    "unit_price": "5311.00",
+    "valid_until": "2025-12-31"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 2,
+    "id": "QTN00490",
+    "product_id": "PRD0177",
+    "supplier_id": "SUP0098",
+    "unit_price": "1802.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00491",
+    "product_id": "PRD0174",
+    "supplier_id": "SUP0099",
+    "unit_price": "93.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 500,
+    "currency": "INR",
+    "delivery_days": 27,
+    "id": "QTN00492",
+    "product_id": "PRD0175",
+    "supplier_id": "SUP0099",
+    "unit_price": "4324.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 5,
+    "id": "QTN00493",
+    "product_id": "PRD0176",
+    "supplier_id": "SUP0099",
+    "unit_price": "4888.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 250,
+    "currency": "INR",
+    "delivery_days": 24,
+    "id": "QTN00494",
+    "product_id": "PRD0177",
+    "supplier_id": "SUP0099",
+    "unit_price": "1751.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 7,
+    "id": "QTN00495",
+    "product_id": "PRD0178",
+    "supplier_id": "SUP0099",
+    "unit_price": "3432.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 300,
+    "currency": "INR",
+    "delivery_days": 15,
+    "id": "QTN00496",
+    "product_id": "PRD0175",
+    "supplier_id": "SUP0100",
+    "unit_price": "4794.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 43,
+    "id": "QTN00497",
+    "product_id": "PRD0176",
+    "supplier_id": "SUP0100",
+    "unit_price": "5029.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 200,
+    "currency": "INR",
+    "delivery_days": 30,
+    "id": "QTN00498",
+    "product_id": "PRD0177",
+    "supplier_id": "SUP0100",
+    "unit_price": "1768.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 100,
+    "currency": "INR",
+    "delivery_days": 4,
+    "id": "QTN00499",
+    "product_id": "PRD0178",
+    "supplier_id": "SUP0100",
+    "unit_price": "3564.00",
+    "valid_until": "2026-04-01"
+  },
+  {
+    "available_quantity": 750,
+    "currency": "INR",
+    "delivery_days": 26,
+    "id": "QTN00500",
+    "product_id": "PRD0179",
+    "supplier_id": "SUP0100",
+    "unit_price": "5047.00",
+    "valid_until": "2026-04-01"
+  }
+]

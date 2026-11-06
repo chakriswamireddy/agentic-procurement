@@ -1,0 +1,2202 @@
+[
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0001",
+    "name": "Essential Monitor",
+    "sku": "SKU-ELEC-0001"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0002",
+    "name": "Essential Router",
+    "sku": "SKU-ELEC-0002"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0003",
+    "name": "Essential Projector",
+    "sku": "SKU-ELEC-0003"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0004",
+    "name": "Essential Camera",
+    "sku": "SKU-ELEC-0004"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0005",
+    "name": "Essential Speaker",
+    "sku": "SKU-ELEC-0005"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0006",
+    "name": "Compact Monitor",
+    "sku": "SKU-ELEC-0006"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0007",
+    "name": "Compact Router",
+    "sku": "SKU-ELEC-0007"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0008",
+    "name": "Compact Projector",
+    "sku": "SKU-ELEC-0008"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0009",
+    "name": "Compact Camera",
+    "sku": "SKU-ELEC-0009"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0010",
+    "name": "Compact Speaker",
+    "sku": "SKU-ELEC-0010"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0011",
+    "name": "Premium Monitor",
+    "sku": "SKU-ELEC-0011"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0012",
+    "name": "Premium Router",
+    "sku": "SKU-ELEC-0012"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0013",
+    "name": "Premium Projector",
+    "sku": "SKU-ELEC-0013"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0014",
+    "name": "Premium Camera",
+    "sku": "SKU-ELEC-0014"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0015",
+    "name": "Premium Speaker",
+    "sku": "SKU-ELEC-0015"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0016",
+    "name": "Standard Monitor",
+    "sku": "SKU-ELEC-0016"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0017",
+    "name": "Standard Router",
+    "sku": "SKU-ELEC-0017"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0018",
+    "name": "Standard Projector",
+    "sku": "SKU-ELEC-0018"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0019",
+    "name": "Standard Camera",
+    "sku": "SKU-ELEC-0019"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0020",
+    "name": "Standard Speaker",
+    "sku": "SKU-ELEC-0020"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0021",
+    "name": "Advanced Monitor",
+    "sku": "SKU-ELEC-0021"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0022",
+    "name": "Advanced Router",
+    "sku": "SKU-ELEC-0022"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0023",
+    "name": "Advanced Projector",
+    "sku": "SKU-ELEC-0023"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0024",
+    "name": "Advanced Camera",
+    "sku": "SKU-ELEC-0024"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0025",
+    "name": "Advanced Speaker",
+    "sku": "SKU-ELEC-0025"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0026",
+    "name": "Professional Monitor",
+    "sku": "SKU-ELEC-0026"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0027",
+    "name": "Professional Router",
+    "sku": "SKU-ELEC-0027"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0028",
+    "name": "Professional Projector",
+    "sku": "SKU-ELEC-0028"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0029",
+    "name": "Professional Camera",
+    "sku": "SKU-ELEC-0029"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0030",
+    "name": "Professional Speaker",
+    "sku": "SKU-ELEC-0030"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0031",
+    "name": "Eco Monitor",
+    "sku": "SKU-ELEC-0031"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0032",
+    "name": "Eco Router",
+    "sku": "SKU-ELEC-0032"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0033",
+    "name": "Eco Projector",
+    "sku": "SKU-ELEC-0033"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0034",
+    "name": "Eco Camera",
+    "sku": "SKU-ELEC-0034"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0035",
+    "name": "Eco Speaker",
+    "sku": "SKU-ELEC-0035"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0036",
+    "name": "Executive Monitor",
+    "sku": "SKU-ELEC-0036"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0037",
+    "name": "Executive Router",
+    "sku": "SKU-ELEC-0037"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0038",
+    "name": "Executive Projector",
+    "sku": "SKU-ELEC-0038"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0039",
+    "name": "Executive Camera",
+    "sku": "SKU-ELEC-0039"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0040",
+    "name": "Executive Speaker",
+    "sku": "SKU-ELEC-0040"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0041",
+    "name": "Value Monitor",
+    "sku": "SKU-ELEC-0041"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0042",
+    "name": "Value Router",
+    "sku": "SKU-ELEC-0042"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0043",
+    "name": "Value Projector",
+    "sku": "SKU-ELEC-0043"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0044",
+    "name": "Value Camera",
+    "sku": "SKU-ELEC-0044"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0045",
+    "name": "Value Speaker",
+    "sku": "SKU-ELEC-0045"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0046",
+    "name": "Enterprise Monitor",
+    "sku": "SKU-ELEC-0046"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0047",
+    "name": "Enterprise Router",
+    "sku": "SKU-ELEC-0047"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0048",
+    "name": "Enterprise Projector",
+    "sku": "SKU-ELEC-0048"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0049",
+    "name": "Enterprise Camera",
+    "sku": "SKU-ELEC-0049"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Electronics",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "electronics",
+    "id": "PRD0050",
+    "name": "Enterprise Speaker",
+    "sku": "SKU-ELEC-0050"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0051",
+    "name": "Essential Desk",
+    "sku": "SKU-FURN-0001"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0052",
+    "name": "Essential Chair",
+    "sku": "SKU-FURN-0002"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0053",
+    "name": "Essential Cabinet",
+    "sku": "SKU-FURN-0003"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0054",
+    "name": "Essential Table",
+    "sku": "SKU-FURN-0004"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0055",
+    "name": "Essential Shelf",
+    "sku": "SKU-FURN-0005"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0056",
+    "name": "Compact Desk",
+    "sku": "SKU-FURN-0006"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0057",
+    "name": "Compact Chair",
+    "sku": "SKU-FURN-0007"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0058",
+    "name": "Compact Cabinet",
+    "sku": "SKU-FURN-0008"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0059",
+    "name": "Compact Table",
+    "sku": "SKU-FURN-0009"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0060",
+    "name": "Compact Shelf",
+    "sku": "SKU-FURN-0010"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0061",
+    "name": "Premium Desk",
+    "sku": "SKU-FURN-0011"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0062",
+    "name": "Premium Chair",
+    "sku": "SKU-FURN-0012"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0063",
+    "name": "Premium Cabinet",
+    "sku": "SKU-FURN-0013"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0064",
+    "name": "Premium Table",
+    "sku": "SKU-FURN-0014"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0065",
+    "name": "Premium Shelf",
+    "sku": "SKU-FURN-0015"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0066",
+    "name": "Standard Desk",
+    "sku": "SKU-FURN-0016"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0067",
+    "name": "Standard Chair",
+    "sku": "SKU-FURN-0017"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0068",
+    "name": "Standard Cabinet",
+    "sku": "SKU-FURN-0018"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0069",
+    "name": "Standard Table",
+    "sku": "SKU-FURN-0019"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0070",
+    "name": "Standard Shelf",
+    "sku": "SKU-FURN-0020"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0071",
+    "name": "Advanced Desk",
+    "sku": "SKU-FURN-0021"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0072",
+    "name": "Advanced Chair",
+    "sku": "SKU-FURN-0022"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0073",
+    "name": "Advanced Cabinet",
+    "sku": "SKU-FURN-0023"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0074",
+    "name": "Advanced Table",
+    "sku": "SKU-FURN-0024"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0075",
+    "name": "Advanced Shelf",
+    "sku": "SKU-FURN-0025"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0076",
+    "name": "Professional Desk",
+    "sku": "SKU-FURN-0026"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0077",
+    "name": "Professional Chair",
+    "sku": "SKU-FURN-0027"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0078",
+    "name": "Professional Cabinet",
+    "sku": "SKU-FURN-0028"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0079",
+    "name": "Professional Table",
+    "sku": "SKU-FURN-0029"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0080",
+    "name": "Professional Shelf",
+    "sku": "SKU-FURN-0030"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0081",
+    "name": "Eco Desk",
+    "sku": "SKU-FURN-0031"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0082",
+    "name": "Eco Chair",
+    "sku": "SKU-FURN-0032"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0083",
+    "name": "Eco Cabinet",
+    "sku": "SKU-FURN-0033"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0084",
+    "name": "Eco Table",
+    "sku": "SKU-FURN-0034"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0085",
+    "name": "Eco Shelf",
+    "sku": "SKU-FURN-0035"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0086",
+    "name": "Executive Desk",
+    "sku": "SKU-FURN-0036"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0087",
+    "name": "Executive Chair",
+    "sku": "SKU-FURN-0037"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0088",
+    "name": "Executive Cabinet",
+    "sku": "SKU-FURN-0038"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0089",
+    "name": "Executive Table",
+    "sku": "SKU-FURN-0039"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0090",
+    "name": "Executive Shelf",
+    "sku": "SKU-FURN-0040"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0091",
+    "name": "Value Desk",
+    "sku": "SKU-FURN-0041"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0092",
+    "name": "Value Chair",
+    "sku": "SKU-FURN-0042"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0093",
+    "name": "Value Cabinet",
+    "sku": "SKU-FURN-0043"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0094",
+    "name": "Value Table",
+    "sku": "SKU-FURN-0044"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0095",
+    "name": "Value Shelf",
+    "sku": "SKU-FURN-0045"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0096",
+    "name": "Enterprise Desk",
+    "sku": "SKU-FURN-0046"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0097",
+    "name": "Enterprise Chair",
+    "sku": "SKU-FURN-0047"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0098",
+    "name": "Enterprise Cabinet",
+    "sku": "SKU-FURN-0048"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0099",
+    "name": "Enterprise Table",
+    "sku": "SKU-FURN-0049"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Furniture",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "furniture",
+    "id": "PRD0100",
+    "name": "Enterprise Shelf",
+    "sku": "SKU-FURN-0050"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0101",
+    "name": "Essential Desktop",
+    "sku": "SKU-IT-0001"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0102",
+    "name": "Essential Server",
+    "sku": "SKU-IT-0002"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0103",
+    "name": "Essential Dock",
+    "sku": "SKU-IT-0003"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0104",
+    "name": "Essential Laptop",
+    "sku": "SKU-IT-0004"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0105",
+    "name": "Essential Monitor",
+    "sku": "SKU-IT-0005"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0106",
+    "name": "Compact Desktop",
+    "sku": "SKU-IT-0006"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0107",
+    "name": "Compact Server",
+    "sku": "SKU-IT-0007"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0108",
+    "name": "Compact Dock",
+    "sku": "SKU-IT-0008"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0109",
+    "name": "Compact Laptop",
+    "sku": "SKU-IT-0009"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0110",
+    "name": "Compact Monitor",
+    "sku": "SKU-IT-0010"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0111",
+    "name": "Premium Desktop",
+    "sku": "SKU-IT-0011"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0112",
+    "name": "Premium Server",
+    "sku": "SKU-IT-0012"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0113",
+    "name": "Premium Dock",
+    "sku": "SKU-IT-0013"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0114",
+    "name": "Premium Laptop",
+    "sku": "SKU-IT-0014"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0115",
+    "name": "Premium Monitor",
+    "sku": "SKU-IT-0015"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0116",
+    "name": "Standard Desktop",
+    "sku": "SKU-IT-0016"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0117",
+    "name": "Standard Server",
+    "sku": "SKU-IT-0017"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0118",
+    "name": "Standard Dock",
+    "sku": "SKU-IT-0018"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0119",
+    "name": "Standard Laptop",
+    "sku": "SKU-IT-0019"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0120",
+    "name": "Standard Monitor",
+    "sku": "SKU-IT-0020"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0121",
+    "name": "Advanced Desktop",
+    "sku": "SKU-IT-0021"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0122",
+    "name": "Advanced Server",
+    "sku": "SKU-IT-0022"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0123",
+    "name": "Advanced Dock",
+    "sku": "SKU-IT-0023"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0124",
+    "name": "Advanced Laptop",
+    "sku": "SKU-IT-0024"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0125",
+    "name": "Advanced Monitor",
+    "sku": "SKU-IT-0025"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0126",
+    "name": "Professional Desktop",
+    "sku": "SKU-IT-0026"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0127",
+    "name": "Professional Server",
+    "sku": "SKU-IT-0027"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0128",
+    "name": "Professional Dock",
+    "sku": "SKU-IT-0028"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0129",
+    "name": "Professional Laptop",
+    "sku": "SKU-IT-0029"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0130",
+    "name": "Professional Monitor",
+    "sku": "SKU-IT-0030"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0131",
+    "name": "Eco Desktop",
+    "sku": "SKU-IT-0031"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0132",
+    "name": "Eco Server",
+    "sku": "SKU-IT-0032"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0133",
+    "name": "Eco Dock",
+    "sku": "SKU-IT-0033"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0134",
+    "name": "Eco Laptop",
+    "sku": "SKU-IT-0034"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0135",
+    "name": "Eco Monitor",
+    "sku": "SKU-IT-0035"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0136",
+    "name": "Executive Desktop",
+    "sku": "SKU-IT-0036"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0137",
+    "name": "Executive Server",
+    "sku": "SKU-IT-0037"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0138",
+    "name": "Executive Dock",
+    "sku": "SKU-IT-0038"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0139",
+    "name": "Executive Laptop",
+    "sku": "SKU-IT-0039"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0140",
+    "name": "Executive Monitor",
+    "sku": "SKU-IT-0040"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0141",
+    "name": "Value Desktop",
+    "sku": "SKU-IT-0041"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0142",
+    "name": "Value Server",
+    "sku": "SKU-IT-0042"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0143",
+    "name": "Value Dock",
+    "sku": "SKU-IT-0043"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0144",
+    "name": "Value Laptop",
+    "sku": "SKU-IT-0044"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0145",
+    "name": "Value Monitor",
+    "sku": "SKU-IT-0045"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0146",
+    "name": "Enterprise Desktop",
+    "sku": "SKU-IT-0046"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0147",
+    "name": "Enterprise Server",
+    "sku": "SKU-IT-0047"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0148",
+    "name": "Enterprise Dock",
+    "sku": "SKU-IT-0048"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0149",
+    "name": "Enterprise Laptop",
+    "sku": "SKU-IT-0049"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo It Hardware",
+      "unit": "each",
+      "warranty_months": 24
+    },
+    "category": "it_hardware",
+    "id": "PRD0150",
+    "name": "Enterprise Monitor",
+    "sku": "SKU-IT-0050"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0151",
+    "name": "Essential Paper",
+    "sku": "SKU-OFF-0001"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0152",
+    "name": "Essential Pen",
+    "sku": "SKU-OFF-0002"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0153",
+    "name": "Essential Toner",
+    "sku": "SKU-OFF-0003"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0154",
+    "name": "Essential Folder",
+    "sku": "SKU-OFF-0004"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0155",
+    "name": "Essential Notebook",
+    "sku": "SKU-OFF-0005"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0156",
+    "name": "Compact Paper",
+    "sku": "SKU-OFF-0006"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0157",
+    "name": "Compact Pen",
+    "sku": "SKU-OFF-0007"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0158",
+    "name": "Compact Toner",
+    "sku": "SKU-OFF-0008"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0159",
+    "name": "Compact Folder",
+    "sku": "SKU-OFF-0009"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0160",
+    "name": "Compact Notebook",
+    "sku": "SKU-OFF-0010"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0161",
+    "name": "Premium Paper",
+    "sku": "SKU-OFF-0011"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0162",
+    "name": "Premium Pen",
+    "sku": "SKU-OFF-0012"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0163",
+    "name": "Premium Toner",
+    "sku": "SKU-OFF-0013"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0164",
+    "name": "Premium Folder",
+    "sku": "SKU-OFF-0014"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0165",
+    "name": "Premium Notebook",
+    "sku": "SKU-OFF-0015"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0166",
+    "name": "Standard Paper",
+    "sku": "SKU-OFF-0016"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0167",
+    "name": "Standard Pen",
+    "sku": "SKU-OFF-0017"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0168",
+    "name": "Standard Toner",
+    "sku": "SKU-OFF-0018"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0169",
+    "name": "Standard Folder",
+    "sku": "SKU-OFF-0019"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0170",
+    "name": "Standard Notebook",
+    "sku": "SKU-OFF-0020"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0171",
+    "name": "Advanced Paper",
+    "sku": "SKU-OFF-0021"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0172",
+    "name": "Advanced Pen",
+    "sku": "SKU-OFF-0022"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0173",
+    "name": "Advanced Toner",
+    "sku": "SKU-OFF-0023"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0174",
+    "name": "Advanced Folder",
+    "sku": "SKU-OFF-0024"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0175",
+    "name": "Advanced Notebook",
+    "sku": "SKU-OFF-0025"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0176",
+    "name": "Professional Paper",
+    "sku": "SKU-OFF-0026"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0177",
+    "name": "Professional Pen",
+    "sku": "SKU-OFF-0027"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0178",
+    "name": "Professional Toner",
+    "sku": "SKU-OFF-0028"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0179",
+    "name": "Professional Folder",
+    "sku": "SKU-OFF-0029"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0180",
+    "name": "Professional Notebook",
+    "sku": "SKU-OFF-0030"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0181",
+    "name": "Eco Paper",
+    "sku": "SKU-OFF-0031"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0182",
+    "name": "Eco Pen",
+    "sku": "SKU-OFF-0032"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0183",
+    "name": "Eco Toner",
+    "sku": "SKU-OFF-0033"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0184",
+    "name": "Eco Folder",
+    "sku": "SKU-OFF-0034"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0185",
+    "name": "Eco Notebook",
+    "sku": "SKU-OFF-0035"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0186",
+    "name": "Executive Paper",
+    "sku": "SKU-OFF-0036"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0187",
+    "name": "Executive Pen",
+    "sku": "SKU-OFF-0037"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0188",
+    "name": "Executive Toner",
+    "sku": "SKU-OFF-0038"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0189",
+    "name": "Executive Folder",
+    "sku": "SKU-OFF-0039"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0190",
+    "name": "Executive Notebook",
+    "sku": "SKU-OFF-0040"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0191",
+    "name": "Value Paper",
+    "sku": "SKU-OFF-0041"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0192",
+    "name": "Value Pen",
+    "sku": "SKU-OFF-0042"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0193",
+    "name": "Value Toner",
+    "sku": "SKU-OFF-0043"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0194",
+    "name": "Value Folder",
+    "sku": "SKU-OFF-0044"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0195",
+    "name": "Value Notebook",
+    "sku": "SKU-OFF-0045"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0196",
+    "name": "Enterprise Paper",
+    "sku": "SKU-OFF-0046"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0197",
+    "name": "Enterprise Pen",
+    "sku": "SKU-OFF-0047"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0198",
+    "name": "Enterprise Toner",
+    "sku": "SKU-OFF-0048"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0199",
+    "name": "Enterprise Folder",
+    "sku": "SKU-OFF-0049"
+  },
+  {
+    "attributes_json": {
+      "brand": "Demo Office Supplies",
+      "unit": "each",
+      "warranty_months": 12
+    },
+    "category": "office_supplies",
+    "id": "PRD0200",
+    "name": "Enterprise Notebook",
+    "sku": "SKU-OFF-0050"
+  }
+]
