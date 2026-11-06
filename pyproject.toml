@@ -1,0 +1,48 @@
+[project]
+name = "agentic-procurement"
+version = "0.1.0"
+description = "Agentic procurement platform: local-first reference implementation"
+requires-python = ">=3.12"
+dependencies = [
+    "asyncpg>=0.32.0",
+    "fastapi>=0.162.0",
+    "fastembed>=0.9.1",
+    "langgraph>=1.0",
+    "langgraph-checkpoint-postgres>=3.0",
+    "psycopg[binary]>=3.3.6",
+    "pydantic>=2.14.2",
+    "pydantic-settings>=2.16.2",
+    "pymongo>=4.19.0",
+    "python-dotenv>=1.2.4",
+    "python-multipart>=0.0.33",
+    "pyyaml>=6.0.3",
+    "qdrant-client>=1.20.0",
+    "redis>=8.1.0",
+    "sqlalchemy[asyncio]>=2.1.6",
+    "tiktoken>=0.14.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=8.3",
+    "pytest-asyncio>=1.4.1.post1",
+    "ruff>=0.8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+pythonpath = ["backend"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+    "integration: tests that require running infrastructure",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
