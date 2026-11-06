@@ -9,6 +9,8 @@ from typing import Any
 import psycopg
 import pytest
 from pymongo import MongoClient
+from qdrant_client import QdrantClient
+from qdrant_client.models import FieldCondition, Filter, MatchValue
 
 from scripts.generate_dataset import (
     ATTRACTIVE_STATUS_QUOTATIONS,
@@ -175,3 +177,68 @@ def test_mongo_profiles_link_to_postgres(seeded_postgres: None, seeded_mongodb: 
     assert profile_ids <= supplier_ids
 
 
+@pytest.mark.integration
+def test_qdrant_ingestion_idempotent(ingested_qdrant: None) -> None:
+    from backend.tests.conftest import run_script
+
+    qdrant_url = os.getenv("QDRANT_URL")
+    if not qdrant_url:
+        pytest.skip("QDRANT_URL is not set")
+    collection_name = os.getenv("QDRANT_COLLECTION", "policy_chunks")
+
+    client = QdrantClient(url=qdrant_url)
+    try:
+        before = client.count(collection_name=collection_name, exact=True).count
+        run_script("ingest_documents.py")
+        after = client.count(collection_name=collection_name, exact=True).count
+    finally:
+        client.close()
+
+    assert before > 0
+    assert after == before
+
+
+@pytest.mark.integration
+def test_obsolete_documents_are_filterable(ingested_qdrant: None) -> None:
+    qdrant_url = os.getenv("QDRANT_URL")
+    if not qdrant_url:
+        pytest.skip("QDRANT_URL is not set")
+    collection_name = os.getenv("QDRANT_COLLECTION", "policy_chunks")
+
+    client = QdrantClient(url=qdrant_url)
+    try:
+        obsolete_points, _ = client.scroll(
+            collection_name=collection_name,
+            scroll_filter=Filter(
+                must=[FieldCondition(key="status", match=MatchValue(value="obsolete"))]
+            ),
+            limit=200,
+            with_payload=True,
+        )
+        active_points, _ = client.scroll(
+            collection_name=collection_name,
+            scroll_filter=Filter(
+                must=[FieldCondition(key="status", match=MatchValue(value="active"))]
+            ),
+            limit=200,
+            with_payload=True,
+        )
+        excluded, _ = client.scroll(
+            collection_name=collection_name,
+            scroll_filter=Filter(
+                must=[
+                    FieldCondition(key="document_id", match=MatchValue(value="POL-011")),
+                    FieldCondition(key="status", match=MatchValue(value="active")),
+                ]
+            ),
+            limit=200,
+            with_payload=True,
+        )
+    finally:
+        client.close()
+
+    assert obsolete_points
+    assert {point.payload["document_id"] for point in obsolete_points} == {"POL-011"}
+    assert all(point.payload["status"] == "active" for point in active_points)
+    assert "POL-011" not in {point.payload["document_id"] for point in active_points}
+    assert excluded == []
