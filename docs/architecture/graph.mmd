@@ -1,0 +1,39 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+    START([START]):::first
+    validate_request(validate_request)
+    supplier_lookup(supplier_lookup)
+    policy_retrieval(policy_retrieval)
+    research_join(research_join)
+    compare_options(compare_options)
+    validate_recommendation(validate_recommendation)
+    approval_interrupt(approval_interrupt):::interrupt
+    execute_tool(execute_tool)
+    record_result(record_result)
+    END([END]):::last
+
+    START --> validate_request
+    validate_request -->|"valid (fan-out)"| supplier_lookup
+    validate_request -->|"valid (fan-out)"| policy_retrieval
+    validate_request -->|"needs_info"| record_result
+    supplier_lookup --> research_join
+    policy_retrieval --> research_join
+    research_join -->|"compare"| compare_options
+    research_join -->|"both research branches failed"| record_result
+    compare_options --> validate_recommendation
+    validate_recommendation -->|"sufficient"| approval_interrupt
+    validate_recommendation -->|"blocking issues"| record_result
+    approval_interrupt -.->|"interrupt: pause for approval"| approval_interrupt
+    approval_interrupt -->|"approved"| execute_tool
+    approval_interrupt -->|"rejected / invalid"| record_result
+    execute_tool -->|"success / failure"| record_result
+    record_result --> END
+
+    classDef default fill:#f2f0ff,line-height:1.2
+    classDef first fill-opacity:0
+    classDef last fill:#bfb6fc
+    classDef interrupt fill:#ffe6b3,stroke:#d9930a
