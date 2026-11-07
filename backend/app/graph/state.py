@@ -6,7 +6,9 @@ Every value stored here must be JSON-serializable because the checkpointer persi
 
 Deviation from the phase guide: ``policy_status`` was added so the policy node can
 return an explicit inconclusive result without inventing fake evidence. ``failure_reason``
-carries a machine-readable terminal reason for the audit trail.
+carries a machine-readable terminal reason for the audit trail. ``plan`` records the
+orchestrator's capabilities and budgets for inspection, and ``explanation`` holds the
+optional grounded explanation, which never influences any decision.
 """
 
 import operator
@@ -32,12 +34,14 @@ class ProcurementState(TypedDict):
     correlation_id: str
     as_of: str
     request: dict
+    plan: NotRequired[dict]
     supplier_results: NotRequired[list[dict]]
     policy_evidence: NotRequired[list[dict]]
     policy_status: NotRequired[dict]
     comparison: NotRequired[dict]
     validation: NotRequired[dict]
     recommendation: NotRequired[dict]
+    explanation: NotRequired[dict]
     approval: NotRequired[dict]
     execution: NotRequired[dict]
     failure_reason: NotRequired[str]

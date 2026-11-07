@@ -1,4 +1,4 @@
-"""Table-driven tests for every conditional-routing branch (step 3.7)."""
+"""Table-driven tests for every conditional-routing branch (steps 3.7 and 4.9)."""
 
 import pytest
 from app.graph.routing import (
@@ -7,9 +7,14 @@ from app.graph.routing import (
     after_research,
     after_validate_request,
     after_validation,
+    research_outcome,
 )
 
 FAN_OUT = ["supplier_lookup", "policy_retrieval"]
+
+
+def _errors(*nodes: str) -> list[dict]:
+    return [{"code": f"{node}_failed", "node": node} for node in nodes]
 
 
 @pytest.mark.parametrize(
@@ -26,30 +31,72 @@ def test_after_validate_request(status: str, expected) -> None:
 
 
 @pytest.mark.parametrize(
-    ("errors", "expected"),
+    ("state", "expected"),
     [
-        ([], "compare_options"),
-        ([{"code": "supplier_lookup_failed"}], "compare_options"),
-        ([{"code": "policy_retrieval_failed"}], "compare_options"),
+        # ok, non-empty | ok, conclusive -> compare
+        ({}, "compare_options"),
+        ({"errors": _errors("other")}, "compare_options"),
+        # ok, empty | any -> compare (validation terminates with no_eligible_supplier)
+        ({"supplier_results": []}, "compare_options"),
+        # supplier failure alone -> failed / supplier_unavailable
+        ({"errors": _errors("supplier_lookup")}, "record_result"),
+        # policy failure alone -> inconclusive / policy_unavailable
+        ({"errors": _errors("policy_retrieval")}, "record_result"),
+        # both branches failed -> failed / research_unavailable
         (
-            [
-                {"code": "supplier_lookup_failed"},
-                {"code": "policy_retrieval_failed"},
-            ],
+            {"errors": _errors("supplier_lookup", "policy_retrieval")},
             "record_result",
         ),
         (
-            [
-                {"code": "policy_retrieval_failed"},
-                {"code": "supplier_lookup_failed"},
-                {"code": "other"},
-            ],
+            {"errors": _errors("policy_retrieval", "supplier_lookup", "other")},
+            "record_result",
+        ),
+        # ok, non-empty | inconclusive -> inconclusive / policy_evidence_insufficient
+        (
+            {"supplier_results": [{"supplier_id": "SUP0001"}],
+             "policy_status": {"inconclusive": True}},
+            "record_result",
+        ),
+        # supplier failure wins over an inconclusive policy flag
+        (
+            {"errors": _errors("supplier_lookup"),
+             "policy_status": {"inconclusive": True}},
             "record_result",
         ),
     ],
 )
-def test_after_research(errors: list[dict], expected: str) -> None:
-    assert after_research({"errors": errors}) == expected
+def test_after_research(state: dict, expected: str) -> None:
+    assert after_research(state) == expected
+
+
+@pytest.mark.parametrize(
+    ("state", "status", "failure_reason"),
+    [
+        ({"errors": _errors("supplier_lookup")}, "failed", "supplier_unavailable"),
+        ({"errors": _errors("policy_retrieval")}, "inconclusive", "policy_unavailable"),
+        (
+            {"errors": _errors("supplier_lookup", "policy_retrieval")},
+            "failed",
+            "research_unavailable",
+        ),
+        (
+            {
+                "supplier_results": [{"supplier_id": "SUP0001"}],
+                "policy_status": {"inconclusive": True},
+            },
+            "inconclusive",
+            "policy_evidence_insufficient",
+        ),
+        ({"supplier_results": []}, None, None),
+    ],
+)
+def test_research_outcome_matrix(state: dict, status, failure_reason) -> None:
+    outcome = research_outcome(state)
+    assert outcome.route == (
+        "record_result" if status is not None else "compare_options"
+    )
+    assert outcome.status == status
+    assert outcome.failure_reason == failure_reason
 
 
 @pytest.mark.parametrize(

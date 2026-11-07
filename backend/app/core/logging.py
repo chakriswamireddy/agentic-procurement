@@ -14,6 +14,18 @@ _EXTRA_FIELDS = (
     "path",
     "status_code",
     "duration_ms",
+    "status",
+    "thread_id",
+    "specialist",
+    "attempt",
+    "outcome",
+    "latency_ms",
+    "error_code",
+    "budget_remaining_ms",
+    "specialist_calls",
+    "specialist_retries",
+    "specialist_failures",
+    "elapsed_ms",
 )
 
 

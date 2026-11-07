@@ -1,17 +1,31 @@
 """Shared fakes for graph tests.
 
-The graph's nodes resolve services from ``GraphDependencies`` through a context
-variable. These fakes replace every service that would touch PostgreSQL, MongoDB,
-or Qdrant while keeping the real deterministic logic (validators, comparison,
-scoring) under test.
+The graph's nodes resolve specialists from ``GraphDependencies`` through a context
+variable. These fakes replace every specialist that would touch PostgreSQL, MongoDB,
+or Qdrant while keeping the real deterministic logic (comparison, scoring, validation)
+under test through the real specialist wrappers.
+
+Test budgets use ``max_attempts=1`` and tiny delays: retry behaviour belongs to the
+runner tests, not to every graph test.
 """
 
 from typing import Any
 
 import pytest
+from app.agents.analysis_specialist import AnalysisSpecialist
+from app.agents.contracts import (
+    PolicyEvidence,
+    PolicyEvidenceResult,
+    PolicyQuery,
+    SupplierCandidate,
+    SupplierQuery,
+    TransientError,
+)
+from app.agents.explanation_service import ExplanationService
+from app.agents.runner import SpecialistMetrics
+from app.agents.validation_specialist import ValidationSpecialist
 from app.graph.dependencies import GraphDependencies
-from app.services.comparison_service import ComparisonService
-from app.services.recommendation_validation_service import RecommendationValidator
+from app.graph.orchestrator import NodeBudget, WorkflowBudgets
 from app.services.request_validation_service import RequestValidator
 
 AS_OF = "2026-01-15"
@@ -102,30 +116,71 @@ def make_policy_result(**overrides: Any) -> dict[str, Any]:
     return result
 
 
+def make_budgets() -> WorkflowBudgets:
+    """Graph-test budgets: one attempt, negligible delays, same topology as settings."""
+    return WorkflowBudgets(
+        supplier_lookup=NodeBudget("supplier_lookup", 5.0, 1, 12.0),
+        policy_retrieval=NodeBudget("policy_retrieval", 5.0, 1, 12.0),
+        compare_options=NodeBudget("compare_options", 1.0, 1, 2.0),
+        validate_recommendation=NodeBudget("validate_recommendation", 1.0, 1, 2.0),
+        execute_tool=NodeBudget("execute_tool", 10.0, 1, 15.0),
+        base_delay_s=0.001,
+        max_delay_s=0.002,
+        max_candidates=200,
+        max_evidence=5,
+    )
+
+
 class FakeSuppliers:
+    """Stands in for SupplierSpecialist: same contract, same error mapping."""
+
     def __init__(self, results: list[dict] | None = None, error: Exception | None = None):
         self.results = results if results is not None else [make_candidate()]
         self.error = error
         self.calls: list[dict] = []
 
-    async def candidates(self, *, request: dict, as_of: str) -> list[dict]:
-        self.calls.append({"request": request, "as_of": as_of})
+    async def search(self, query: SupplierQuery) -> list[SupplierCandidate]:
+        self.calls.append(
+            {"as_of": query.as_of, "request": query.to_request_payload()}
+        )
         if self.error is not None:
-            raise self.error
-        return list(self.results)
+            if isinstance(self.error, TransientError):
+                raise self.error
+            raise TransientError(
+                self.error.__class__.__name__ or "supplier unavailable",
+                code="supplier_db_unavailable",
+            )
+        return [SupplierCandidate.from_dict(item) for item in self.results]
 
 
 class FakePolicies:
+    """Stands in for PolicySpecialist: same contract, same error mapping."""
+
     def __init__(self, result: dict | None = None, error: Exception | None = None):
         self.result = result if result is not None else make_policy_result()
         self.error = error
         self.calls: list[dict] = []
 
-    async def evidence_for(self, *, request: dict, as_of: str) -> dict:
-        self.calls.append({"request": request, "as_of": as_of})
+    async def retrieve(self, query: PolicyQuery) -> PolicyEvidenceResult:
+        self.calls.append({"as_of": query.as_of, "text": query.text})
         if self.error is not None:
-            raise self.error
-        return dict(self.result)
+            if isinstance(self.error, TransientError):
+                raise self.error
+            raise TransientError(
+                self.error.__class__.__name__ or "policy unavailable",
+                code="policy_index_unavailable",
+            )
+        payload = dict(self.result)
+        evidence = tuple(
+            PolicyEvidence.from_dict(item)
+            for item in payload.get("evidence") or []
+        )
+        return PolicyEvidenceResult(
+            query=str(payload.get("query", query.text)),
+            inconclusive=bool(payload.get("inconclusive")),
+            reason=payload.get("reason"),
+            evidence=evidence,
+        )
 
 
 class FakeRecommendations:
@@ -221,14 +276,15 @@ def make_dependencies(
         request_validator=RequestValidator(),
         suppliers=FakeSuppliers(results=candidates, error=supplier_error),
         policies=FakePolicies(result=policy_result, error=policy_error),
-        comparison=ComparisonService(),
-        validator=RecommendationValidator(),
+        comparison=AnalysisSpecialist(),
+        validator=ValidationSpecialist(),
         recommendations=FakeRecommendations(),
         approvals=FakeApprovals(),
         execution=FakeExecution(result=execution_result, error=execution_error),
         results=FakeResults(),
-        supplier_timeout_seconds=5.0,
-        policy_timeout_seconds=8.0,
+        budgets=make_budgets(),
+        metrics=SpecialistMetrics(),
+        explanation=ExplanationService(),
     )
 
 

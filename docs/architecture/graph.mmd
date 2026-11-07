@@ -22,8 +22,8 @@ graph TD;
     validate_request -->|"needs_info"| record_result
     supplier_lookup --> research_join
     policy_retrieval --> research_join
-    research_join -->|"compare"| compare_options
-    research_join -->|"both research branches failed"| record_result
+    research_join -->|"matrix: research ok"| compare_options
+    research_join -->|"matrix: supplier/policy/both failed"| record_result
     compare_options --> validate_recommendation
     validate_recommendation -->|"sufficient"| approval_interrupt
     validate_recommendation -->|"blocking issues"| record_result

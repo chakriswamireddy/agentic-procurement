@@ -45,11 +45,12 @@ async def test_weak_policy_evidence_routes_to_inconclusive() -> None:
         )
 
     assert result["status"] == "inconclusive"
-    assert result["failure_reason"] == "weak_policy_evidence"
+    assert result["failure_reason"] == "policy_evidence_insufficient"
     assert "__interrupt__" not in result
     assert dependencies.approvals.calls == []
-    # Recommendation is persisted before validation, but routing never reaches approval.
-    assert len(dependencies.recommendations.calls) == 1
+    # Phase 4 matrix: missing policy evidence stops before recommendation persistence.
+    assert dependencies.recommendations.calls == []
+    assert "comparison" not in result
     assert dependencies.results.calls[-1]["status"] == "inconclusive"
 
 
@@ -66,12 +67,11 @@ async def test_parallel_research_errors_merge_in_state() -> None:
             state, {"configurable": {"thread_id": state["thread_id"]}}
         )
 
-    codes = [error["code"] for error in result["errors"]]
-    assert "supplier_lookup_failed" in codes
-    assert "policy_retrieval_failed" in codes
-    assert len(codes) == 2
+    nodes = {error.get("node") for error in result["errors"]}
+    assert {"supplier_lookup", "policy_retrieval"} <= nodes
+    assert len(result["errors"]) == 2
     assert result["status"] == "failed"
-    assert result["failure_reason"] == "research_failed"
+    assert result["failure_reason"] == "research_unavailable"
     assert dependencies.results.calls[-1]["status"] == "failed"
 
 
@@ -149,11 +149,12 @@ async def test_policy_outage_alone_routes_to_inconclusive() -> None:
         result = await graph.ainvoke(state, config)
 
     assert result["status"] == "inconclusive"
-    assert result["failure_reason"] == "weak_policy_evidence"
+    assert result["failure_reason"] == "policy_unavailable"
     assert result["policy_status"]["reason"] == "dependency_unavailable"
     assert result["policy_status"]["inconclusive"] is True
     assert "__interrupt__" not in result
     assert dependencies.approvals.calls == []
+    assert dependencies.recommendations.calls == []
     assert dependencies.results.calls[-1]["status"] == "inconclusive"
 
 

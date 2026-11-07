@@ -46,8 +46,8 @@ async def test_all_candidates_excluded_records_reasons() -> None:
     assert dependencies.recommendations.calls == []
 
 
-async def test_supplier_lookup_failure_alone_still_compares() -> None:
-    """One failed branch must not mask the healthy policy branch."""
+async def test_supplier_outage_alone_routes_to_supplier_unavailable() -> None:
+    """Phase 4 matrix: supplier down (policy healthy) is an operational failure."""
     dependencies = make_dependencies(supplier_error=TimeoutError("slow supplier"))
     graph = build_graph()
     state = make_state()
@@ -56,10 +56,14 @@ async def test_supplier_lookup_failure_alone_still_compares() -> None:
     with use_dependencies(dependencies):
         result = await graph.ainvoke(state, config)
 
-    codes = [error["code"] for error in result["errors"]]
-    assert "supplier_lookup_failed" in codes
-    # One failed branch must not mask the healthy policy branch: research still
-    # reaches comparison, which reports the empty eligible set.
+    supplier_errors = [
+        error for error in result["errors"] if error.get("node") == "supplier_lookup"
+    ]
+    assert supplier_errors
+    assert supplier_errors[0]["code"] in {"supplier_db_unavailable", "supplier_timeout"}
     assert result["status"] == "failed"
-    assert result["failure_reason"] == "no_eligible_supplier"
+    assert result["failure_reason"] == "supplier_unavailable"
+    # The healthy policy branch still ran, but the workflow never compares.
     assert len(dependencies.policies.calls) == 1
+    assert "comparison" not in result
+    assert dependencies.results.calls[-1]["status"] == "failed"

@@ -6,10 +6,16 @@ from app.graph.state import ProcurementState
 
 logger = logging.getLogger(__name__)
 
-EXECUTION_TIMEOUT_SECONDS = 10.0
-
 
 async def execute_tool(state: ProcurementState) -> dict:
+    """Purchase execution is non-idempotent: budgeted, but never retried generically.
+
+    Phase 5 adds idempotent retry on top of the execution gateway; the generic
+    specialist runner must not retry this node.
+    """
+    dependencies = get_dependencies()
+    budget = dependencies.budgets.for_node("execute_tool")
+
     approval = state.get("approval") or {}
     if not approval.get("valid") or approval.get("decision") != "approved":
         return {
@@ -25,8 +31,8 @@ async def execute_tool(state: ProcurementState) -> dict:
         }
 
     try:
-        async with asyncio.timeout(EXECUTION_TIMEOUT_SECONDS):
-            execution = await get_dependencies().execution.execute(state=state)
+        async with asyncio.timeout(budget.timeout_s):
+            execution = await dependencies.execution.execute(state=state)
     except Exception as exc:
         logger.exception(
             "execution failed",

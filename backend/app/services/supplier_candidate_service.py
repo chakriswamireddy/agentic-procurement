@@ -1,7 +1,15 @@
-"""Assemble supplier candidates from PostgreSQL identity/quotations and Mongo profiles."""
+"""Assemble supplier candidates from PostgreSQL identity/quotations and Mongo profiles.
+
+Profiles are fetched in one batched ``$in`` lookup — never one query per candidate —
+and missing profiles degrade to an empty profile instead of a failure. Missing fields
+are left empty for validation to judge; nothing is fabricated here.
+"""
 
 from typing import Any
 
+from pymongo.errors import PyMongoError
+
+from app.core.errors import DependencyUnavailableError
 from app.repositories.supplier_profile_repository import SupplierProfileRepository
 from app.repositories.supplier_repository import SupplierRepository
 
@@ -22,14 +30,20 @@ class SupplierCandidateService:
         product_id = str(request.get("product_id", ""))
         rows = await self.suppliers.list_quotation_candidates(product_id)
 
-        profiles: dict[str, dict[str, Any] | None] = {}
+        supplier_ids = list(dict.fromkeys(supplier.id for supplier, _ in rows))
+        # A Mongo outage is a retryable dependency failure, not an unexpected crash:
+        # translate it so the runner can retry and route supplier_unavailable instead
+        # of wrapping it as a non-retryable unexpected error.
+        try:
+            profiles = await self.profiles.get_profiles(supplier_ids)
+        except PyMongoError as exc:
+            raise DependencyUnavailableError(
+                details={"cause": type(exc).__name__}
+            ) from exc
+
         candidates: list[dict[str, Any]] = []
         for supplier, quotation in rows:
-            if supplier.id not in profiles:
-                profile = await self.profiles.get_profile(supplier.id)
-                profiles[supplier.id] = (
-                    profile.model_dump(mode="json") if profile is not None else None
-                )
+            profile = profiles.get(supplier.id)
             candidates.append(
                 {
                     "supplier_id": supplier.id,
@@ -43,7 +57,7 @@ class SupplierCandidateService:
                     "available_quantity": quotation.available_quantity,
                     "delivery_days": quotation.delivery_days,
                     "valid_until": quotation.valid_until.isoformat(),
-                    "profile": profiles[supplier.id],
+                    "profile": profile.model_dump(mode="json") if profile else None,
                 }
             )
 

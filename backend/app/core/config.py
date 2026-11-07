@@ -54,6 +54,16 @@ class Settings(BaseSettings):
     workflow_as_of: date | None = None
     workflow_supplier_timeout_seconds: float = 5.0
     workflow_policy_timeout_seconds: float = 8.0
+    workflow_compare_timeout_seconds: float = 1.0
+    workflow_validate_timeout_seconds: float = 1.0
+    workflow_execute_timeout_seconds: float = 10.0
+    workflow_research_deadline_seconds: float = 12.0
+    workflow_execute_deadline_seconds: float = 15.0
+    workflow_specialist_max_attempts: int = 3
+    workflow_specialist_base_delay_seconds: float = 0.2
+    workflow_specialist_max_delay_seconds: float = 2.0
+    workflow_max_supplier_candidates: int = 200
+    workflow_max_policy_evidence: int = 5
     jwt_secret: str
     jwt_issuer: str = "agentic-procurement"
     jwt_audience: str = "agentic-procurement-api"
@@ -88,6 +98,9 @@ class Settings(BaseSettings):
         "retrieval_min_text_chars",
         "rrf_k",
         "workflow_recursion_limit",
+        "workflow_specialist_max_attempts",
+        "workflow_max_supplier_candidates",
+        "workflow_max_policy_evidence",
     )
     @classmethod
     def _must_be_positive_int(cls, value: int) -> int:
@@ -101,6 +114,13 @@ class Settings(BaseSettings):
         "retrieval_min_sparse_score",
         "workflow_supplier_timeout_seconds",
         "workflow_policy_timeout_seconds",
+        "workflow_compare_timeout_seconds",
+        "workflow_validate_timeout_seconds",
+        "workflow_execute_timeout_seconds",
+        "workflow_research_deadline_seconds",
+        "workflow_execute_deadline_seconds",
+        "workflow_specialist_base_delay_seconds",
+        "workflow_specialist_max_delay_seconds",
     )
     @classmethod
     def _must_be_positive_float(cls, value: float) -> float:

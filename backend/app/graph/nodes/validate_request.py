@@ -1,13 +1,15 @@
 import logging
 
 from app.graph.dependencies import get_dependencies
+from app.graph.orchestrator import build_plan
 from app.graph.state import ProcurementState
 
 logger = logging.getLogger(__name__)
 
 
 async def validate_request(state: ProcurementState) -> dict:
-    result = get_dependencies().request_validator.validate(state["request"])
+    dependencies = get_dependencies()
+    result = dependencies.request_validator.validate(state["request"])
     if not result["valid"]:
         logger.info(
             "procurement request needs information",
@@ -20,4 +22,7 @@ async def validate_request(state: ProcurementState) -> dict:
                 {**issue, "node": "validate_request"} for issue in result["issues"]
             ],
         }
-    return {"status": "researching"}
+    return {
+        "status": "researching",
+        "plan": build_plan(dependencies.budgets),
+    }

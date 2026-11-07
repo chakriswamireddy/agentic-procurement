@@ -1,24 +1,16 @@
 import logging
 
+from app.agents.contracts import (
+    ComparisonResult,
+    PolicyEvidence,
+    RequestFacts,
+    ValidationRequest,
+)
+from app.agents.runner import run_specialist
 from app.graph.dependencies import get_dependencies
 from app.graph.state import ProcurementState
 
 logger = logging.getLogger(__name__)
-
-_BLOCKING_CODES = {
-    "missing_request_info",
-    "no_eligible_supplier",
-    "recommendation_missing",
-    "recommendation_not_eligible",
-    "recommendation_not_persisted",
-    "invalid_recommendation_version",
-    "score_mismatch",
-    "total_cost_mismatch",
-    "constraint_violation",
-    "weak_policy_evidence",
-    "evidence_missing_fields",
-    "obsolete_evidence",
-}
 
 
 def _status_for(issues: list[dict]) -> tuple[str, str]:
@@ -27,15 +19,23 @@ def _status_for(issues: list[dict]) -> tuple[str, str]:
         return "awaiting_approval", ""
     if "missing_request_info" in codes:
         return "needs_info", "missing_request_info"
-    if "weak_policy_evidence" in codes or "obsolete_evidence" in codes:
-        return "inconclusive", "weak_policy_evidence"
     if "no_eligible_supplier" in codes:
         return "failed", "no_eligible_supplier"
+    if "weak_policy_evidence" in codes or "obsolete_evidence" in codes:
+        return "inconclusive", "weak_policy_evidence"
     return "failed", "validation_failed"
 
 
+def _evidence(state: ProcurementState) -> list[PolicyEvidence]:
+    return [
+        PolicyEvidence.from_dict(item) for item in state.get("policy_evidence") or []
+    ]
+
+
 async def validate_recommendation(state: ProcurementState) -> dict:
+    """Thin adapter: persist, validate under budget, then explain without deciding."""
     dependencies = get_dependencies()
+    budget = dependencies.budgets.for_node("validate_recommendation")
     request = state["request"]
     comparison = state.get("comparison")
     policy_status = state.get("policy_status") or {}
@@ -51,15 +51,37 @@ async def validate_recommendation(state: ProcurementState) -> dict:
             issues=[],
         )
 
-    validation = dependencies.validator.validate(
-        request=request,
-        comparison=comparison,
-        recommendation=recommendation,
-        policy_status=policy_status,
-        policy_evidence=policy_evidence,
+    result = await run_specialist(
+        name="validate_recommendation",
+        operation=lambda: dependencies.validator.validate(
+            ValidationRequest(
+                request=request,
+                comparison=comparison,
+                recommendation=recommendation,
+                policy_status=policy_status,
+                policy_evidence=tuple(_evidence(state)),
+            )
+        ),
+        timeout_s=budget.timeout_s,
+        max_attempts=budget.max_attempts,
+        base_delay_s=dependencies.budgets.base_delay_s,
+        max_delay_s=dependencies.budgets.max_delay_s,
+        deadline_s=budget.deadline_s,
+        correlation_id=state["correlation_id"],
+        thread_id=state["thread_id"],
+        metrics=dependencies.metrics,
     )
 
-    status, failure_reason = _status_for(validation["issues"])
+    if not result.ok:
+        return {
+            "status": "failed",
+            "failure_reason": "validation_failed",
+            "recommendation": recommendation,
+            "errors": [result.to_error_entry(node="validate_recommendation")],
+        }
+
+    validation = result.data.to_dict() if result.data else {"sufficient": False, "issues": []}
+    status, failure_reason = _status_for(list(validation["issues"]))
     update: dict = {"validation": validation, "recommendation": recommendation}
     update["status"] = status
     if failure_reason:
@@ -79,4 +101,21 @@ async def validate_recommendation(state: ProcurementState) -> dict:
                 "status": status,
             },
         )
+
+    if comparison and comparison.get("recommended"):
+        try:
+            update["explanation"] = await dependencies.explanation.explain(
+                comparison=ComparisonResult.from_dict(comparison),
+                evidence=_evidence(state),
+                request=RequestFacts.from_request(request, as_of=state["as_of"]),
+            )
+        except Exception:  # an explanation must never break the workflow
+            logger.warning(
+                "explanation skipped",
+                extra={
+                    "path": f"/workflows/{state['thread_id']}",
+                    "error_code": "explanation_failed",
+                },
+            )
+
     return update
