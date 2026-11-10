@@ -1,3 +1,4 @@
+import hashlib
 import logging
 import time
 from datetime import date
@@ -9,6 +10,7 @@ from qdrant_client.http.exceptions import (
     UnexpectedResponse,
 )
 
+from app.cache.redis_cache import RedisCache
 from app.core.errors import (
     DependencyUnavailableError,
     ForbiddenError,
@@ -37,12 +39,14 @@ class PolicyService:
         min_dense_score: float = 0.60,
         min_sparse_score: float = 2.0,
         min_text_chars: int = 40,
+        cache: RedisCache | None = None,
     ) -> None:
         self.retriever = retriever
         self.result_limit = result_limit
         self.min_dense_score = min_dense_score
         self.min_sparse_score = min_sparse_score
         self.min_text_chars = min_text_chars
+        self.cache = cache
 
     @staticmethod
     def _validate_query(query: str) -> str:
@@ -84,6 +88,22 @@ class PolicyService:
             classifications=classifications or RetrievalFilters().classifications,
             document_ids=document_ids,
         )
+
+        cache_key: str | None = None
+        if self.cache is not None:
+            parts = (
+                normalized,
+                str(effective_limit),
+                mode,
+                str(filters.as_of),
+                str(sorted(filters.classifications or [])),
+                str(sorted(filters.document_ids or [])),
+            )
+            raw_cache = ":".join(parts)
+            cache_key = f"policy_search:{hashlib.sha256(raw_cache.encode()).hexdigest()}"
+            cached_data = await self.cache.get(cache_key)
+            if cached_data is not None:
+                return PolicySearchResponse.model_validate(cached_data)
 
         started = time.perf_counter()
         try:
@@ -137,9 +157,13 @@ class PolicyService:
             },
         )
 
-        return PolicySearchResponse(
+        response = PolicySearchResponse(
             query=normalized,
             inconclusive=decision.inconclusive,
             reason=decision.reason,
             evidence=evidence,
         )
+        if self.cache is not None and cache_key is not None and not decision.inconclusive:
+            await self.cache.set(cache_key, response.model_dump(mode="json"))
+
+        return response

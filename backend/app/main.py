@@ -13,6 +13,7 @@ from app.database.mongodb.client import close_mongo, init_mongo
 from app.database.postgres.engine import dispose_engine, init_engine
 from app.database.postgres.session import init_session_factory
 from app.database.qdrant.client import close_qdrant, init_qdrant
+from app.database.redis.client import close_redis, init_redis
 from app.graph.builder import build_graph
 from app.graph.checkpointer import checkpointer_context
 from app.rag.runtime import init_embedding_providers
@@ -28,6 +29,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         init_session_factory(engine)
         init_mongo(runtime_settings)
         init_qdrant(runtime_settings)
+        init_redis(runtime_settings)
         init_embedding_providers(runtime_settings)
         try:
             async with checkpointer_context(runtime_settings) as checkpointer:
@@ -37,6 +39,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         finally:
             app.state.workflow_checkpointer = None
             app.state.workflow_graph = None
+            await close_redis()
             await close_mongo()
             await close_qdrant()
             await dispose_engine()

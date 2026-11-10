@@ -1,4 +1,7 @@
+from __future__ import annotations
+
 import logging
+from typing import TYPE_CHECKING
 
 from pymongo.errors import PyMongoError
 from sqlalchemy.exc import SQLAlchemyError
@@ -8,6 +11,9 @@ from app.database.postgres.engine import is_database_unavailable
 from app.repositories.supplier_profile_repository import SupplierProfileRepository
 from app.repositories.supplier_repository import SupplierRepository
 from app.schemas.supplier import SupplierDetail, SupplierList, SupplierRead
+
+if TYPE_CHECKING:
+    from app.database.redis.cache import SupplierCache
 
 logger = logging.getLogger(__name__)
 
@@ -19,9 +25,12 @@ class SupplierService:
         self,
         suppliers: SupplierRepository,
         profiles: SupplierProfileRepository,
+        *,
+        cache: SupplierCache | None = None,
     ) -> None:
         self.suppliers = suppliers
         self.profiles = profiles
+        self.cache = cache
 
     @staticmethod
     def _normalize(value: str | None) -> str | None:
@@ -57,12 +66,33 @@ class SupplierService:
         limit: int = 20,
         offset: int = 0,
     ) -> SupplierList:
+        norm_cat = self._normalize(category)
+        norm_loc = self._normalize(location)
+        norm_stat = self._normalize_status(status)
+        norm_q = self._normalize_search(q)
+
+        cache_key: str | None = None
+        if self.cache is not None and self.cache.enabled:
+            version = await self.cache.get_cache_version()
+            cache_key = self.cache.compute_cache_key(
+                version=version,
+                category=norm_cat,
+                location=norm_loc,
+                status=norm_stat,
+                q=norm_q,
+                limit=limit,
+                offset=offset,
+            )
+            cached_result = await self.cache.get_supplier_list(cache_key)
+            if cached_result is not None:
+                return cached_result
+
         try:
             rows, total = await self.suppliers.list_suppliers(
-                category=self._normalize(category),
-                location=self._normalize(location),
-                status=self._normalize_status(status),
-                q=self._normalize_search(q),
+                category=norm_cat,
+                location=norm_loc,
+                status=norm_stat,
+                q=norm_q,
                 limit=limit,
                 offset=offset,
             )
@@ -71,12 +101,17 @@ class SupplierService:
                 raise DependencyUnavailableError("database unavailable") from exc
             raise
 
-        return SupplierList(
+        result = SupplierList(
             items=[SupplierRead.model_validate(row) for row in rows],
             total=total,
             limit=limit,
             offset=offset,
         )
+
+        if self.cache is not None and self.cache.enabled and cache_key is not None:
+            await self.cache.set_supplier_list(cache_key, result)
+
+        return result
 
     async def get_supplier(self, supplier_id: str) -> SupplierDetail:
         try:

@@ -69,6 +69,21 @@ class Settings(BaseSettings):
     jwt_audience: str = "agentic-procurement-api"
     log_level: str = "INFO"
 
+    # Production pool and caching configuration (Phase 6)
+    database_pool_size: int = 10
+    database_max_overflow: int = 20
+    database_pool_timeout: float = 10.0
+    database_pool_recycle: int = 1800
+    database_pool_pre_ping: bool = True
+    redis_cache_enabled: bool = True
+    redis_cache_ttl_seconds: int = 3600
+
+    # Production LLM provider configuration (Phase 6)
+    llm_provider: str = "simulator"
+    llm_model: str = "gpt-4o-mini"
+    llm_api_key: str | None = None
+    llm_base_url: str | None = None
+
     model_config = SettingsConfigDict(
         env_file=REPO_ROOT / ".env",
         env_file_encoding="utf-8",

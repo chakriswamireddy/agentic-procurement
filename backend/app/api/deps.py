@@ -6,6 +6,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database.mongodb.client import get_database
 from app.database.postgres.session import get_db_session
+from app.database.redis.cache import SupplierCache
+from app.database.redis.client import get_redis
 from app.graph.builder import build_graph
 from app.rag.runtime import build_retriever
 from app.repositories.document_repository import DocumentRepository
@@ -21,13 +23,30 @@ def get_mongo_db() -> AsyncDatabase:
     return get_database()
 
 
+def get_supplier_cache(request: Request) -> SupplierCache | None:
+    settings = getattr(request.app.state, "settings", None)
+    if settings is None or not getattr(settings, "redis_cache_enabled", True):
+        return None
+    try:
+        redis_client = get_redis()
+        return SupplierCache(
+            redis_client,
+            base_ttl=getattr(settings, "redis_cache_ttl_seconds", 60),
+            enabled=getattr(settings, "redis_cache_enabled", True),
+        )
+    except Exception:
+        return None
+
+
 def get_supplier_service(
     session: Annotated[AsyncSession, Depends(get_db_session)],
     mongo_db: Annotated[AsyncDatabase, Depends(get_mongo_db)],
+    cache: Annotated[SupplierCache | None, Depends(get_supplier_cache)] = None,
 ) -> SupplierService:
     return SupplierService(
         suppliers=SupplierRepository(session),
         profiles=SupplierProfileRepository(mongo_db),
+        cache=cache,
     )
 
 

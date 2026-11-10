@@ -12,11 +12,12 @@ _engine: AsyncEngine | None = None
 def create_engine(settings: Settings) -> AsyncEngine:
     return create_async_engine(
         settings.database_url,
-        pool_size=5,
-        max_overflow=10,
-        pool_timeout=5,
-        pool_pre_ping=True,
-        connect_args={"command_timeout": 5},
+        pool_size=settings.database_pool_size,
+        max_overflow=settings.database_max_overflow,
+        pool_timeout=settings.database_pool_timeout,
+        pool_recycle=settings.database_pool_recycle,
+        pool_pre_ping=settings.database_pool_pre_ping,
+        connect_args={"command_timeout": int(settings.database_pool_timeout)},
     )
 
 

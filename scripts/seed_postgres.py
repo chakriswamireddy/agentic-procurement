@@ -342,6 +342,18 @@ def main() -> int:
         for table, inserted, updated in reports:
             print(f"{table}: {inserted} inserted, {updated} updated")
         print("postgres seed complete")
+
+        # Invalidate supplier cache in Redis by bumping version (Phase 6)
+        redis_url = os.getenv("REDIS_URL", "redis://localhost:6379/0")
+        try:
+            import redis
+            r = redis.from_url(redis_url, socket_timeout=1.0)
+            new_ver = r.incr("suppliers:cache_version")
+            print(f"redis supplier cache invalidated (cache_version={new_ver})")
+            r.close()
+        except Exception:
+            pass
+
         return 0
     except Exception as exc:
         print(f"postgres seed failed: {redact(error_text(exc))}", file=sys.stderr)

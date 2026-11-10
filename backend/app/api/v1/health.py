@@ -3,7 +3,6 @@ import time
 from collections.abc import Awaitable
 from typing import Any
 
-import redis.asyncio as redis
 from fastapi import APIRouter, Request, Response
 from qdrant_client import AsyncQdrantClient
 from sqlalchemy import text
@@ -11,6 +10,7 @@ from sqlalchemy import text
 from app.core.config import Settings
 from app.database.mongodb.client import get_database
 from app.database.postgres.engine import get_engine
+from app.database.redis.client import get_redis, init_redis
 
 router = APIRouter(tags=["health"])
 
@@ -42,11 +42,11 @@ async def _check_mongodb() -> None:
 
 
 async def _check_redis(settings: Settings) -> None:
-    client = redis.from_url(settings.redis_url)
     try:
-        await client.ping()
-    finally:
-        await client.aclose()
+        client = get_redis()
+    except RuntimeError:
+        client = init_redis(settings)
+    await client.ping()
 
 
 async def _check_qdrant(settings: Settings) -> None:
