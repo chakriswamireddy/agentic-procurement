@@ -26,6 +26,10 @@ _EXTRA_FIELDS = (
     "specialist_retries",
     "specialist_failures",
     "elapsed_ms",
+    "workflow_event",
+    "node",
+    "request_id",
+    "user_id_hash",
 )
 
 

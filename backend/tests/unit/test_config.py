@@ -29,7 +29,7 @@ def test_safe_dict_redacts_secrets(monkeypatch: pytest.MonkeyPatch) -> None:
         "postgresql+asyncpg://procurement:super-secret@localhost:5432/procurement",
     )
     monkeypatch.setenv("MONGODB_URL", "mongodb://localhost:27017")
-    monkeypatch.setenv("JWT_SECRET", "jwt-super-secret")
+    monkeypatch.setenv("JWT_SECRET", "jwt-super-secret-at-least-32-bytes-long!")
 
     settings = Settings(_env_file=None)
     safe = settings.safe_dict()

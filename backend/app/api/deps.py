@@ -1,9 +1,11 @@
+from collections.abc import Callable
 from typing import Annotated
 
-from fastapi import Depends, Request
+from fastapi import Depends, Header, Request
 from pymongo.asynchronous.database import AsyncDatabase
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.errors import ForbiddenError, UnauthorizedError
 from app.database.mongodb.client import get_database
 from app.database.postgres.session import get_db_session
 from app.database.redis.cache import SupplierCache
@@ -13,6 +15,9 @@ from app.rag.runtime import build_retriever
 from app.repositories.document_repository import DocumentRepository
 from app.repositories.supplier_profile_repository import SupplierProfileRepository
 from app.repositories.supplier_repository import SupplierRepository
+from app.repositories.user_repository import UserRepository
+from app.schemas.auth import AuthenticatedUser
+from app.services.auth_service import AuthService
 from app.services.document_service import DocumentService
 from app.services.policy_service import PolicyService
 from app.services.supplier_service import SupplierService
@@ -93,7 +98,57 @@ def get_workflow_service(
     )
 
 
+def get_user_repository(
+    session: Annotated[AsyncSession, Depends(get_db_session)],
+) -> UserRepository:
+    return UserRepository(session)
+
+
+def get_auth_service(
+    request: Request,
+    users: Annotated[UserRepository, Depends(get_user_repository)],
+) -> AuthService:
+    return AuthService(users=users, settings=request.app.state.settings)
+
+
+async def get_current_user_optional(
+    auth_service: Annotated[AuthService, Depends(get_auth_service)],
+    authorization: Annotated[str | None, Header()] = None,
+) -> AuthenticatedUser | None:
+    if not authorization:
+        return None
+    scheme, _, token = authorization.partition(" ")
+    if scheme.lower() != "bearer" or not token:
+        raise UnauthorizedError("invalid authorization scheme, must be Bearer")
+    return await auth_service.verify_token(token)
+
+
+async def get_current_user(
+    auth_service: Annotated[AuthService, Depends(get_auth_service)],
+    authorization: Annotated[str | None, Header()] = None,
+) -> AuthenticatedUser:
+    if not authorization:
+        raise UnauthorizedError("missing authorization header")
+    scheme, _, token = authorization.partition(" ")
+    if scheme.lower() != "bearer" or not token:
+        raise UnauthorizedError("invalid authorization scheme, must be Bearer")
+    return await auth_service.verify_token(token)
+
+
+def require_roles(*roles: str) -> Callable:
+    async def _role_checker(
+        current_user: Annotated[AuthenticatedUser, Depends(get_current_user)],
+    ) -> AuthenticatedUser:
+        if current_user.role not in roles:
+            raise ForbiddenError(f"role {current_user.role} is not permitted for this operation")
+        return current_user
+
+    return _role_checker
+
+
 SupplierServiceDep = Annotated[SupplierService, Depends(get_supplier_service)]
 PolicyServiceDep = Annotated[PolicyService, Depends(get_policy_service)]
 DocumentServiceDep = Annotated[DocumentService, Depends(get_document_service)]
 WorkflowServiceDep = Annotated[WorkflowService, Depends(get_workflow_service)]
+AuthServiceDep = Annotated[AuthService, Depends(get_auth_service)]
+CurrentUserDep = Annotated[AuthenticatedUser, Depends(get_current_user)]

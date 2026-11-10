@@ -94,7 +94,7 @@ async def test_checkpointer_connection_failure_is_clear() -> None:
     settings = Settings(
         database_url="postgresql+asyncpg://procurement:procurement@127.0.0.1:1/procurement",
         mongodb_url="mongodb://127.0.0.1:1/procurement",
-        jwt_secret="test-secret",
+        jwt_secret="test-secret-0123456789abcdef01234567",
         checkpointer_database_url="postgresql://procurement:procurement@127.0.0.1:1/procurement",
     )
 

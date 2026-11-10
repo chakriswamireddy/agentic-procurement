@@ -67,6 +67,7 @@ class Settings(BaseSettings):
     jwt_secret: str
     jwt_issuer: str = "agentic-procurement"
     jwt_audience: str = "agentic-procurement-api"
+    jwt_ttl_minutes: int = 30
     log_level: str = "INFO"
 
     # Auth rate limiting (Phase 6); disabled under APP_ENV=test
@@ -153,7 +154,15 @@ class Settings(BaseSettings):
     def _normalize_log_level(cls, value: str) -> str:
         return value.upper()
 
+    @field_validator("jwt_secret")
+    @classmethod
+    def _jwt_secret_strength(cls, value: str) -> str:
+        if len(value.encode("utf-8")) < 32:
+            raise ValueError("jwt_secret must be at least 32 bytes long")
+        return value
+
     @field_validator(
+        "jwt_ttl_minutes",
         "auth_rate_limit_requests",
         "auth_rate_limit_window_seconds",
     )

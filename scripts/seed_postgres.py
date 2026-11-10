@@ -106,12 +106,13 @@ def seed_users(cursor: psycopg.Cursor[Any], rows: list[dict[str, Any]]) -> tuple
     existing = existing_ids(cursor, "users")
     cursor.executemany(
         """
-        INSERT INTO users (id, email, password_hash, role, created_at)
-        VALUES (%s, %s, %s, %s, %s)
+        INSERT INTO users (id, email, password_hash, role, is_active, created_at)
+        VALUES (%s, %s, %s, %s, %s, %s)
         ON CONFLICT (id) DO UPDATE SET
             email = EXCLUDED.email,
             password_hash = EXCLUDED.password_hash,
             role = EXCLUDED.role,
+            is_active = EXCLUDED.is_active,
             created_at = EXCLUDED.created_at
         """,
         [
@@ -120,6 +121,7 @@ def seed_users(cursor: psycopg.Cursor[Any], rows: list[dict[str, Any]]) -> tuple
                 row["email"],
                 row["password_hash"],
                 row["role"],
+                row.get("is_active", True),
                 parse_timestamp(row["created_at"]),
             )
             for row in rows
