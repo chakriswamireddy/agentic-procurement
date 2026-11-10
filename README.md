@@ -11,9 +11,11 @@ untrusted-evidence handling, document and policy APIs, and a retrieval evaluatio
 Phase 3 adds the LangGraph workflow: typed state, parallel supplier/policy research,
 deterministic comparison and scoring, validation routing, a Postgres checkpointer, an
 approval interrupt with resume, an execution gateway, and the request/workflow APIs.
+Phase 4 adds specialist contracts, the bounded runner, orchestrator budgets, partial-failure
+routing, and grounded explanations. Phase 5 adds authentication, POL-002 approval governance,
+concurrency locking, and the Model Context Protocol (MCP) execution gateway.
 
-Phases 4–7 (orchestration, MCP/auth/approval, production evaluation, and the
-frontend) are not implemented yet.
+Phases 6–7 (production evaluation and the frontend) are not implemented yet.
 
 ## What Phase 0 provides
 
@@ -71,7 +73,21 @@ frontend) are not implemented yet.
   resume paths; a `FakeExecutionGateway` behind a stable protocol with idempotency key
   `<request_id>:<version>`.
 - A workflow service that merges graph state with PostgreSQL business rows, plus
-  request and workflow APIs (resume is development-only until Phase 5).
+  request and workflow APIs.
+
+## What Phase 5 provides
+
+- Argon2id password hashing and PyJWT token lifecycle (`sub`, `role`, `iss`, `aud`, `exp`).
+- User repository and auth service supporting seed fixtures and production JWT tokens.
+- Auth endpoints: `POST /api/v1/auth/login` and `GET /api/v1/auth/me`.
+- Authenticated procurement requests with automatic `requester_id` derivation.
+- Policy POL-002 approval governance: self-approval prohibition (§ 1.3), recommendation
+  version matching, and actionable rejection reason enforcement (§ 5.2).
+- PostgreSQL row-level locking (`with_for_update()`) to close the concurrent-resume
+  double execution race condition.
+- Model Context Protocol (`mcp`) server exposing `create_purchase_order` and
+  `MCPExecutionGateway` issuing real `PO-<request_id>-<version>` references.
+- Bounded idempotent execution retry in the graph execution node.
 
 Graph diagram: `docs/architecture/graph.mmd`.
 
@@ -148,14 +164,16 @@ Search supports `limit` (1–20), `as_of`, repeated `classification`, and repeat
 `inconclusive: true` and an empty `evidence` list; an unavailable Qdrant or embedding
 provider returns `503 dependency_unavailable`.
 
-## Phase 3 workflow endpoints
+## Workflow and authentication endpoints
 
 | Method | Path | Purpose |
 |---|---|---|
-| `POST` | `/api/v1/procurement/requests` | Create a request and run the workflow until approval or a terminal state (`201` + `X-Workflow-Status`) |
+| `POST` | `/api/v1/auth/login` | Authenticate with email/password and obtain a JWT access token |
+| `GET` | `/api/v1/auth/me` | Read authenticated user identity and role from Bearer token |
+| `POST` | `/api/v1/procurement/requests` | Create a request (JWT-derived requester) and run until approval or terminal (`201` + `X-Workflow-Status`) |
 | `GET` | `/api/v1/procurement/requests/{id}` | Read the request with its recommendation summary |
 | `GET` | `/api/v1/workflows/{thread_id}` | Workflow status, current node, recommendation, evidence IDs |
-| `POST` | `/api/v1/workflows/{thread_id}/approval` | Resume with `approved`/`rejected`; development-only until Phase 5 (`403` otherwise) |
+| `POST` | `/api/v1/workflows/{thread_id}/approval` | Authenticated resume with `approved`/`rejected` under POL-002 |
 
 Request creation and graph start are combined: a new request returns `201` with the
 paused workflow state rather than a bare `202`. Repeating an approval after a terminal

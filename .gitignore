@@ -10,3 +10,7 @@ coverage.xml
 htmlcov/
 data/seed/*.generated.*
 data/evaluation/retrieval_results_*.json
+data/evaluation/results/
+graphify-out/
+.gitnexus/
+
