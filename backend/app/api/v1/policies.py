@@ -3,7 +3,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Query, Response
 
-from app.api.deps import PolicyServiceDep
+from app.api.deps import CurrentUserDep, PolicyServiceDep
 from app.schemas.policy import PolicySearchResponse
 
 router = APIRouter(prefix="/policies", tags=["policies"])
@@ -17,12 +17,14 @@ router = APIRouter(prefix="/policies", tags=["policies"])
 async def search_policies(
     service: PolicyServiceDep,
     response: Response,
+    current_user: CurrentUserDep,
     q: Annotated[str, Query(min_length=3, max_length=500)],
     limit: Annotated[int, Query(ge=1, le=20)] = 5,
     as_of: Annotated[date | None, Query()] = None,
     classification: Annotated[list[str] | None, Query()] = None,
     document_ids: Annotated[list[str] | None, Query()] = None,
 ) -> PolicySearchResponse:
+    del current_user
     response.headers["Cache-Control"] = "no-store"
     return await service.search(
         q,

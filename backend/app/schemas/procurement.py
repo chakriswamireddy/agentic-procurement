@@ -20,12 +20,6 @@ class CreateProcurementRequest(BaseModel):
     product_id: str
     quantity: int = Field(gt=0, le=100000)
     constraints: ProcurementConstraints = Field(default_factory=ProcurementConstraints)
-    requester_id: str = Field(
-        description=(
-            "Temporary client-supplied requester identifier. Phase 5 removes this field "
-            "from the payload and derives the requester from the JWT subject."
-        )
-    )
 
 
 class RecommendationSummary(BaseModel):

@@ -21,11 +21,13 @@ class WorkflowView(BaseModel):
 
 class ApprovalDecisionRequest(BaseModel):
     decision: WorkflowDecision
-    approver_id: str = Field(
-        description=(
-            "Temporary client-supplied approver identifier for the development-only "
-            "resume endpoint. Phase 5 derives the approver from the JWT subject and "
-            "adds authorization and recommendation-version checks."
-        )
-    )
     reason: str | None = Field(default=None, max_length=2000)
+    recommendation_version: int | None = Field(
+        default=None,
+        description="Version of the recommendation being approved or rejected.",
+    )
+    idempotency_key: str | None = Field(
+        default=None,
+        max_length=128,
+        description="Optional client key; derived from request/version/decision when omitted.",
+    )

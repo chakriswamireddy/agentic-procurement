@@ -274,6 +274,13 @@ class WorkflowService:
         )
 
     async def resume(self, thread_id: str, decision: dict[str, Any]) -> WorkflowView:
+        requests = RequestRepository(self.session)
+        locked_row = await requests.lock_for_resume(thread_id)
+        if locked_row is None:
+            raise NotFoundError(f"workflow {thread_id} not found")
+        if locked_row.status != "awaiting_approval":
+            raise ConflictError("workflow is not awaiting approval")
+
         config = self._config(thread_id)
         snapshot = await self.graph.aget_state(config)
         values = dict(snapshot.values or {})
@@ -281,6 +288,9 @@ class WorkflowService:
             raise NotFoundError(f"workflow {thread_id} not found")
         if values.get("status") != "awaiting_approval":
             raise ConflictError("workflow is not awaiting approval")
+
+        locked_row.status = "resuming"
+        await self.session.flush()
 
         try:
             with use_dependencies(self._dependencies()):
@@ -294,6 +304,77 @@ class WorkflowService:
             raise WorkflowError("workflow resume failed") from exc
 
         await self._sync_status(result)
+        return await self.get_status(thread_id)
+
+    async def retry_execution(self, thread_id: str, *, actor_id: str) -> WorkflowView:
+        """Phase 5.13: re-invoke execution with the same idempotency key.
+
+        Verifies a valid approval still exists for the current recommendation
+        version. Returns the existing execution if one already succeeded.
+        """
+        from app.repositories.approval_repository import ApprovalRepository
+        from app.repositories.execution_repository import ExecutionRepository
+        from app.services.execution_service import ExecutionService
+        from app.services.mcp_gateway import MCPExecutionGateway
+
+        requests = RequestRepository(self.session)
+        row = await requests.get_request_view(thread_id)
+        if row is None:
+            raise NotFoundError(f"workflow {thread_id} not found")
+        if row["status"] not in ("failed", "executed", "unknown"):
+            raise ConflictError(f"workflow status {row['status']} is not retryable")
+
+        recommendation = await RecommendationRepository(self.session).get_latest(thread_id)
+        if recommendation is None:
+            raise ConflictError("no recommendation available for execution retry")
+        version = int(recommendation.version)
+
+        approval = await ApprovalRepository(self.session).get(thread_id, version)
+        if approval is None or approval.decision != "approved":
+            raise ConflictError("valid approved decision required for execution retry")
+
+        executions = ExecutionRepository(self.session)
+        idempotency_key = f"{thread_id}:{version}"
+        existing = await executions.get_by_idempotency_key(idempotency_key)
+        if existing is not None and existing.status == "succeeded":
+            await self._audit(
+                event_type="execution_retry_noop",
+                request_id=thread_id,
+                actor_id=actor_id,
+                correlation_id="",
+                details={"idempotency_key": idempotency_key, "reason": "already_succeeded"},
+            )
+            await self.session.commit()
+            return await self.get_status(thread_id)
+
+        service = ExecutionService(
+            MCPExecutionGateway(), executions, AuditRepository(self.session)
+        )
+        state = {
+            "request_id": thread_id,
+            "thread_id": thread_id,
+            "recommendation": {"version": version},
+            "correlation_id": f"retry:{actor_id}",
+        }
+        result = await service.execute(state=state)
+        status = "executed" if result.get("success") else "failed"
+        await self._audit(
+            event_type="execution_retried",
+            request_id=thread_id,
+            actor_id=actor_id,
+            correlation_id=f"retry:{actor_id}",
+            details={
+                "idempotency_key": idempotency_key,
+                "success": result.get("success"),
+                "error_code": result.get("error_code"),
+            },
+        )
+        await ResultService(requests, AuditRepository(self.session)).mark_status(
+            state={"request_id": thread_id, "correlation_id": f"retry:{actor_id}"},
+            status=status,
+            event_type="workflow_status_changed",
+            details={"source": "execution_retry"},
+        )
         return await self.get_status(thread_id)
 
     async def _sync_status(self, state: dict[str, Any]) -> None:

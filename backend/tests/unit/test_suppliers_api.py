@@ -1,7 +1,8 @@
 import pytest
 import pytest_asyncio
-from app.api.deps import get_supplier_service
+from app.api.deps import get_current_user, get_current_user_optional, get_supplier_service
 from app.core.errors import NotFoundError
+from app.schemas.auth import AuthenticatedUser
 from app.schemas.supplier import (
     QuotationSummary,
     SupplierDetail,
@@ -10,6 +11,15 @@ from app.schemas.supplier import (
     SupplierRead,
 )
 from httpx import ASGITransport, AsyncClient
+
+
+def _as_user(user_id="USR0001", role="admin", email="user0001@example.test"):
+    user = AuthenticatedUser(id=user_id, email=email, role=role)
+    return {
+        get_current_user: (lambda u=user: u),
+        get_current_user_optional: (lambda u=user: u),
+    }
+
 
 
 class StubSupplierService:
@@ -70,6 +80,7 @@ async def stub_client(application, request):
     availability = getattr(request, "param", True)
     service = StubSupplierService(profile_store_available=availability)
     application.dependency_overrides[get_supplier_service] = lambda: service
+    application.dependency_overrides.update(_as_user())
     transport = ASGITransport(app=application)
     async with AsyncClient(transport=transport, base_url="http://test") as client:
         yield client

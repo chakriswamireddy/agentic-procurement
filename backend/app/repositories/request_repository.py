@@ -71,3 +71,11 @@ class RequestRepository:
         record.status = status
         await self.session.flush()
         return True
+
+    async def lock_for_resume(self, request_id: str) -> ProcurementRequest | None:
+        statement = (
+            select(ProcurementRequest)
+            .where(ProcurementRequest.id == request_id)
+            .with_for_update()
+        )
+        return (await self.session.execute(statement)).scalar_one_or_none()

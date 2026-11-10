@@ -1,8 +1,10 @@
 from typing import Annotated
 
-from fastapi import APIRouter, File, Path, Query, Response, UploadFile, status
+from fastapi import APIRouter, Depends, File, Path, Query, Response, UploadFile, status
 
-from app.api.deps import DocumentServiceDep
+from app.api.deps import DocumentServiceDep, require_roles
+from app.core.authz import ensure_can_manage_documents
+from app.schemas.auth import AuthenticatedUser
 from app.schemas.document import (
     DocumentStatus,
     PolicyDocumentList,
@@ -22,7 +24,9 @@ async def upload_document(
     service: DocumentServiceDep,
     response: Response,
     file: Annotated[UploadFile, File()],
+    current_user: Annotated[AuthenticatedUser, Depends(require_roles("admin"))],
 ) -> PolicyDocumentRecord:
+    ensure_can_manage_documents(current_user)
     content = await file.read()
     record = await service.upload(file.filename or "upload.md", content)
     response.headers["Location"] = f"/api/v1/documents/{record.id}"
@@ -37,8 +41,13 @@ async def upload_document(
 async def list_documents(
     service: DocumentServiceDep,
     response: Response,
+    current_user: Annotated[
+        AuthenticatedUser,
+        Depends(require_roles("admin", "approver", "requester", "auditor")),
+    ],
     status_filter: Annotated[DocumentStatus | None, Query(alias="status")] = None,
 ) -> PolicyDocumentList:
+    del current_user
     response.headers["Cache-Control"] = "no-store"
     items = await service.list_documents(status_filter)
     return PolicyDocumentList(items=items, total=len(items))
@@ -53,8 +62,13 @@ async def get_document(
     service: DocumentServiceDep,
     response: Response,
     document_id: Annotated[str, Path(min_length=1, max_length=64)],
+    current_user: Annotated[
+        AuthenticatedUser,
+        Depends(require_roles("admin", "approver", "requester", "auditor")),
+    ],
     version: Annotated[str | None, Query(max_length=32)] = None,
 ) -> PolicyDocumentRecord:
+    del current_user
     response.headers["Cache-Control"] = "no-store"
     return await service.get_document(document_id, version)
 
@@ -68,7 +82,9 @@ async def ingest_document(
     service: DocumentServiceDep,
     response: Response,
     document_id: str,
+    current_user: Annotated[AuthenticatedUser, Depends(require_roles("admin"))],
     version: Annotated[str | None, Query(max_length=32)] = None,
 ) -> PolicyDocumentRecord:
+    ensure_can_manage_documents(current_user)
     response.headers["Cache-Control"] = "no-store"
     return await service.ingest(document_id, version)

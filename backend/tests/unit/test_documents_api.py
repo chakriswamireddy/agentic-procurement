@@ -1,7 +1,8 @@
 from datetime import date
 
 import pytest
-from app.api.deps import get_document_service
+from app.api.deps import get_current_user, get_current_user_optional, get_document_service
+from app.schemas.auth import AuthenticatedUser
 from app.schemas.document import PolicyDocumentRecord
 
 
@@ -51,8 +52,17 @@ def fake_service() -> FakeDocumentService:
     return FakeDocumentService()
 
 
+def _as(role="admin", user_id="USR0001"):
+    user = AuthenticatedUser(id=user_id, email="user0001@example.test", role=role)
+    return {
+        get_current_user: (lambda u=user: u),
+        get_current_user_optional: (lambda u=user: u),
+    }
+
+
 async def test_upload_document(application, api_client, fake_service) -> None:
     application.dependency_overrides[get_document_service] = lambda: fake_service
+    application.dependency_overrides.update(_as("admin"))
     try:
         response = await api_client.post(
             "/api/v1/documents",
@@ -68,6 +78,7 @@ async def test_upload_document(application, api_client, fake_service) -> None:
 
 async def test_list_documents_with_status_filter(application, api_client, fake_service) -> None:
     application.dependency_overrides[get_document_service] = lambda: fake_service
+    application.dependency_overrides.update(_as("admin"))
     try:
         response = await api_client.get(
             "/api/v1/documents", params={"status": "active"}
@@ -82,6 +93,7 @@ async def test_list_documents_with_status_filter(application, api_client, fake_s
 
 async def test_get_document_and_ingest(application, api_client, fake_service) -> None:
     application.dependency_overrides[get_document_service] = lambda: fake_service
+    application.dependency_overrides.update(_as("admin"))
     try:
         detail = await api_client.get(
             "/api/v1/documents/TST-001", params={"version": "1.0"}

@@ -1,7 +1,8 @@
 from datetime import date
 
 import pytest
-from app.api.deps import get_policy_service
+from app.api.deps import get_current_user, get_current_user_optional, get_policy_service
+from app.schemas.auth import AuthenticatedUser
 from app.schemas.policy import EvidenceRead, PolicySearchResponse
 
 
@@ -40,7 +41,10 @@ def fake_response() -> PolicySearchResponse:
 
 async def test_policy_search_returns_evidence(application, api_client, fake_response) -> None:
     service = FakePolicyService(fake_response)
+    user = AuthenticatedUser(id="USR0001", email="user0001@example.test", role="admin")
     application.dependency_overrides[get_policy_service] = lambda: service
+    application.dependency_overrides[get_current_user] = lambda: user
+    application.dependency_overrides[get_current_user_optional] = lambda: user
     try:
         response = await api_client.get(
             "/api/v1/policies/search",
@@ -58,7 +62,10 @@ async def test_policy_search_returns_evidence(application, api_client, fake_resp
 
 async def test_policy_search_passes_filters(application, api_client, fake_response) -> None:
     service = FakePolicyService(fake_response)
+    user = AuthenticatedUser(id="USR0001", email="user0001@example.test", role="admin")
     application.dependency_overrides[get_policy_service] = lambda: service
+    application.dependency_overrides[get_current_user] = lambda: user
+    application.dependency_overrides[get_current_user_optional] = lambda: user
     try:
         response = await api_client.get(
             "/api/v1/policies/search",
@@ -83,6 +90,9 @@ async def test_policy_search_rejects_short_query(application, api_client, fake_r
     application.dependency_overrides[get_policy_service] = lambda: FakePolicyService(
         fake_response
     )
+    user = AuthenticatedUser(id="USR0001", email="user0001@example.test", role="admin")
+    application.dependency_overrides[get_current_user] = lambda: user
+    application.dependency_overrides[get_current_user_optional] = lambda: user
     try:
         response = await api_client.get(
             "/api/v1/policies/search", params={"q": "ab"}
@@ -98,6 +108,9 @@ async def test_policy_search_rejects_large_limit(application, api_client, fake_r
     application.dependency_overrides[get_policy_service] = lambda: FakePolicyService(
         fake_response
     )
+    user = AuthenticatedUser(id="USR0001", email="user0001@example.test", role="admin")
+    application.dependency_overrides[get_current_user] = lambda: user
+    application.dependency_overrides[get_current_user_optional] = lambda: user
     try:
         response = await api_client.get(
             "/api/v1/policies/search",
