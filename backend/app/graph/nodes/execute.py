@@ -30,42 +30,54 @@ async def execute_tool(state: ProcurementState) -> dict:
             ],
         }
 
-    try:
-        async with asyncio.timeout(budget.timeout_s):
-            execution = await dependencies.execution.execute(state=state)
-    except Exception as exc:
-        logger.exception(
-            "execution failed",
-            extra={"path": f"/workflows/{state['thread_id']}"},
-        )
-        return {
-            "execution": {
-                "success": False,
-                "error_code": exc.__class__.__name__,
-                "recoverable": True,
-            },
-            "status": "failed",
-            "failure_reason": "execution_failed",
-            "errors": [
-                {
-                    "code": "execution_failed",
-                    "message": exc.__class__.__name__,
-                    "node": "execute_tool",
-                }
-            ],
-        }
+    attempts = 0
+    max_attempts = 2
+    execution = None
+    last_exc = None
 
-    if execution.get("success"):
+    while attempts < max_attempts:
+        attempts += 1
+        try:
+            async with asyncio.timeout(budget.timeout_s):
+                execution = await dependencies.execution.execute(state=state)
+            if execution.get("success"):
+                return {"execution": execution, "status": "executed"}
+            if not execution.get("recoverable", True):
+                break
+        except Exception as exc:
+            last_exc = exc
+            if attempts >= max_attempts:
+                break
+            await asyncio.sleep(0.1)
+
+    if execution is not None and execution.get("success"):
         return {"execution": execution, "status": "executed"}
 
+    err_code = (
+        (execution.get("error_code") if execution else None)
+        or (last_exc.__class__.__name__ if last_exc else "execution_failed")
+    )
+
+    logger.warning(
+        "execution failed after attempts",
+        extra={
+            "path": f"/workflows/{state['thread_id']}",
+            "attempts": attempts,
+            "error_code": err_code,
+        },
+    )
     return {
-        "execution": execution,
+        "execution": execution or {
+            "success": False,
+            "error_code": err_code,
+            "recoverable": True,
+        },
         "status": "failed",
         "failure_reason": "execution_failed",
         "errors": [
             {
                 "code": "execution_failed",
-                "message": execution.get("error_code") or "execution failed",
+                "message": err_code,
                 "node": "execute_tool",
             }
         ],

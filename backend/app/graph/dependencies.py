@@ -44,7 +44,11 @@ from app.repositories.request_repository import RequestRepository
 from app.repositories.supplier_profile_repository import SupplierProfileRepository
 from app.repositories.supplier_repository import SupplierRepository
 from app.services.approval_service import ApprovalService
-from app.services.execution_service import ExecutionService, FakeExecutionGateway
+from app.services.execution_service import (
+    ExecutionGateway,
+    ExecutionService,
+)
+from app.services.mcp_gateway import MCPExecutionGateway
 from app.services.policy_service import PolicyService
 from app.services.recommendation_service import RecommendationService
 from app.services.request_validation_service import RequestValidator
@@ -137,6 +141,7 @@ def build_dependencies(
     session: AsyncSession,
     mongo_db: AsyncDatabase,
     policy_service: PolicyService,
+    gateway: ExecutionGateway | None = None,
 ) -> GraphDependencies:
     audit = AuditRepository(session)
     requests = RequestRepository(session)
@@ -156,7 +161,10 @@ def build_dependencies(
         recommendations=RecommendationService(RecommendationRepository(session)),
         approvals=ApprovalService(ApprovalRepository(session), audit),
         execution=ExecutionService(
-            FakeExecutionGateway(), ExecutionRepository(session), audit
+            gateway
+            or MCPExecutionGateway(use_client=getattr(settings, "mcp_use_client", False)),
+            ExecutionRepository(session),
+            audit,
         ),
         results=ResultService(requests, audit),
         budgets=budgets_from_settings(settings),

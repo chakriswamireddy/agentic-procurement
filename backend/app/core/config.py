@@ -75,6 +75,12 @@ class Settings(BaseSettings):
     auth_rate_limit_requests: int = 5
     auth_rate_limit_window_seconds: int = 60
 
+    # MCP server/client (Phase 5)
+    mcp_server_command: str = "python"
+    mcp_server_args: str = '["-m","app.mcp.server"]'
+    mcp_tool_timeout_s: float = 10.0
+    mcp_use_client: bool = False
+
     # Production pool and caching configuration (Phase 6)
     database_pool_size: int = 10
     database_max_overflow: int = 20
