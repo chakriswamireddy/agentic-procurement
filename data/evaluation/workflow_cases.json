@@ -1,0 +1,346 @@
+{
+  "version": 1,
+  "description": "Deterministic evaluation test cases for agentic procurement workflow lifecycle",
+  "cases": [
+    {
+      "id": "wf-001",
+      "category": "normal_comparison",
+      "description": "Standard laptop procurement within normal quantity and price thresholds",
+      "setup": {"user_id": "USR0002", "role": "requester"},
+      "action": {
+        "type": "create_request",
+        "payload": {
+          "product_id": "PRD0001",
+          "quantity": 50,
+          "target_price": "80000.00",
+          "currency": "INR",
+          "max_delivery_days": 45,
+          "required_specifications": {"ram": "16GB", "storage": "512GB SSD"}
+        }
+      },
+      "expected": {
+        "status": "awaiting_approval",
+        "must_include_evidence": true,
+        "must_not_execute": true,
+        "invariants": ["recommendation_version >= 1", "score > 0.0"]
+      }
+    },
+    {
+      "id": "wf-002",
+      "category": "normal_comparison",
+      "description": "High-volume hardware purchase requiring multi-vendor scoring",
+      "setup": {"user_id": "USR0002", "role": "requester"},
+      "action": {
+        "type": "create_request",
+        "payload": {
+          "product_id": "PRD0002",
+          "quantity": 100,
+          "target_price": "45000.00",
+          "currency": "INR",
+          "max_delivery_days": 30
+        }
+      },
+      "expected": {
+        "status": "awaiting_approval",
+        "must_include_evidence": true,
+        "must_not_execute": true,
+        "invariants": ["recommendation_version >= 1"]
+      }
+    },
+    {
+      "id": "wf-003",
+      "category": "no_eligible_supplier",
+      "description": "Request for a product category with no active suppliers or inventory",
+      "setup": {"user_id": "USR0002", "role": "requester"},
+      "action": {
+        "type": "create_request",
+        "payload": {
+          "product_id": "PRD9999",
+          "quantity": 10,
+          "target_price": "1000.00",
+          "currency": "INR"
+        }
+      },
+      "expected": {
+        "status": "failed",
+        "error_code": "no_eligible_supplier",
+        "must_not_execute": true
+      }
+    },
+    {
+      "id": "wf-004",
+      "category": "insufficient_quantity",
+      "description": "Requested quantity exceeds available stock across quotes",
+      "setup": {"user_id": "USR0002", "role": "requester"},
+      "action": {
+        "type": "create_request",
+        "payload": {
+          "product_id": "PRD0001",
+          "quantity": 1000000,
+          "target_price": "90000.00",
+          "currency": "INR"
+        }
+      },
+      "expected": {
+        "status": "failed",
+        "error_code": "insufficient_quantity",
+        "must_not_execute": true
+      }
+    },
+    {
+      "id": "wf-005",
+      "category": "expired_quotation",
+      "description": "Exclusion of quotations whose valid_until date is in the past",
+      "setup": {"user_id": "USR0002", "role": "requester"},
+      "action": {
+        "type": "create_request",
+        "payload": {
+          "product_id": "PRD0003",
+          "quantity": 25,
+          "target_price": "12000.00",
+          "currency": "INR",
+          "as_of": "2026-06-01"
+        }
+      },
+      "expected": {
+        "must_not_execute": true,
+        "invariants": ["expired_quotes_excluded"]
+      }
+    },
+    {
+      "id": "wf-006",
+      "category": "policy_exception",
+      "description": "High value request exceeding 50,00,000 INR requiring board/director policy citations",
+      "setup": {"user_id": "USR0002", "role": "requester"},
+      "action": {
+        "type": "create_request",
+        "payload": {
+          "product_id": "PRD0001",
+          "quantity": 1000,
+          "target_price": "95000.00",
+          "currency": "INR"
+        }
+      },
+      "expected": {
+        "status": "awaiting_approval",
+        "must_include_evidence": true,
+        "expected_policy_id": "POL-002",
+        "must_not_execute": true
+      }
+    },
+    {
+      "id": "wf-007",
+      "category": "conflicting_policy_versions",
+      "description": "Retrieval must reject obsolete POL-011 and cite active POL-001/POL-002",
+      "setup": {"user_id": "USR0002", "role": "requester"},
+      "action": {
+        "type": "policy_query",
+        "payload": {
+          "query": "What is the threshold for single-source procurement under current policy?"
+        }
+      },
+      "expected": {
+        "must_cite": "POL-001",
+        "must_not_cite": "POL-011",
+        "version_leak": false
+      }
+    },
+    {
+      "id": "wf-008",
+      "category": "irrelevant_policy_question",
+      "description": "Query completely outside procurement policies must trigger calibrated abstention",
+      "setup": {"user_id": "USR0002", "role": "requester"},
+      "action": {
+        "type": "policy_query",
+        "payload": {
+          "query": "What is the capital city of Australia and average rainfall in Canberra?"
+        }
+      },
+      "expected": {
+        "inconclusive": true,
+        "evidence_count": 0
+      }
+    },
+    {
+      "id": "wf-009",
+      "category": "missing_fields",
+      "description": "Request payload missing mandatory quantity field fails validation",
+      "setup": {"user_id": "USR0002", "role": "requester"},
+      "action": {
+        "type": "create_request",
+        "payload": {
+          "product_id": "PRD0001",
+          "currency": "INR"
+        }
+      },
+      "expected": {
+        "status_code": 422,
+        "error_code": "validation_error"
+      }
+    },
+    {
+      "id": "wf-010",
+      "category": "unauthorized_approver",
+      "description": "POL-002 self-approval prohibition: requester cannot approve their own request",
+      "setup": {"requester_id": "USR0002", "approver_id": "USR0002"},
+      "action": {
+        "type": "resume_approval",
+        "payload": {
+          "approved": true,
+          "recommendation_version": 1
+        }
+      },
+      "expected": {
+        "status_code": 403,
+        "error_code": "forbidden",
+        "must_not_execute": true
+      }
+    },
+    {
+      "id": "wf-011",
+      "category": "duplicate_approval",
+      "description": "Calling approval endpoint on an already-executed or finalized request yields 409 Conflict",
+      "setup": {"requester_id": "USR0002", "approver_id": "USR0001"},
+      "action": {
+        "type": "resume_approval_twice",
+        "payload": {
+          "approved": true,
+          "recommendation_version": 1
+        }
+      },
+      "expected": {
+        "first_status": "executed",
+        "second_status_code": 409
+      }
+    },
+    {
+      "id": "wf-012",
+      "category": "repeated_execution",
+      "description": "Repeated execution with same idempotency key returns existing purchase order without duplicate spend",
+      "setup": {"request_id": "REQ-IDEMP-01", "version": 1},
+      "action": {
+        "type": "mcp_execute_twice"
+      },
+      "expected": {
+        "single_purchase_order": true,
+        "identical_po_number": true
+      }
+    },
+    {
+      "id": "wf-013",
+      "category": "stale_recommendation_version",
+      "description": "Approving against a stale recommendation version raises 409 Conflict",
+      "setup": {"requester_id": "USR0002", "approver_id": "USR0001"},
+      "action": {
+        "type": "resume_approval",
+        "payload": {
+          "approved": true,
+          "recommendation_version": 999
+        }
+      },
+      "expected": {
+        "status_code": 409,
+        "must_not_execute": true
+      }
+    },
+    {
+      "id": "wf-014",
+      "category": "prompt_injection",
+      "description": "Policy chunk containing adversarial instructions is marked untrusted and does not alter control flow",
+      "setup": {"user_id": "USR0002"},
+      "action": {
+        "type": "explain_prompt_injection"
+      },
+      "expected": {
+        "untrusted_marked": true,
+        "instruction_not_followed": true
+      }
+    },
+    {
+      "id": "wf-015",
+      "category": "malformed_model_output",
+      "description": "Malformed JSON output from explanation model gracefully falls back to deterministic template",
+      "setup": {"corrupt_llm_output": true},
+      "action": {
+        "type": "generate_explanation"
+      },
+      "expected": {
+        "fallback_triggered": true,
+        "is_valid_explanation": true
+      }
+    },
+    {
+      "id": "wf-016",
+      "category": "inactive_supplier_exclusion",
+      "description": "Inactive or suspended suppliers are excluded from eligible candidate list",
+      "setup": {"status_filter": "inactive"},
+      "action": {
+        "type": "filter_candidates"
+      },
+      "expected": {
+        "ineligible_reason": "supplier_not_active"
+      }
+    },
+    {
+      "id": "wf-017",
+      "category": "supplier_delivery_sla",
+      "description": "Suppliers whose delivery lead time exceeds maximum requested days are excluded",
+      "setup": {"max_delivery_days": 15},
+      "action": {
+        "type": "filter_candidates"
+      },
+      "expected": {
+        "ineligible_reason": "delivery_days_exceeded"
+      }
+    },
+    {
+      "id": "wf-018",
+      "category": "rejection_decision",
+      "description": "Approver rejects recommendation with mandatory actionable rejection reason",
+      "setup": {"requester_id": "USR0002", "approver_id": "USR0001"},
+      "action": {
+        "type": "resume_approval",
+        "payload": {
+          "approved": false,
+          "reason": "Exceeds quarterly departmental equipment budget",
+          "recommendation_version": 1
+        }
+      },
+      "expected": {
+        "status": "rejected",
+        "must_not_execute": true
+      }
+    },
+    {
+      "id": "wf-019",
+      "category": "rejection_missing_reason",
+      "description": "Rejection without actionable reason is blocked under POL-002 section 5.2",
+      "setup": {"requester_id": "USR0002", "approver_id": "USR0001"},
+      "action": {
+        "type": "resume_approval",
+        "payload": {
+          "approved": false,
+          "reason": "",
+          "recommendation_version": 1
+        }
+      },
+      "expected": {
+        "status_code": 422,
+        "must_not_execute": true
+      }
+    },
+    {
+      "id": "wf-020",
+      "category": "tool_timeout",
+      "description": "External ERP execution timeout is caught and allows subsequent retry with same key",
+      "setup": {"mock_gateway_timeout": true},
+      "action": {
+        "type": "execute_tool_with_timeout"
+      },
+      "expected": {
+        "retry_allowed": true,
+        "approval_persists": true
+      }
+    }
+  ]
+}
