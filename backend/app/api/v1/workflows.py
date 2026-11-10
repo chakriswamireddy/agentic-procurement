@@ -1,6 +1,6 @@
-from typing import Annotated
+from typing import Annotated, Any
 
-from fastapi import APIRouter, Depends, Path, Request, Response
+from fastapi import APIRouter, Depends, Path, Query, Request, Response
 
 from app.api.deps import (
     CurrentUserDep,
@@ -13,6 +13,29 @@ from app.schemas.workflow import ApprovalDecisionRequest, WorkflowView
 from app.services.approval_policy_service import ApprovalPolicyService
 
 router = APIRouter(prefix="/workflows", tags=["workflows"])
+
+
+@router.get(
+    "",
+    response_model=list[dict[str, Any]],
+    operation_id="list_workflows",
+)
+async def list_workflows(
+    service: WorkflowServiceDep,
+    response: Response,
+    current_user: CurrentUserDep,
+    status: Annotated[str | None, Query()] = None,
+    limit: Annotated[int, Query(ge=1, le=100)] = 50,
+    offset: Annotated[int, Query(ge=0)] = 0,
+) -> list[dict[str, Any]]:
+    response.headers["Cache-Control"] = "no-store"
+    requester_filter = current_user.id if current_user.role == "requester" else None
+    return await service.list_workflows(
+        status=status,
+        requester_id=requester_filter,
+        limit=limit,
+        offset=offset,
+    )
 
 
 @router.get(

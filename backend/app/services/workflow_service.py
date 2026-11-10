@@ -206,6 +206,30 @@ class WorkflowService:
     async def list_products(self, category: str | None = None) -> list[dict[str, Any]]:
         return await RequestRepository(self.session).list_products(category=category)
 
+    async def list_workflows(
+        self,
+        *,
+        status: str | None = None,
+        requester_id: str | None = None,
+        limit: int = 50,
+        offset: int = 0,
+    ) -> list[dict[str, Any]]:
+        requests = await RequestRepository(self.session).list_requests(
+            status=status,
+            requester_id=requester_id,
+            limit=limit,
+            offset=offset,
+        )
+        rec_repo = RecommendationRepository(self.session)
+        result = []
+        for req in requests:
+            record = await rec_repo.get_latest(req["id"])
+            rec_summary = None
+            if record is not None:
+                rec_summary = self._summary(self._recommendation_from_record(record))
+            result.append({**req, "recommendation": rec_summary})
+        return result
+
     async def get_request(self, request_id: str) -> Any:
         request = await RequestRepository(self.session).get_request_view(request_id)
         if request is None:

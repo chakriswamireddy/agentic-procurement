@@ -89,6 +89,44 @@ class RequestRepository:
             for p in rows
         ]
 
+    async def list_requests(
+        self,
+        *,
+        status: str | None = None,
+        requester_id: str | None = None,
+        limit: int = 50,
+        offset: int = 0,
+    ) -> list[dict[str, Any]]:
+        statement = (
+            select(ProcurementRequest, Product)
+            .join(Product, Product.id == ProcurementRequest.product_id)
+        )
+        if status:
+            statement = statement.where(ProcurementRequest.status == status)
+        if requester_id:
+            statement = statement.where(ProcurementRequest.requester_id == requester_id)
+        statement = (
+            statement.order_by(ProcurementRequest.created_at.desc())
+            .limit(limit)
+            .offset(offset)
+        )
+        rows = (await self.session.execute(statement)).all()
+        return [
+            {
+                "id": req.id,
+                "thread_id": req.id,
+                "requester_id": req.requester_id,
+                "product_id": req.product_id,
+                "product_name": prod.name,
+                "category": prod.category,
+                "quantity": req.quantity,
+                "constraints": req.constraints_json or {},
+                "status": req.status,
+                "created_at": req.created_at.isoformat(),
+            }
+            for req, prod in rows
+        ]
+
     async def lock_for_resume(self, request_id: str) -> ProcurementRequest | None:
         statement = (
             select(ProcurementRequest)
