@@ -127,6 +127,21 @@ async def run_rag_eval(
         "total_cases": len(results),
         "duration_seconds": total_time,
         "dataset_hash": dataset_hash,
+        "metadata": {
+            "embedding_model": settings.embedding_model,
+            "sparse_embedding_model": settings.sparse_embedding_model,
+            "retrieval_mode": "hybrid",
+            "rrf_k": settings.rrf_k,
+            "candidate_k": settings.retrieval_candidate_k,
+            "result_limit": 5,
+            "judge_provider": settings.llm_provider,
+            "judge_model": settings.llm_model if settings.llm_provider != "simulator" else None,
+            "metric_kind": "proxy",
+            "note": (
+                "Faithfulness and relevancy are deterministic lexical proxies; "
+                "they are a signal, not ground truth. Human review is required."
+            ),
+        },
         "metrics": {
             "mean_context_recall": round(avg_recall, 4),
             "mean_context_precision": round(avg_precision, 4),

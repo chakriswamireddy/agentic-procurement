@@ -13,9 +13,11 @@ deterministic comparison and scoring, validation routing, a Postgres checkpointe
 approval interrupt with resume, an execution gateway, and the request/workflow APIs.
 Phase 4 adds specialist contracts, the bounded runner, orchestrator budgets, partial-failure
 routing, and grounded explanations. Phase 5 adds authentication, POL-002 approval governance,
-concurrency locking, and the Model Context Protocol (MCP) execution gateway.
+concurrency locking, and the Model Context Protocol (MCP) execution gateway. Phase 6 adds
+Redis supplier caching, rate limiting, structured telemetry, an evaluation harness with
+baseline measurement, multi-stage backend containerization, Compose deployment, and resilience tests.
 
-Phases 6–7 (production evaluation and the frontend) are not implemented yet.
+Phase 7 (frontend and demo) is next.
 
 ## What Phase 0 provides
 

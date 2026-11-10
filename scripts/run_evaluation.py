@@ -19,6 +19,7 @@ BACKEND = ROOT / "backend"
 if str(BACKEND) not in sys.path:
     sys.path.insert(0, str(BACKEND))
 
+from app.agents.contracts import ComparisonResult, RequestFacts  # noqa: E402
 from app.agents.explanation_service import ExplanationService  # noqa: E402
 from app.core.config import Settings  # noqa: E402
 from app.core.errors import ConflictError, ForbiddenError, ValidationError  # noqa: E402
@@ -28,7 +29,10 @@ from app.services.approval_policy_service import ApprovalPolicyService  # noqa: 
 from app.services.comparison_service import ComparisonService  # noqa: E402
 from pydantic import ValidationError as PydanticValidationError  # noqa: E402
 
-from scripts.evaluate_rag import run_rag_eval  # noqa: E402
+try:  # works when invoked as `python -m scripts.run_evaluation`
+    from scripts.evaluate_rag import run_rag_eval  # noqa: E402
+except ModuleNotFoundError:  # works when invoked as `python scripts/run_evaluation.py`
+    from evaluate_rag import run_rag_eval  # noqa: E402
 
 DEFAULT_WORKFLOW_DATASET = ROOT / "data" / "evaluation" / "workflow_cases.json"
 DEFAULT_RAG_DATASET = ROOT / "data" / "evaluation" / "rag_questions.json"
@@ -66,7 +70,12 @@ async def execute_case(
     # --- wf-001 / wf-002: Normal comparison ---
     if category == "normal_comparison":
         payload = action["payload"]
-        req = CreateProcurementRequest.model_validate(payload)
+        constraints = {"max_delivery_days": payload.get("max_delivery_days", 45)}
+        req = CreateProcurementRequest(
+            product_id=payload["product_id"],
+            quantity=payload["quantity"],
+            constraints=constraints,
+        )
         assert req.product_id == payload["product_id"]
         assert req.quantity > 0
 
@@ -100,13 +109,14 @@ async def execute_case(
             },
         ]
         request_dict = {
+            "product_id": req.product_id,
             "quantity": req.quantity,
             "category": "it_hardware",
-            "currency": "INR",
+            "currency": payload.get("currency", "INR"),
             "as_of": "2026-01-01",
-            "constraints": {"max_delivery_days": req.max_delivery_days or 45},
+            "constraints": {"max_delivery_days": req.constraints.max_delivery_days or 45},
         }
-        res = ComparisonService().compare_candidates(request_dict, candidates)
+        res = ComparisonService().compare(request_dict, candidates, as_of="2026-01-01")
         assert res["recommended"] is not None, "No supplier recommended"
         best = res["recommended"]
         assert Decimal(best["total_score"]) > 0, "Score must be positive"
@@ -114,21 +124,30 @@ async def execute_case(
 
     # --- wf-003: No eligible supplier ---
     elif category == "no_eligible_supplier":
-        req = CreateProcurementRequest.model_validate(action["payload"])
+        payload = action["payload"]
+        req = CreateProcurementRequest(
+            product_id=payload["product_id"],
+            quantity=payload["quantity"],
+        )
         request_dict = {
+            "product_id": req.product_id,
             "quantity": req.quantity,
             "category": "it_hardware",
-            "currency": "INR",
+            "currency": payload.get("currency", "INR"),
             "as_of": "2026-01-01",
             "constraints": {},
         }
-        res = ComparisonService().compare_candidates(request_dict, [])
+        res = ComparisonService().compare(request_dict, [], as_of="2026-01-01")
         assert res["reason"] == "no_eligible_supplier"
         return True, "Correctly identified zero eligible suppliers"
 
     # --- wf-004: Insufficient quantity ---
     elif category == "insufficient_quantity":
-        req = CreateProcurementRequest.model_validate(action["payload"])
+        payload = action["payload"]
+        req = CreateProcurementRequest(
+            product_id=payload["product_id"],
+            quantity=payload["quantity"],
+        )
         candidates = [
             {
                 "supplier_id": "SUP0001",
@@ -137,7 +156,7 @@ async def execute_case(
                 "supplier_category": "it_hardware",
                 "quotation_id": "Q-01",
                 "unit_price": "75000.00",
-                "available_quantity": 50,  # Far below requested 1,000,000
+                "available_quantity": 50,  # Below requested quantity
                 "delivery_days": 15,
                 "valid_until": "2026-12-31",
                 "currency": "INR",
@@ -145,15 +164,16 @@ async def execute_case(
             }
         ]
         request_dict = {
+            "product_id": req.product_id,
             "quantity": req.quantity,
             "category": "it_hardware",
-            "currency": "INR",
+            "currency": payload.get("currency", "INR"),
             "as_of": "2026-01-01",
             "constraints": {},
         }
-        res = ComparisonService().compare_candidates(request_dict, candidates)
+        res = ComparisonService().compare(request_dict, candidates, as_of="2026-01-01")
         assert res["recommended"] is None, "Supplier with insufficient quantity must be excluded"
-        assert any(e["reasons"] == ["insufficient_quantity"] for e in res["excluded"])
+        assert any("insufficient_quantity" in e["reasons"] for e in res["excluded"])
         return True, "Excluded supplier due to insufficient quantity"
 
     # --- wf-005: Expired quotation ---
@@ -205,17 +225,17 @@ async def execute_case(
         setup = case["setup"]
         service = ApprovalPolicyService()
         try:
-            service.validate_decision(
+            service.validate_approval(
+                decision="approved",
                 requester_id=setup["requester_id"],
                 approver_id=setup["approver_id"],
                 approver_role="approver",
-                approved=True,
-                recommendation_version=1,
-                active_recommendation_version=1,
+                recommendation={"version": 1},
+                expected_version=1,
             )
             return False, "Self-approval was incorrectly allowed"
         except ForbiddenError as exc:
-            assert exc.code == "forbidden"
+            assert "self_approval_prohibited" in str(exc)
             return True, "Blocked self-approval under POL-002 § 1.3"
 
     # --- wf-011: Duplicate approval ---
@@ -243,13 +263,13 @@ async def execute_case(
     elif category == "stale_recommendation_version":
         service = ApprovalPolicyService()
         try:
-            service.validate_decision(
+            service.validate_approval(
+                decision="approved",
                 requester_id="USR0002",
                 approver_id="USR0001",
                 approver_role="approver",
-                approved=True,
-                recommendation_version=999,
-                active_recommendation_version=1,
+                recommendation={"version": 1},
+                expected_version=999,
             )
             return False, "Stale recommendation was not caught"
         except ConflictError:
@@ -265,26 +285,47 @@ async def execute_case(
     # --- wf-015: Malformed model output ---
     elif category == "malformed_model_output":
         class CorruptProvider:
-            async def complete(self, system: str, user: str) -> str:
+            model = "corrupt-provider"
+
+            async def complete(self, *, system: str, user: str, max_tokens: int) -> str:
                 return "THIS IS NOT VALID JSON {{"
 
         svc = ExplanationService(provider=CorruptProvider())
-        explanation = await svc.explain(
-            facts={"product_id": "PRD0001", "quantity": 50},
-            comparison={
-                "recommended": {
-                    "supplier_name": "Apex",
-                    "score": 0.85,
-                    "estimated_total": "50000.00",
-                    "currency": "INR",
-                    "breakdown": {},
-                },
+        comparison_dto = ComparisonResult.from_dict({
+            "reason": None,
+            "eligible_count": 1,
+            "eligible": [
+                {"supplier_id": "SUP0001", "supplier_name": "Apex", "total_score": "85.00"}
+            ],
+            "excluded": [],
+            "recommended": {
+                "supplier_id": "SUP0001",
+                "supplier_name": "Apex",
+                "total_score": "85.00",
+                "total_cost": "50000.00",
+                "currency": "INR",
+                "unit_price": "1000.00",
+                "delivery_days": 10,
+                "quotation_id": "Q-01",
             },
-            evidence=[],
+            "rationale": {"scoring_version": "1.0"},
+        })
+        request_dto = RequestFacts(
+            product_id="PRD0001",
+            product_name="Laptop",
+            category="it_hardware",
+            quantity=50,
+            currency="INR",
+            as_of="2026-01-01",
         )
-        assert explanation.summary != "", "Summary must not be empty"
+        explanation = await svc.explain(
+            comparison=comparison_dto,
+            evidence=[],
+            request=request_dto,
+        )
+        assert explanation.get("summary") != "", "Summary must not be empty"
         assert (
-            explanation.model == "template-fallback"
+            explanation.get("model") == "template/explain-v1"
         ), "Must use template fallback on corrupted LLM JSON"
         return True, "Corrupt model JSON successfully fell back to deterministic template"
 
@@ -294,22 +335,31 @@ async def execute_case(
             {
                 "supplier_id": "SUP0099",
                 "supplier_name": "Suspended Supplier Inc",
+                "supplier_status": "suspended",
+                "supplier_category": "it_hardware",
                 "quotation_id": "Q-99",
                 "unit_price": Decimal("50000.00"),
                 "available_quantity": 100,
                 "delivery_days": 10,
+                "valid_until": "2026-12-31",
                 "rating": 4.0,
-                "status": "suspended",
                 "currency": "INR",
             }
         ]
-        req = CreateProcurementRequest(product_id="PRD0001", quantity=10)
+        request_dict = {
+            "product_id": "PRD0001",
+            "quantity": 10,
+            "category": "it_hardware",
+            "currency": "INR",
+            "constraints": {},
+        }
         result = ComparisonService().compare(
-            req.model_dump(),
+            request_dict,
             candidates,
             as_of="2026-06-01",
         )
         assert result["eligible_count"] == 0, "Suspended supplier must be excluded"
+        assert any("inactive_supplier" in e["reasons"] for e in result["excluded"])
         return True, "Inactive/suspended supplier excluded from eligible candidates"
 
     # --- wf-017: Supplier delivery SLA ---
@@ -318,59 +368,65 @@ async def execute_case(
             {
                 "supplier_id": "SUP0001",
                 "supplier_name": "Slow Cargo Supplies",
+                "supplier_status": "active",
+                "supplier_category": "it_hardware",
                 "quotation_id": "Q-01",
                 "unit_price": Decimal("50000.00"),
                 "available_quantity": 100,
                 "delivery_days": 60,  # Exceeds max 15
+                "valid_until": "2026-12-31",
                 "rating": 4.0,
-                "status": "active",
                 "currency": "INR",
             }
         ]
-        req = CreateProcurementRequest(
-            product_id="PRD0001", quantity=10, max_delivery_days=15
-        )
+        request_dict = {
+            "product_id": "PRD0001",
+            "quantity": 10,
+            "category": "it_hardware",
+            "currency": "INR",
+            "constraints": {"max_delivery_days": 15},
+        }
         result = ComparisonService().compare(
-            req.model_dump(),
+            request_dict,
             candidates,
             as_of="2026-06-01",
         )
         assert result["eligible_count"] == 0, (
             "Supplier exceeding max delivery days must be excluded"
         )
+        assert any("delivery_too_slow" in e["reasons"] for e in result["excluded"])
         return True, "Supplier excluded due to delivery days SLA exceeding threshold"
 
     # --- wf-018: Rejection decision with valid reason ---
     elif category == "rejection_decision":
         service = ApprovalPolicyService()
-        valid = service.validate_decision(
+        service.validate_approval(
+            decision="rejected",
             requester_id="USR0002",
             approver_id="USR0001",
             approver_role="approver",
-            approved=False,
             reason=action["payload"]["reason"],
-            recommendation_version=1,
-            active_recommendation_version=1,
+            recommendation={"version": 1},
+            expected_version=1,
         )
-        assert valid is True
         return True, "Actionable rejection reason accepted and validated"
 
     # --- wf-019: Rejection missing reason ---
     elif category == "rejection_missing_reason":
         service = ApprovalPolicyService()
         try:
-            service.validate_decision(
+            service.validate_approval(
+                decision="rejected",
                 requester_id="USR0002",
                 approver_id="USR0001",
                 approver_role="approver",
-                approved=False,
                 reason="",
-                recommendation_version=1,
-                active_recommendation_version=1,
+                recommendation={"version": 1},
+                expected_version=1,
             )
             return False, "Rejection without reason was not rejected"
         except ValidationError as exc:
-            assert "actionable rejection reason" in str(exc)
+            assert "actionable reason" in str(exc)
             return True, "Blocked rejection without reason under POL-002 § 5.2"
 
     # --- wf-020: Tool timeout & retry ---

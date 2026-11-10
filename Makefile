@@ -1,9 +1,12 @@
 COMPOSE := docker compose -f infrastructure/docker-compose.yml
 
-.PHONY: up down reset seed check test eval api logs
+.PHONY: up up-app down reset seed check test eval baseline verify api logs
 
 up:
 	$(COMPOSE) up -d
+
+up-app:
+	$(COMPOSE) --profile app up -d --build
 
 down:
 	$(COMPOSE) down
@@ -26,6 +29,12 @@ test:
 
 eval:
 	uv run python scripts/evaluate_retrieval.py
+
+baseline:
+	uv run python scripts/measure_baseline.py
+
+verify:
+	bash scripts/verify_stack.sh
 
 api:
 	uv run uvicorn app.main:app --app-dir backend --reload --port 8000

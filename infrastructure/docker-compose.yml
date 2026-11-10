@@ -66,6 +66,49 @@ services:
     restart: unless-stopped
     networks: [procurement-net]
 
+  backend:
+    profiles: ["app"]
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    env_file:
+      - ../.env
+    environment:
+      APP_ENV: development
+      DATABASE_URL: postgresql+asyncpg://procurement:procurement@postgres:5432/procurement
+      MONGODB_URL: mongodb://mongodb:27017
+      MONGODB_DB: procurement
+      REDIS_URL: redis://redis:6379/0
+      QDRANT_URL: http://qdrant:6333
+      CHECKPOINTER_DATABASE_URL: postgresql://procurement:procurement@postgres:5432/procurement
+      WORKFLOW_AS_OF: ${WORKFLOW_AS_OF:-2026-01-15}
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mongodb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - >-
+          import urllib.request,sys;
+          sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/health/live',
+          timeout=2).status == 200 else 1)
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    restart: unless-stopped
+    networks: [procurement-net]
+
 networks:
   procurement-net:
     driver: bridge

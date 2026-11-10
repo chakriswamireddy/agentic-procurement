@@ -76,7 +76,7 @@
         "type": "create_request",
         "payload": {
           "product_id": "PRD0001",
-          "quantity": 1000000,
+          "quantity": 50000,
           "target_price": "90000.00",
           "currency": "INR"
         }
