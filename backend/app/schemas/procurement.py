@@ -5,6 +5,14 @@ from typing import Any
 from pydantic import BaseModel, Field, field_serializer
 
 
+class ProductRead(BaseModel):
+    id: str
+    sku: str
+    name: str
+    category: str
+    attributes: dict[str, Any] = Field(default_factory=dict)
+
+
 class ProcurementConstraints(BaseModel):
     max_delivery_days: int | None = Field(default=None, ge=0)
     required_certifications: list[str] = Field(default_factory=list)

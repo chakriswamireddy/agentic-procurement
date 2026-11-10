@@ -203,6 +203,9 @@ class WorkflowService:
         await self._sync_status(result)
         return await self.get_status(request_id)
 
+    async def list_products(self, category: str | None = None) -> list[dict[str, Any]]:
+        return await RequestRepository(self.session).list_products(category=category)
+
     async def get_request(self, request_id: str) -> Any:
         request = await RequestRepository(self.session).get_request_view(request_id)
         if request is None:

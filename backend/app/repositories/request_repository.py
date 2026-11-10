@@ -72,6 +72,23 @@ class RequestRepository:
         await self.session.flush()
         return True
 
+    async def list_products(self, category: str | None = None) -> list[dict[str, Any]]:
+        statement = select(Product)
+        if category:
+            statement = statement.where(Product.category == category)
+        statement = statement.order_by(Product.name)
+        rows = (await self.session.execute(statement)).scalars().all()
+        return [
+            {
+                "id": p.id,
+                "sku": p.sku,
+                "name": p.name,
+                "category": p.category,
+                "attributes": p.attributes_json or {},
+            }
+            for p in rows
+        ]
+
     async def lock_for_resume(self, request_id: str) -> ProcurementRequest | None:
         statement = (
             select(ProcurementRequest)
