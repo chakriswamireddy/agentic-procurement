@@ -69,6 +69,11 @@ class Settings(BaseSettings):
     jwt_audience: str = "agentic-procurement-api"
     log_level: str = "INFO"
 
+    # Auth rate limiting (Phase 6); disabled under APP_ENV=test
+    auth_rate_limit_enabled: bool = True
+    auth_rate_limit_requests: int = 5
+    auth_rate_limit_window_seconds: int = 60
+
     # Production pool and caching configuration (Phase 6)
     database_pool_size: int = 10
     database_max_overflow: int = 20
@@ -147,6 +152,16 @@ class Settings(BaseSettings):
     @classmethod
     def _normalize_log_level(cls, value: str) -> str:
         return value.upper()
+
+    @field_validator(
+        "auth_rate_limit_requests",
+        "auth_rate_limit_window_seconds",
+    )
+    @classmethod
+    def _must_be_positive_int_settings(cls, value: int) -> int:
+        if value <= 0:
+            raise ValueError("must be positive")
+        return value
 
     def safe_dict(self) -> dict[str, Any]:
         return {key: redact_value(key, value) for key, value in self.model_dump().items()}

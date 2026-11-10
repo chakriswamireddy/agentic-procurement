@@ -4,6 +4,9 @@ import sys
 from pathlib import Path
 from typing import Any
 
+# Must be set before app.core.config.get_settings is first evaluated.
+os.environ.setdefault("AUTH_RATE_LIMIT_ENABLED", "false")
+
 import pytest
 import pytest_asyncio
 from app.main import create_app

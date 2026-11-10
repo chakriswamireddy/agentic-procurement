@@ -101,6 +101,7 @@ def _http_code(status_code: int) -> str:
         405: "method_not_allowed",
         409: "conflict",
         422: "validation_error",
+        429: "rate_limited",
         503: "dependency_unavailable",
     }.get(status_code, "http_error")
 
