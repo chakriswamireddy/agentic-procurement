@@ -57,6 +57,13 @@ for _ in $(seq 1 30); do
   STATUS="$(printf '%s' "$WORKFLOW_JSON" | json_field "['status']")"
   if [[ "$STATUS" == "awaiting_approval" ]]; then
     echo "PASS: workflow $THREAD_ID paused at approval (status=$STATUS)"
+    
+    echo "Verifying frontend container healthz and SPA delivery on http://localhost:5173..."
+    if curl -fsS "http://localhost:5173/healthz" >/dev/null 2>&1; then
+      echo "PASS: Frontend healthz OK"
+    else
+      echo "WARN: Frontend on port 5173 not reachable (check if profile app was built)"
+    fi
     exit 0
   fi
   if [[ "$STATUS" == "failed" || "$STATUS" == "executed" || "$STATUS" == "rejected" || "$STATUS" == "inconclusive" ]]; then

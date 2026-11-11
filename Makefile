@@ -1,6 +1,6 @@
 COMPOSE := docker compose -f infrastructure/docker-compose.yml
 
-.PHONY: up up-app down reset seed check test eval baseline verify api logs
+.PHONY: up up-app down reset seed check test test-backend test-frontend eval baseline verify api logs frontend-dev frontend-build
 
 up:
 	$(COMPOSE) up -d
@@ -23,9 +23,20 @@ seed:
 check:
 	uv run python scripts/check_connectivity.py
 
-test:
+test: test-backend test-frontend
+
+test-backend:
 	uv run ruff check .
 	uv run pytest -q
+
+test-frontend:
+	cd frontend && npm test && npm run build
+
+frontend-dev:
+	cd frontend && npm run dev
+
+frontend-build:
+	cd frontend && npm run build
 
 eval:
 	uv run python scripts/evaluate_retrieval.py

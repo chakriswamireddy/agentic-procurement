@@ -6,7 +6,8 @@ FROM python:3.12.8-slim AS builder
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PIP_NO_CACHE_DIR=1 \
     TIKTOKEN_CACHE_DIR=/opt/tiktoken_cache \
-    FASTEMBED_CACHE_DIR=/opt/fastembed_cache
+    FASTEMBED_CACHE_DIR=/opt/fastembed_cache \
+    FASTEMBED_CACHE_PATH=/opt/fastembed_cache
 
 WORKDIR /build
 RUN python -m venv /opt/venv
@@ -24,6 +25,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PATH="/opt/venv/bin:$PATH" \
     FASTEMBED_CACHE_DIR=/home/app/.cache/fastembed \
+    FASTEMBED_CACHE_PATH=/home/app/.cache/fastembed \
     TIKTOKEN_CACHE_DIR=/home/app/.cache/tiktoken \
     HOME=/home/app
 

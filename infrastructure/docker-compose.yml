@@ -84,6 +84,8 @@ services:
       WORKFLOW_AS_OF: ${WORKFLOW_AS_OF:-2026-01-15}
     ports:
       - "127.0.0.1:8000:8000"
+    volumes:
+      - ../backend/app:/app/app:ro
     depends_on:
       postgres:
         condition: service_healthy
@@ -106,6 +108,25 @@ services:
       timeout: 5s
       retries: 5
       start_period: 20s
+    restart: unless-stopped
+    networks: [procurement-net]
+
+  frontend:
+    profiles: ["app"]
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:5173:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1/healthz || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
     restart: unless-stopped
     networks: [procurement-net]
 
