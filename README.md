@@ -1,5 +1,15 @@
 # Agentic Procurement
 
+<p align="center">
+  <img src="docs/architecture/langgraph_workflow.png" alt="LangGraph procurement workflow" width="420" />
+</p>
+<p align="center"><em>LangGraph workflow state machine</em></p>
+
+<p align="center">
+  <img src="docs/architecture/langgraph_flow_with_Example.png" alt="LangGraph workflow with example trace" width="420" />
+</p>
+<p align="center"><em>End-to-end workflow with an example request</em></p>
+
 A local-first reference implementation of an agentic procurement platform. Phase 0
 builds the reproducible data foundation: four local stores, a deterministic synthetic
 dataset, synthetic policy documents, and a rebuildable Qdrant policy index. Phase 1
