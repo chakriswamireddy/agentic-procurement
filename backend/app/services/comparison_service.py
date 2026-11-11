@@ -160,9 +160,15 @@ class ComparisonService:
         ):
             reasons.append("price_above_cap")
 
-        required = {str(value) for value in constraints.get("required_certifications") or []}
+        required = {
+            str(value).replace("-", "").replace("_", "").strip().upper()
+            for value in constraints.get("required_certifications") or []
+        }
         if required:
-            profile_certifications = _certifications(candidate.get("profile"))
+            profile_certifications = {
+                str(value).replace("-", "").replace("_", "").strip().upper()
+                for value in _certifications(candidate.get("profile"))
+            }
             if not required.issubset(profile_certifications):
                 reasons.append("missing_certification")
 
