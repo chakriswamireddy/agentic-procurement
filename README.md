@@ -13,11 +13,37 @@ deterministic comparison and scoring, validation routing, a Postgres checkpointe
 approval interrupt with resume, an execution gateway, and the request/workflow APIs.
 Phase 4 adds specialist contracts, the bounded runner, orchestrator budgets, partial-failure
 routing, and grounded explanations. Phase 5 adds authentication, POL-002 approval governance,
-concurrency locking, and the Model Context Protocol (MCP) execution gateway. Phase 6 adds
-Redis supplier caching, rate limiting, structured telemetry, an evaluation harness with
+concurrency locking, and the Model Context Protocol (MCP) execution gateway. Phase 6 adds Redis supplier caching, rate limiting, structured telemetry, an evaluation harness with
 baseline measurement, multi-stage backend containerization, Compose deployment, and resilience tests.
+Phase 7 completes the platform with a React/Vite/TypeScript frontend, Nginx reverse proxy container,
+pessimistic approval flows with stable idempotency keys, trust badges, architecture and interview documentation,
+and a reproducible 5-minute demo script.
 
-Phase 7 (frontend and demo) is next.
+## Core Documentation
+- [Architecture & Trust Boundaries](docs/architecture.md)
+- [Five-Minute Demo Script](docs/demo-script.md)
+- [Test & Evaluation Report](docs/test-report.md)
+- [Known Limitations](docs/known-limitations.md)
+- [Interview Q&A Notes](docs/interview-notes.md)
+- [Phase 7 Learning Log](docs/learning-log/phase-7.md)
+
+## Quickstart
+
+```bash
+# 1. Start the complete containerized stack (Postgres, Mongo, Redis, Qdrant, Backend, Frontend)
+make up-app
+
+# 2. Reset and seed all demo data (products, suppliers, quotes, policies, demo accounts)
+bash scripts/prepare_demo.sh --yes
+
+# 3. Verify stack health and smoke test
+make verify
+
+# 4. Open the Web Application
+# Frontend SPA: http://localhost:5173
+# Backend API:  http://localhost:8000
+# API Docs:     http://localhost:8000/docs
+```
 
 ## What Phase 0 provides
 
