@@ -72,7 +72,7 @@ export const EvidenceList: React.FC<EvidenceListProps> = ({
                 }}
               >
                 <span>
-                  <strong>{item.document_id}</strong> (v{item.version}) &middot; Section: {item.section}
+                  <strong>{item.document_id}</strong> (v{item.version}) &middot; Section: {(item as any).section_path || item.section}
                 </span>
                 <span style={{ fontFamily: 'monospace' }}>
                   Effective: {item.effective_from}
@@ -96,8 +96,8 @@ export const EvidenceList: React.FC<EvidenceListProps> = ({
 
               <div style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: '#6b7280', display: 'flex', gap: '12px' }}>
                 <span>Chunk ID: <code>{item.chunk_id.slice(0, 8)}...</code></span>
-                {item.combined_score !== undefined && item.combined_score !== null && (
-                  <span>Hybrid RRF Score: {item.combined_score.toFixed(4)}</span>
+                {((item as any).score ?? item.combined_score) !== undefined && ((item as any).score ?? item.combined_score) !== null && (
+                  <span>Hybrid RRF Score: {Number((item as any).score ?? item.combined_score).toFixed(4)}</span>
                 )}
                 <span>Classification: {item.classification}</span>
               </div>

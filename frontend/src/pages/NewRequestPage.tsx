@@ -200,7 +200,7 @@ export const NewRequestPage: React.FC = () => {
             >
               {products.map((p) => (
                 <option key={p.id} value={p.id}>
-                  {p.name} ({p.sku}) &mdash; {p.category}
+                  {p.id} &mdash; {p.name} ({p.sku}) &mdash; {p.category}
                 </option>
               ))}
             </select>

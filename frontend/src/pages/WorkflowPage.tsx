@@ -71,9 +71,9 @@ export const WorkflowPage: React.FC = () => {
       const query = requestDetails?.product_id ? `procurement rules ${requestDetails.product_id}` : 'procurement policy';
       api.policies
         .search(query, 5)
-        .then((res) => {
-          if (active && res.results) {
-            setEvidenceItems(res.results);
+        .then((res: any) => {
+          if (active && (res.evidence || res.results)) {
+            setEvidenceItems(res.evidence || res.results);
           }
         })
         .catch(() => {
@@ -255,6 +255,11 @@ export const WorkflowPage: React.FC = () => {
         </div>
 
         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+            <TrustBadge level="verified" />
+            <TrustBadge level="computed" />
+            <TrustBadge level="policy" />
+          </div>
           <button
             type="button"
             onClick={refresh}
