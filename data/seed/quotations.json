@@ -2,7 +2,7 @@
   {
     "available_quantity": 200,
     "currency": "INR",
-    "delivery_days": 20,
+    "delivery_days": 7,
     "id": "QTN00001",
     "product_id": "PRD0001",
     "supplier_id": "SUP0001",
